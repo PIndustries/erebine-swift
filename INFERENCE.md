@@ -1,7 +1,7 @@
 # Inference SDK
 
-The current milestone is native inference integration. Management expansion is
-deferred. The raw operation catalog remains available for existing callers.
+Native inference integration is available alongside project management bindings.
+See [MANAGEMENT.md](MANAGEMENT.md) for the management validation milestone.
 
 ## Coverage and proof
 

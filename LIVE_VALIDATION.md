@@ -54,4 +54,5 @@ translation, System 1 request construction, fragmented parallel tool calls,
 reasoning/refusal separation, and native WebSocket transcription. No speech,
 System 1, or realtime deployment was identified in the available model catalog,
 so those successful local checks are not reported as live service verification.
-Management is deferred. See INFERENCE.md for the complete proof matrix.
+Management was subsequently validated with a separate management-scoped key and
+project; see [MANAGEMENT.md](MANAGEMENT.md). See INFERENCE.md for inference proof.

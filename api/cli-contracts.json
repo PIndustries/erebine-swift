@@ -1,0 +1,3808 @@
+{
+  "schema_version": 1,
+  "source": "https://github.com/erebine/binaries/releases/tag/v2.7.3",
+  "binary": "erectl-Darwin-arm64",
+  "sha256": "e6dedd66403ba27eda263e71843fad3752f67b78e3c097f09bfe047dad405233",
+  "build": "e2f5a35a0aaf",
+  "captured": "2026-10-26",
+  "notes": [
+    "No live Erebine request or credential used during capture.",
+    "Synthetic values are request-construction evidence, not server response/schema conformance.",
+    "Local fixture file paths normalized to /fixture.",
+    "CLI response decoding may fail after the outgoing request is captured; synthetic server replies are not API contracts."
+  ],
+  "requests": [
+    {
+      "command": "rerank",
+      "operation": "post_project_id_endpoint_slug_v1_rerank",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/11111111-1111-4111-8111-111111111111/v1/rerank",
+      "content_type": "application/json",
+      "body_json": {
+        "documents": [
+          "fixture"
+        ],
+        "return_documents": false,
+        "query": "fixture"
+      },
+      "body_base64": "eyJkb2N1bWVudHMiOlsiZml4dHVyZSJdLCJyZXR1cm5fZG9jdW1lbnRzIjpmYWxzZSwicXVlcnkiOiJmaXh0dXJlIn0="
+    },
+    {
+      "command": "score",
+      "operation": "get_project_id_v1_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "tiers",
+      "operation": "get_project_id_v1_management_tiers",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/tiers",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "upload",
+      "operation": "post_project_id_v1_uploads_preflight",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/uploads/preflight",
+      "content_type": "application/json",
+      "body_json": {
+        "upload_type": "archive",
+        "manifest_hash": "ac7a81654e4521190ee27cced1f56efbed0e2c0307edf56992796fbf0ca94181",
+        "model_name": "fixture"
+      },
+      "body_base64": "eyJ1cGxvYWRfdHlwZSI6ImFyY2hpdmUiLCJtYW5pZmVzdF9oYXNoIjoiYWM3YTgxNjU0ZTQ1MjExOTBlZTI3Y2NlZDFmNTZlZmJlZDBlMmMwMzA3ZWRmNTY5OTI3OTZmYmYwY2E5NDE4MSIsIm1vZGVsX25hbWUiOiJmaXh0dXJlIn0="
+    },
+    {
+      "command": "upload",
+      "operation": "post_project_id_v1_uploads_archive",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/uploads/archive",
+      "content_type": "application/json",
+      "body_json": {
+        "model_name": "fixture",
+        "archive_format": "tar",
+        "manifest_hash": "ac7a81654e4521190ee27cced1f56efbed0e2c0307edf56992796fbf0ca94181",
+        "force_new": false,
+        "archive_size": 10240
+      },
+      "body_base64": "eyJtb2RlbF9uYW1lIjoiZml4dHVyZSIsImFyY2hpdmVfZm9ybWF0IjoidGFyIiwibWFuaWZlc3RfaGFzaCI6ImFjN2E4MTY1NGU0NTIxMTkwZWUyN2NjZWQxZjU2ZWZiZWQwZTJjMDMwN2VkZjU2OTkyNzk2ZmJmMGNhOTQxODEiLCJmb3JjZV9uZXciOmZhbHNlLCJhcmNoaXZlX3NpemUiOjEwMjQwfQ=="
+    },
+    {
+      "command": "admin health",
+      "operation": "get_project_id_v1_admin_health",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/health",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin consumption",
+      "operation": "get_project_id_v1_admin_consumption",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/consumption",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin users",
+      "operation": "get_project_id_v1_admin_users",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [
+        [
+          "role",
+          "member"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/admin/users",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin endpoints",
+      "operation": "get_project_id_v1_admin_project_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/project-endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin storage",
+      "operation": "get_project_id_v1_admin_storage_dashboard",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/storage/dashboard",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "agents curve-rotate",
+      "operation": "post_project_id_v1_management_agents_id_curve_rotate",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents/11111111-1111-4111-8111-111111111111/curve-rotate",
+      "content_type": "application/json",
+      "body_json": {
+        "reason": "fixture"
+      },
+      "body_base64": "eyJyZWFzb24iOiJmaXh0dXJlIn0="
+    },
+    {
+      "command": "agents set-location",
+      "operation": "patch_project_id_v1_management_agents_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "region": "us-east-1"
+      },
+      "body_base64": "eyJyZWdpb24iOiJ1cy1lYXN0LTEifQ=="
+    },
+    {
+      "command": "agents logs",
+      "operation": "get_project_id_v1_management_agents_id_logs_stream",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents/11111111-1111-4111-8111-111111111111/logs/stream",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "anchors list",
+      "operation": "get_project_id_v1_admin_anchors",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "anchors set-compliance",
+      "operation": "patch_project_id_v1_admin_anchors_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "compliance_flags": {}
+      },
+      "body_base64": "eyJjb21wbGlhbmNlX2ZsYWdzIjp7fX0="
+    },
+    {
+      "command": "anchors set-deployment-region",
+      "operation": "patch_project_id_v1_admin_anchors_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "deployment_region": "us-east-1"
+      },
+      "body_base64": "eyJkZXBsb3ltZW50X3JlZ2lvbiI6InVzLWVhc3QtMSJ9"
+    },
+    {
+      "command": "anchors set-discount",
+      "operation": "patch_project_id_v1_admin_anchors_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "marketplace_discount": 0.1
+      },
+      "body_base64": "eyJtYXJrZXRwbGFjZV9kaXNjb3VudCI6MC4xfQ=="
+    },
+    {
+      "command": "anchors set-list-free",
+      "operation": "patch_project_id_v1_admin_anchors_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "marketplace_list_free": true
+      },
+      "body_base64": "eyJtYXJrZXRwbGFjZV9saXN0X2ZyZWUiOnRydWV9"
+    },
+    {
+      "command": "anchors set-marketplace-concurrency",
+      "operation": "patch_project_id_v1_admin_anchors_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "marketplace_max_concurrency": 1
+      },
+      "body_base64": "eyJtYXJrZXRwbGFjZV9tYXhfY29uY3VycmVuY3kiOjF9"
+    },
+    {
+      "command": "anchors set-marketplace-price",
+      "operation": "patch_project_id_v1_admin_anchors_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "marketplace_price_prompt_usd": 1e-06,
+        "marketplace_price_completion_usd": 1e-06
+      },
+      "body_base64": "eyJtYXJrZXRwbGFjZV9wcmljZV9wcm9tcHRfdXNkIjoxZS0wNiwibWFya2V0cGxhY2VfcHJpY2VfY29tcGxldGlvbl91c2QiOjFlLTA2fQ=="
+    },
+    {
+      "command": "anchors set-openrouter-slug",
+      "operation": "patch_project_id_v1_admin_anchors_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "openrouter_slug": "fixture/model"
+      },
+      "body_base64": "eyJvcGVucm91dGVyX3NsdWciOiJmaXh0dXJlXC9tb2RlbCJ9"
+    },
+    {
+      "command": "anchors show",
+      "operation": "get_project_id_v1_admin_anchors_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/anchors/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "approvals approve",
+      "operation": "post_project_id_v1_exec_approvals_id_approve",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/approvals/11111111-1111-4111-8111-111111111111/approve",
+      "content_type": "application/json",
+      "body_json": {
+        "confirmation": "SDK fixture"
+      },
+      "body_base64": "eyJjb25maXJtYXRpb24iOiJTREsgZml4dHVyZSJ9"
+    },
+    {
+      "command": "approvals list",
+      "operation": "get_project_id_v1_exec_approvals",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/approvals",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "approvals reject",
+      "operation": "post_project_id_v1_exec_approvals_id_reject",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/approvals/11111111-1111-4111-8111-111111111111/reject",
+      "content_type": "application/json",
+      "body_json": {
+        "reason": "fixture"
+      },
+      "body_base64": "eyJyZWFzb24iOiJmaXh0dXJlIn0="
+    },
+    {
+      "command": "approvals show",
+      "operation": "get_project_id_v1_exec_approvals_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/approvals/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "approvals watch",
+      "operation": "get_project_id_v1_exec_approvals",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/approvals",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chat new",
+      "operation": "post_project_id_v1_workspaces_id_1_chat_templates_id_2_apply",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/chat-templates/ctpl_fixture/apply",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "chat send",
+      "operation": "post_project_id_endpoint_slug_v1_chat_completions",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/11111111-1111-4111-8111-111111111111/v1/chat/completions",
+      "content_type": "application/json",
+      "body_json": {
+        "store": false,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Offline fixture"
+          }
+        ],
+        "model": "default"
+      },
+      "body_base64": "eyJzdG9yZSI6ZmFsc2UsIm1lc3NhZ2VzIjpbeyJyb2xlIjoidXNlciIsImNvbnRlbnQiOiJPZmZsaW5lIGZpeHR1cmUifV0sIm1vZGVsIjoiZGVmYXVsdCJ9"
+    },
+    {
+      "command": "chats context",
+      "operation": "get_project_id_v1_chats_id_context",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111/context",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats create",
+      "operation": "post_project_id_v1_chats",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats",
+      "content_type": "application/json",
+      "body_json": {
+        "title": "fixture"
+      },
+      "body_base64": "eyJ0aXRsZSI6ImZpeHR1cmUifQ=="
+    },
+    {
+      "command": "chats delete",
+      "operation": "delete_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats exec-workspace",
+      "operation": "get_project_id_v1_chats_id_exec_workspace",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "chat_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/chat_fixture/exec-workspace",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats link-exec-workspace",
+      "operation": "put_project_id_v1_chats_id_exec_workspace",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "chat_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/chat_fixture/exec-workspace",
+      "content_type": "application/json",
+      "body_json": {
+        "workspace_id": "ws_fixture",
+        "allows_members": false
+      },
+      "body_base64": "eyJ3b3Jrc3BhY2VfaWQiOiJ3c19maXh0dXJlIiwiYWxsb3dzX21lbWJlcnMiOmZhbHNlfQ=="
+    },
+    {
+      "command": "chats list",
+      "operation": "get_project_id_v1_chats",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats show",
+      "operation": "get_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats unlink-exec-workspace",
+      "operation": "delete_project_id_v1_chats_id_exec_workspace",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "chat_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/chat_fixture/exec-workspace",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats update",
+      "operation": "patch_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "title": "fixture"
+      },
+      "body_base64": "eyJ0aXRsZSI6ImZpeHR1cmUifQ=="
+    },
+    {
+      "command": "conversations add-item",
+      "operation": "post_project_id_v1_conversations_id_items",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/conversations/11111111-1111-4111-8111-111111111111/items",
+      "content_type": "application/json",
+      "body_json": {
+        "role": "user",
+        "content": "Offline fixture",
+        "type": "message"
+      },
+      "body_base64": "eyJyb2xlIjoidXNlciIsImNvbnRlbnQiOiJPZmZsaW5lIGZpeHR1cmUiLCJ0eXBlIjoibWVzc2FnZSJ9"
+    },
+    {
+      "command": "conversations create",
+      "operation": "post_project_id_v1_conversations",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/conversations",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "conversations delete",
+      "operation": "delete_project_id_v1_conversations_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/conversations/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "conversations delete-item",
+      "operation": "delete_project_id_v1_conversations_id_1_items_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "11111111-1111-4111-8111-111111111111",
+        "id_2": "22222222-2222-4222-8222-222222222222"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/conversations/11111111-1111-4111-8111-111111111111/items/22222222-2222-4222-8222-222222222222",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "conversations get",
+      "operation": "get_project_id_v1_conversations_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/conversations/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "conversations list",
+      "operation": "get_project_id_v1_conversations",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/conversations",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "conversations list-items",
+      "operation": "get_project_id_v1_conversations_id_items",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/conversations/11111111-1111-4111-8111-111111111111/items",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "conversations update",
+      "operation": "post_project_id_v1_conversations_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/conversations/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "metadata": {
+          "sdk_fixture": "true"
+        }
+      },
+      "body_base64": "eyJtZXRhZGF0YSI6eyJzZGtfZml4dHVyZSI6InRydWUifX0="
+    },
+    {
+      "command": "embeddings create",
+      "operation": "post_project_id_endpoint_slug_v1_embeddings",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/11111111-1111-4111-8111-111111111111/v1/embeddings",
+      "content_type": "application/json",
+      "body_json": {
+        "input": "fixture",
+        "model": "default"
+      },
+      "body_base64": "eyJpbnB1dCI6ImZpeHR1cmUiLCJtb2RlbCI6ImRlZmF1bHQifQ=="
+    },
+    {
+      "command": "endpoints create",
+      "operation": "post_project_id_v1_management_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints",
+      "content_type": "application/json",
+      "body_json": {
+        "tier_id": "11111111-1111-4111-8111-111111111111",
+        "name": "SDK fixture",
+        "slug": "sdk-fixture",
+        "model_id": "11111111-1111-4111-8111-111111111111"
+      },
+      "body_base64": "eyJ0aWVyX2lkIjoiMTExMTExMTEtMTExMS00MTExLTgxMTEtMTExMTExMTExMTExIiwibmFtZSI6IlNESyBmaXh0dXJlIiwic2x1ZyI6InNkay1maXh0dXJlIiwibW9kZWxfaWQiOiIxMTExMTExMS0xMTExLTQxMTEtODExMS0xMTExMTExMTExMTEifQ=="
+    },
+    {
+      "command": "endpoints delete",
+      "operation": "delete_project_id_v1_management_endpoints_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints list",
+      "operation": "get_project_id_v1_management_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints provision",
+      "operation": "post_project_id_v1_management_endpoints_id_provision",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/provision",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints regenerate-capabilities",
+      "operation": "post_project_id_v1_management_endpoints_id_regenerate_capabilities",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/regenerate-capabilities",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints show",
+      "operation": "get_project_id_v1_management_endpoints_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints unprovision",
+      "operation": "post_project_id_v1_management_endpoints_id_unprovision",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/unprovision",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints update",
+      "operation": "patch_project_id_v1_management_endpoints_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "SDK fixture"
+      },
+      "body_base64": "eyJuYW1lIjoiU0RLIGZpeHR1cmUifQ=="
+    },
+    {
+      "command": "evolution breaker-reset",
+      "operation": "post_project_id_v1_management_evolution_id_lane_breaker_reset",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture",
+        "lane": "chat_instruction"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture/chat_instruction/breaker/reset",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "evolution disable",
+      "operation": "put_project_id_v1_management_evolution_id_lane_enable",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture",
+        "lane": "chat_instruction"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture/chat_instruction/enable",
+      "content_type": "application/json",
+      "body_json": {
+        "enabled": false
+      },
+      "body_base64": "eyJlbmFibGVkIjpmYWxzZX0="
+    },
+    {
+      "command": "evolution enable",
+      "operation": "put_project_id_v1_management_evolution_id_lane_enable",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture",
+        "lane": "chat_instruction"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture/chat_instruction/enable",
+      "content_type": "application/json",
+      "body_json": {
+        "enabled": true
+      },
+      "body_base64": "eyJlbmFibGVkIjp0cnVlfQ=="
+    },
+    {
+      "command": "evolution history",
+      "operation": "get_project_id_v1_management_evolution_id_lane_history",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture",
+        "lane": "chat_instruction"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture/chat_instruction/history",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "evolution rollback",
+      "operation": "post_project_id_v1_management_evolution_id_lane_rollback",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture",
+        "lane": "chat_instruction"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture/chat_instruction/rollback",
+      "content_type": "application/json",
+      "body_json": {
+        "version": 1
+      },
+      "body_base64": "eyJ2ZXJzaW9uIjoxfQ=="
+    },
+    {
+      "command": "evolution run",
+      "operation": "post_project_id_v1_management_evolution_id_lane_run",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture",
+        "lane": "chat_instruction"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture/chat_instruction/run",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "evolution run-status",
+      "operation": "get_project_id_v1_management_evolution_id_1_lane_runs_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "lane": "chat_instruction",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture/chat_instruction/runs/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "evolution show",
+      "operation": "get_project_id_v1_management_evolution_id_lane_active",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture",
+        "lane": "chat_instruction"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture/chat_instruction/active",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "evolution status",
+      "operation": "get_project_id_v1_management_evolution_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/evolution/ws_fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exec cancel",
+      "operation": "post_project_id_v1_exec_invocations_id_cancel",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/invocations/11111111-1111-4111-8111-111111111111/cancel",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exec history",
+      "operation": "get_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [
+        [
+          "limit",
+          "50"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/exec/invocations",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exec invoke",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/invocations",
+      "content_type": "application/json",
+      "body_json": {
+        "workspace_id": "ws_fixture",
+        "arguments": {},
+        "tool_name": "fixture.echo"
+      },
+      "body_base64": "eyJ3b3Jrc3BhY2VfaWQiOiJ3c19maXh0dXJlIiwiYXJndW1lbnRzIjp7fSwidG9vbF9uYW1lIjoiZml4dHVyZS5lY2hvIn0="
+    },
+    {
+      "command": "exec show",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/invocations/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exec tool-show",
+      "operation": "get_project_id_v1_exec_tools_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "SDK fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/tools/SDK%20fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exec tools",
+      "operation": "get_project_id_v1_exec_tools",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/tools",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exec watch",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/invocations/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exports cancel",
+      "operation": "delete_project_id_v1_exports_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exports/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exports create",
+      "operation": "post_project_id_v1_exports_logs",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exports/logs",
+      "content_type": "application/json",
+      "body_json": {
+        "until": "2026-10-02T00:00:00Z",
+        "since": "2026-10-01T00:00:00Z"
+      },
+      "body_base64": "eyJ1bnRpbCI6IjIwMjYtMTAtMDJUMDA6MDA6MDBaIiwic2luY2UiOiIyMDI2LTEwLTAxVDAwOjAwOjAwWiJ9"
+    },
+    {
+      "command": "exports download",
+      "operation": "get_project_id_v1_exports_id_download",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exports/11111111-1111-4111-8111-111111111111/download",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "exports status",
+      "operation": "get_project_id_v1_exports_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exports/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "health dashboard",
+      "operation": "get_project_id_v1_health_dashboard",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/health/dashboard",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "health services",
+      "operation": "get_project_id_v1_health_dashboard",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/health/dashboard",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "learnings list",
+      "operation": "get_project_id_v1_exec_learnings",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [
+        [
+          "limit",
+          "200"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/exec/learnings",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "learnings show",
+      "operation": "get_project_id_v1_exec_learnings_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/exec/learnings/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "maintenance cancel",
+      "operation": "delete_project_id_v1_management_maintenance_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/maintenance/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "maintenance complete",
+      "operation": "post_project_id_v1_management_maintenance_id_complete",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/maintenance/11111111-1111-4111-8111-111111111111/complete",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "maintenance list",
+      "operation": "get_project_id_v1_management_maintenance",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/maintenance",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "maintenance purge",
+      "operation": "post_project_id_v1_management_maintenance_id_purge",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/maintenance/11111111-1111-4111-8111-111111111111/purge",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "maintenance schedule",
+      "operation": "post_project_id_v1_management_maintenance",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/maintenance",
+      "content_type": "application/json",
+      "body_json": {
+        "ends_at": "2026-11-02T00:00:00Z",
+        "starts_at": "2026-11-01T00:00:00Z",
+        "title": "fixture",
+        "description": "fixture"
+      },
+      "body_base64": "eyJlbmRzX2F0IjoiMjAyNi0xMS0wMlQwMDowMDowMFoiLCJzdGFydHNfYXQiOiIyMDI2LTExLTAxVDAwOjAwOjAwWiIsInRpdGxlIjoiZml4dHVyZSIsImRlc2NyaXB0aW9uIjoiZml4dHVyZSJ9"
+    },
+    {
+      "command": "maintenance update",
+      "operation": "patch_project_id_v1_management_maintenance_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/maintenance/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "description": "fixture",
+        "starts_at": "2026-11-01T00:00:00Z",
+        "title": "fixture",
+        "ends_at": "2026-11-02T00:00:00Z"
+      },
+      "body_base64": "eyJkZXNjcmlwdGlvbiI6ImZpeHR1cmUiLCJzdGFydHNfYXQiOiIyMDI2LTExLTAxVDAwOjAwOjAwWiIsInRpdGxlIjoiZml4dHVyZSIsImVuZHNfYXQiOiIyMDI2LTExLTAyVDAwOjAwOjAwWiJ9"
+    },
+    {
+      "command": "models update",
+      "operation": "patch_project_id_v1_models_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "description": "fixture"
+      },
+      "body_base64": "eyJkZXNjcmlwdGlvbiI6ImZpeHR1cmUifQ=="
+    },
+    {
+      "command": "models hf-overrides",
+      "operation": "get_project_id_v1_models_id_hf_overrides",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/hf-overrides",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "preferences get",
+      "operation": "get_project_id_v1_user_preferences",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/user/preferences",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "preferences set",
+      "operation": "patch_project_id_v1_user_preferences",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/user/preferences",
+      "content_type": "application/json",
+      "body_json": {
+        "value": "true",
+        "key": "sdk_fixture"
+      },
+      "body_base64": "eyJ2YWx1ZSI6InRydWUiLCJrZXkiOiJzZGtfZml4dHVyZSJ9"
+    },
+    {
+      "command": "responses create",
+      "operation": "post_project_id_endpoint_slug_v1_responses",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/11111111-1111-4111-8111-111111111111/v1/responses",
+      "content_type": "application/json",
+      "body_json": {
+        "input": "fixture",
+        "stream": false,
+        "model": "default"
+      },
+      "body_base64": "eyJpbnB1dCI6ImZpeHR1cmUiLCJzdHJlYW0iOmZhbHNlLCJtb2RlbCI6ImRlZmF1bHQifQ=="
+    },
+    {
+      "command": "semantic-router decisions",
+      "operation": "get_project_id_v1_management_semantic_router_decisions",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/decisions",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "semantic-router health",
+      "operation": "get_project_id_v1_management_semantic_router_health",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/health",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "settings delete",
+      "operation": "delete_project_id_v1_settings_project",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/settings/project",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "settings get",
+      "operation": "get_project_id_v1_settings_project",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/settings/project",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "settings update",
+      "operation": "patch_project_id_v1_settings_project",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/settings/project",
+      "content_type": "application/json",
+      "body_json": {
+        "description": "fixture",
+        "name": "SDK fixture"
+      },
+      "body_base64": "eyJkZXNjcmlwdGlvbiI6ImZpeHR1cmUiLCJuYW1lIjoiU0RLIGZpeHR1cmUifQ=="
+    },
+    {
+      "command": "templates apply",
+      "operation": "post_project_id_v1_workspaces_id_1_chat_templates_id_2_apply",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/chat-templates/ctpl_fixture/apply",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "templates apply-from-dir",
+      "operation": "get_project_id_v1_chat_templates",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates apply-from-dir",
+      "operation": "get_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates apply-from-dir",
+      "operation": "patch_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "approval_policy": "standard",
+        "description": "Offline contract fixture",
+        "name": "sdk-fixture",
+        "allowed_tools": [],
+        "system_prompt": "Test fixture"
+      },
+      "body_base64": "eyJhcHByb3ZhbF9wb2xpY3kiOiJzdGFuZGFyZCIsImRlc2NyaXB0aW9uIjoiT2ZmbGluZSBjb250cmFjdCBmaXh0dXJlIiwibmFtZSI6InNkay1maXh0dXJlIiwiYWxsb3dlZF90b29scyI6W10sInN5c3RlbV9wcm9tcHQiOiJUZXN0IGZpeHR1cmUifQ=="
+    },
+    {
+      "command": "templates create",
+      "operation": "post_project_id_v1_chat_templates",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates",
+      "content_type": "application/json",
+      "body_json": {
+        "description": "Offline contract fixture",
+        "approval_policy": "standard",
+        "allowed_tools": [],
+        "system_prompt": "Test fixture",
+        "name": "sdk-fixture"
+      },
+      "body_base64": "eyJkZXNjcmlwdGlvbiI6Ik9mZmxpbmUgY29udHJhY3QgZml4dHVyZSIsImFwcHJvdmFsX3BvbGljeSI6InN0YW5kYXJkIiwiYWxsb3dlZF90b29scyI6W10sInN5c3RlbV9wcm9tcHQiOiJUZXN0IGZpeHR1cmUiLCJuYW1lIjoic2RrLWZpeHR1cmUifQ=="
+    },
+    {
+      "command": "templates delete",
+      "operation": "delete_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates list",
+      "operation": "get_project_id_v1_chat_templates",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates promote",
+      "operation": "post_project_id_v1_chat_templates_id_promote",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture/promote",
+      "content_type": "application/json",
+      "body_json": {
+        "scope": "platform"
+      },
+      "body_base64": "eyJzY29wZSI6InBsYXRmb3JtIn0="
+    },
+    {
+      "command": "templates show",
+      "operation": "get_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates update",
+      "operation": "patch_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture",
+      "content_type": "application/json",
+      "body_json": {
+        "system_prompt": "Test fixture",
+        "description": "Offline contract fixture",
+        "approval_policy": "standard",
+        "allowed_tools": [],
+        "name": "sdk-fixture"
+      },
+      "body_base64": "eyJzeXN0ZW1fcHJvbXB0IjoiVGVzdCBmaXh0dXJlIiwiZGVzY3JpcHRpb24iOiJPZmZsaW5lIGNvbnRyYWN0IGZpeHR1cmUiLCJhcHByb3ZhbF9wb2xpY3kiOiJzdGFuZGFyZCIsImFsbG93ZWRfdG9vbHMiOltdLCJuYW1lIjoic2RrLWZpeHR1cmUifQ=="
+    },
+    {
+      "command": "templates versions",
+      "operation": "get_project_id_v1_chat_templates_id_versions",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture/versions",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "usage endpoints",
+      "operation": "get_project_id_v1_usage_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/usage/endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "usage events",
+      "operation": "get_project_id_v1_usage_events",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/usage/events",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "usage logs",
+      "operation": "get_project_id_v1_usage_logs",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/usage/logs",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "usage uptime",
+      "operation": "get_project_id_v1_usage_uptime",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/usage/uptime",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces agents",
+      "operation": "get_project_id_v1_workspaces_id_agents",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/agents",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces auto-approvals",
+      "operation": "get_project_id_v1_workspaces_id_auto_approvals",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/auto-approvals",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces bind-agent",
+      "operation": "post_project_id_v1_workspaces_id_agents",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/agents",
+      "content_type": "application/json",
+      "body_json": {
+        "agent_id": "11111111-1111-4111-8111-111111111111"
+      },
+      "body_base64": "eyJhZ2VudF9pZCI6IjExMTExMTExLTExMTEtNDExMS04MTExLTExMTExMTExMTExMSJ9"
+    },
+    {
+      "command": "workspaces create",
+      "operation": "post_project_id_v1_workspaces",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "SDK fixture",
+        "description": "fixture"
+      },
+      "body_base64": "eyJuYW1lIjoiU0RLIGZpeHR1cmUiLCJkZXNjcmlwdGlvbiI6ImZpeHR1cmUifQ=="
+    },
+    {
+      "command": "workspaces delete",
+      "operation": "delete_project_id_v1_workspaces_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces grant-auto-approval",
+      "operation": "post_project_id_v1_workspaces_id_auto_approvals",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/auto-approvals",
+      "content_type": "application/json",
+      "body_json": {
+        "domain": "fixture",
+        "max_risk": "write"
+      },
+      "body_base64": "eyJkb21haW4iOiJmaXh0dXJlIiwibWF4X3Jpc2siOiJ3cml0ZSJ9"
+    },
+    {
+      "command": "workspaces list",
+      "operation": "get_project_id_v1_workspaces",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces pause-agent",
+      "operation": "post_project_id_v1_workspaces_id_1_agents_id_2_pause",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/agents/11111111-1111-4111-8111-111111111111/pause",
+      "content_type": "application/json",
+      "body_json": {
+        "reason": "fixture"
+      },
+      "body_base64": "eyJyZWFzb24iOiJmaXh0dXJlIn0="
+    },
+    {
+      "command": "workspaces resume-agent",
+      "operation": "post_project_id_v1_workspaces_id_1_agents_id_2_resume",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/agents/11111111-1111-4111-8111-111111111111/resume",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "workspaces revoke-auto-approval",
+      "operation": "delete_project_id_v1_workspaces_id_1_auto_approvals_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/auto-approvals/fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces revalidate-intelligence",
+      "operation": "post_project_id_v1_workspaces_id_revalidate_intelligence",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/revalidate-intelligence",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "workspaces search",
+      "operation": "post_project_id_v1_workspaces_id_search",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/search",
+      "content_type": "application/json",
+      "body_json": {
+        "query": "fixture"
+      },
+      "body_base64": "eyJxdWVyeSI6ImZpeHR1cmUifQ=="
+    },
+    {
+      "command": "workspaces show",
+      "operation": "get_project_id_v1_workspaces_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces unbind-agent",
+      "operation": "delete_project_id_v1_workspaces_id_1_agents_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/agents/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces update",
+      "operation": "patch_project_id_v1_workspaces_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "SDK fixture",
+        "description": "fixture"
+      },
+      "body_base64": "eyJuYW1lIjoiU0RLIGZpeHR1cmUiLCJkZXNjcmlwdGlvbiI6ImZpeHR1cmUifQ=="
+    },
+    {
+      "command": "admin agents list",
+      "operation": "get_project_id_v1_admin_private_agents",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/private-agents",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin agents attach",
+      "operation": "post_project_id_v1_admin_private_agents_id_attach_project",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/private-agents/11111111-1111-4111-8111-111111111111/attach-project",
+      "content_type": "application/json",
+      "body_json": {
+        "project_id": "11111111-1111-4111-8111-111111111111"
+      },
+      "body_base64": "eyJwcm9qZWN0X2lkIjoiMTExMTExMTEtMTExMS00MTExLTgxMTEtMTExMTExMTExMTExIn0="
+    },
+    {
+      "command": "admin storage-tiers list",
+      "operation": "get_project_id_v1_admin_storage_tiers",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/storage-tiers",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin storage-tiers create",
+      "operation": "post_project_id_v1_admin_storage_tiers",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/storage-tiers",
+      "content_type": "application/json",
+      "body_json": {
+        "description": "fixture",
+        "markup_multiplier": 0.1,
+        "region": "us-east-1",
+        "provider_name": "11111111-1111-4111-8111-111111111111",
+        "slug": "sdk-fixture",
+        "name": "SDK fixture",
+        "base_rate_per_gb": 0.1
+      },
+      "body_base64": "eyJkZXNjcmlwdGlvbiI6ImZpeHR1cmUiLCJtYXJrdXBfbXVsdGlwbGllciI6MC4xLCJyZWdpb24iOiJ1cy1lYXN0LTEiLCJwcm92aWRlcl9uYW1lIjoiMTExMTExMTEtMTExMS00MTExLTgxMTEtMTExMTExMTExMTExIiwic2x1ZyI6InNkay1maXh0dXJlIiwibmFtZSI6IlNESyBmaXh0dXJlIiwiYmFzZV9yYXRlX3Blcl9nYiI6MC4xfQ=="
+    },
+    {
+      "command": "admin storage-tiers update",
+      "operation": "patch_project_id_v1_admin_storage_tiers_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/storage-tiers/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "provider_name": "11111111-1111-4111-8111-111111111111",
+        "description": "fixture",
+        "base_rate_per_gb": 0.1,
+        "markup_multiplier": 0.1,
+        "region": "us-east-1",
+        "name": "SDK fixture"
+      },
+      "body_base64": "eyJwcm92aWRlcl9uYW1lIjoiMTExMTExMTEtMTExMS00MTExLTgxMTEtMTExMTExMTExMTExIiwiZGVzY3JpcHRpb24iOiJmaXh0dXJlIiwiYmFzZV9yYXRlX3Blcl9nYiI6MC4xLCJtYXJrdXBfbXVsdGlwbGllciI6MC4xLCJyZWdpb24iOiJ1cy1lYXN0LTEiLCJuYW1lIjoiU0RLIGZpeHR1cmUifQ=="
+    },
+    {
+      "command": "admin storage-tiers delete",
+      "operation": "delete_project_id_v1_admin_storage_tiers_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/storage-tiers/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin maintenance list",
+      "operation": "get_project_id_v1_admin_maintenance_windows",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/maintenance/windows",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin maintenance get",
+      "operation": "get_project_id_v1_admin_maintenance_windows_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/maintenance/windows/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin maintenance create",
+      "operation": "post_project_id_v1_admin_maintenance_windows",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/maintenance/windows",
+      "content_type": "application/json",
+      "body_json": {
+        "end_time": "2026-11-02T00:00:00Z",
+        "title": "fixture",
+        "description": "fixture",
+        "reason": "fixture",
+        "start_time": "2026-11-01T00:00:00Z"
+      },
+      "body_base64": "eyJlbmRfdGltZSI6IjIwMjYtMTEtMDJUMDA6MDA6MDBaIiwidGl0bGUiOiJmaXh0dXJlIiwiZGVzY3JpcHRpb24iOiJmaXh0dXJlIiwicmVhc29uIjoiZml4dHVyZSIsInN0YXJ0X3RpbWUiOiIyMDI2LTExLTAxVDAwOjAwOjAwWiJ9"
+    },
+    {
+      "command": "admin maintenance update",
+      "operation": "patch_project_id_v1_admin_maintenance_windows_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/maintenance/windows/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "start_time": "2026-11-01T00:00:00Z",
+        "end_time": "2026-11-02T00:00:00Z",
+        "reason": "fixture",
+        "title": "fixture",
+        "description": "fixture"
+      },
+      "body_base64": "eyJzdGFydF90aW1lIjoiMjAyNi0xMS0wMVQwMDowMDowMFoiLCJlbmRfdGltZSI6IjIwMjYtMTEtMDJUMDA6MDA6MDBaIiwicmVhc29uIjoiZml4dHVyZSIsInRpdGxlIjoiZml4dHVyZSIsImRlc2NyaXB0aW9uIjoiZml4dHVyZSJ9"
+    },
+    {
+      "command": "admin maintenance delete",
+      "operation": "delete_project_id_v1_admin_maintenance_windows_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/maintenance/windows/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin cache stats",
+      "operation": "get_project_id_v1_admin_cache_stats",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/cache/stats",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin cache keys",
+      "operation": "get_project_id_v1_admin_cache_keys",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/cache/keys",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "admin cache clear",
+      "operation": "post_project_id_v1_admin_cache_clear",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/cache/clear",
+      "content_type": "application/json",
+      "body_json": {
+        "purge_type": "all"
+      },
+      "body_base64": "eyJwdXJnZV90eXBlIjoiYWxsIn0="
+    },
+    {
+      "command": "admin tasks cancel",
+      "operation": "post_project_id_v1_admin_tasks_id_cancel",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/admin/tasks/11111111-1111-4111-8111-111111111111/cancel",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "chats branches fork",
+      "operation": "post_project_id_v1_chats_id_branches",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111/branches",
+      "content_type": "application/json",
+      "body_json": {
+        "title": "fixture",
+        "from_message_id": "11111111-1111-4111-8111-111111111111"
+      },
+      "body_base64": "eyJ0aXRsZSI6ImZpeHR1cmUiLCJmcm9tX21lc3NhZ2VfaWQiOiIxMTExMTExMS0xMTExLTQxMTEtODExMS0xMTExMTExMTExMTEifQ=="
+    },
+    {
+      "command": "chats branches list",
+      "operation": "get_project_id_v1_chats_id_branches",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111/branches",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats members add",
+      "operation": "get_project_id_v1_project_members_search",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [
+        [
+          "q",
+          "sdk-fixture@example.invalid"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/project-members/search",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats members list",
+      "operation": "get_project_id_v1_chats_id_members",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111/members",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats members remove",
+      "operation": "delete_project_id_v1_chats_id_1_members_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "11111111-1111-4111-8111-111111111111",
+        "id_2": "22222222-2222-4222-8222-222222222222"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111/members/22222222-2222-4222-8222-222222222222",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats memories list",
+      "operation": "get_project_id_v1_chats_id_memories",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111/memories",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats messages list",
+      "operation": "get_project_id_v1_chats_id_messages",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111/messages",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats visibility get",
+      "operation": "get_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "chats visibility set",
+      "operation": "patch_project_id_v1_chats_id_visibility",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/11111111-1111-4111-8111-111111111111/visibility",
+      "content_type": "application/json",
+      "body_json": {
+        "visibility": "project"
+      },
+      "body_base64": "eyJ2aXNpYmlsaXR5IjoicHJvamVjdCJ9"
+    },
+    {
+      "command": "endpoints agents add",
+      "operation": "post_project_id_v1_management_endpoints_id_agents",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/agents",
+      "content_type": "application/json",
+      "body_json": {
+        "agent_id": "11111111-1111-4111-8111-111111111111",
+        "weight": 1
+      },
+      "body_base64": "eyJhZ2VudF9pZCI6IjExMTExMTExLTExMTEtNDExMS04MTExLTExMTExMTExMTExMSIsIndlaWdodCI6MX0="
+    },
+    {
+      "command": "endpoints agents list",
+      "operation": "get_project_id_v1_management_endpoints_id_agents",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/agents",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints agents remove",
+      "operation": "delete_project_id_v1_management_endpoints_id_1_agents_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "11111111-1111-4111-8111-111111111111",
+        "id_2": "22222222-2222-4222-8222-222222222222"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/agents/22222222-2222-4222-8222-222222222222",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints agents weight",
+      "operation": "patch_project_id_v1_management_endpoints_id_1_agents_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "11111111-1111-4111-8111-111111111111",
+        "id_2": "22222222-2222-4222-8222-222222222222"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/agents/22222222-2222-4222-8222-222222222222",
+      "content_type": "application/json",
+      "body_json": {
+        "weight": 1
+      },
+      "body_base64": "eyJ3ZWlnaHQiOjF9"
+    },
+    {
+      "command": "endpoints cors get",
+      "operation": "get_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/cors",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints cors set",
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/cors",
+      "content_type": "application/json",
+      "body_json": {
+        "allow_origins": [
+          "https://example.invalid"
+        ],
+        "allow_methods": [
+          "GET",
+          "POST"
+        ]
+      },
+      "body_base64": "eyJhbGxvd19vcmlnaW5zIjpbImh0dHBzOlwvXC9leGFtcGxlLmludmFsaWQiXSwiYWxsb3dfbWV0aG9kcyI6WyJHRVQiLCJQT1NUIl19"
+    },
+    {
+      "command": "endpoints health check",
+      "operation": "get_project_id_v1_management_endpoints_id_health_check",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/health/check",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge artifacts delete",
+      "operation": "delete_project_id_v1_chats_id_1_artifacts_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "chat_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/chat_fixture/artifacts/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge artifacts edit",
+      "operation": "patch_project_id_v1_chats_id_1_artifacts_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "chat_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/chat_fixture/artifacts/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "SDK fixture",
+        "content": "Offline fixture"
+      },
+      "body_base64": "eyJuYW1lIjoiU0RLIGZpeHR1cmUiLCJjb250ZW50IjoiT2ZmbGluZSBmaXh0dXJlIn0="
+    },
+    {
+      "command": "knowledge artifacts list",
+      "operation": "get_project_id_v1_chats_id_artifacts",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "chat_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/chat_fixture/artifacts",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge artifacts show",
+      "operation": "get_project_id_v1_chats_id_artifacts",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "chat_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chats/chat_fixture/artifacts",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge decisions delete",
+      "operation": "delete_project_id_v1_workspaces_id_1_decisions_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/decisions/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge decisions edit",
+      "operation": "patch_project_id_v1_workspaces_id_1_decisions_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/decisions/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "title": "fixture"
+      },
+      "body_base64": "eyJ0aXRsZSI6ImZpeHR1cmUifQ=="
+    },
+    {
+      "command": "knowledge decisions list",
+      "operation": "get_project_id_v1_workspaces_id_decisions",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/decisions",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge decisions show",
+      "operation": "get_project_id_v1_workspaces_id_decisions",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/decisions",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge memories create",
+      "operation": "post_project_id_v1_workspaces_id_memories",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/memories",
+      "content_type": "application/json",
+      "body_json": {
+        "content": "Offline fixture"
+      },
+      "body_base64": "eyJjb250ZW50IjoiT2ZmbGluZSBmaXh0dXJlIn0="
+    },
+    {
+      "command": "knowledge memories delete",
+      "operation": "delete_project_id_v1_workspaces_id_1_memories_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/memories/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge memories edit",
+      "operation": "patch_project_id_v1_workspaces_id_1_memories_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/memories/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "content": "Offline fixture"
+      },
+      "body_base64": "eyJjb250ZW50IjoiT2ZmbGluZSBmaXh0dXJlIn0="
+    },
+    {
+      "command": "knowledge memories list",
+      "operation": "get_project_id_v1_workspaces_id_memories",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/memories",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge memories show",
+      "operation": "get_project_id_v1_workspaces_id_memories",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/memories",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge milestones delete",
+      "operation": "delete_project_id_v1_workspaces_id_1_milestones_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/milestones/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge milestones edit",
+      "operation": "patch_project_id_v1_workspaces_id_1_milestones_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/milestones/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "title": "fixture",
+        "description": "fixture"
+      },
+      "body_base64": "eyJ0aXRsZSI6ImZpeHR1cmUiLCJkZXNjcmlwdGlvbiI6ImZpeHR1cmUifQ=="
+    },
+    {
+      "command": "knowledge milestones list",
+      "operation": "get_project_id_v1_workspaces_id_milestones",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/milestones",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "knowledge milestones show",
+      "operation": "get_project_id_v1_workspaces_id_milestones",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/milestones",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "project invitations list",
+      "operation": "get_project_id_v1_management_project_invitations",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/project/invitations",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "project invitations resend",
+      "operation": "post_project_id_v1_management_project_invitations_id_resend",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/project/invitations/11111111-1111-4111-8111-111111111111/resend",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "project invitations revoke",
+      "operation": "delete_project_id_v1_management_project_invitations_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/project/invitations/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "project members add",
+      "operation": "post_project_id_v1_management_project_members",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/project/members",
+      "content_type": "application/json",
+      "body_json": {
+        "email": "sdk-fixture@example.invalid",
+        "role": "member"
+      },
+      "body_base64": "eyJlbWFpbCI6InNkay1maXh0dXJlQGV4YW1wbGUuaW52YWxpZCIsInJvbGUiOiJtZW1iZXIifQ=="
+    },
+    {
+      "command": "project members list",
+      "operation": "get_project_id_v1_management_project_members",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/project/members",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "project members remove",
+      "operation": "delete_project_id_v1_management_project_members_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "22222222-2222-4222-8222-222222222222"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/project/members/22222222-2222-4222-8222-222222222222",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "project members search",
+      "operation": "get_project_id_v1_project_members_search",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [
+        [
+          "q",
+          "fixture"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/project-members/search",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "project members update",
+      "operation": "patch_project_id_v1_management_project_members_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "22222222-2222-4222-8222-222222222222"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/project/members/22222222-2222-4222-8222-222222222222",
+      "content_type": "application/json",
+      "body_json": {
+        "role": "member"
+      },
+      "body_base64": "eyJyb2xlIjoibWVtYmVyIn0="
+    },
+    {
+      "command": "semantic-router config set",
+      "operation": "patch_project_id_v1_management_semantic_router_config",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/config",
+      "content_type": "application/json",
+      "body_json": {
+        "semantic_router_enabled": true
+      },
+      "body_base64": "eyJzZW1hbnRpY19yb3V0ZXJfZW5hYmxlZCI6dHJ1ZX0="
+    },
+    {
+      "command": "semantic-router config show",
+      "operation": "get_project_id_v1_management_semantic_router_config",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/config",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "semantic-router descriptions regenerate",
+      "operation": "get_project_id_v1_management_semantic_router_config",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/config",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "semantic-router rules add",
+      "operation": "post_project_id_v1_management_semantic_router_rules",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/rules",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "SDK fixture",
+        "query_contains": [
+          "fixture"
+        ],
+        "endpoint_id": "11111111-1111-4111-8111-111111111111"
+      },
+      "body_base64": "eyJuYW1lIjoiU0RLIGZpeHR1cmUiLCJxdWVyeV9jb250YWlucyI6WyJmaXh0dXJlIl0sImVuZHBvaW50X2lkIjoiMTExMTExMTEtMTExMS00MTExLTgxMTEtMTExMTExMTExMTExIn0="
+    },
+    {
+      "command": "semantic-router rules delete",
+      "operation": "delete_project_id_v1_management_semantic_router_rules_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/rules/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "semantic-router rules disable",
+      "operation": "patch_project_id_v1_management_semantic_router_rules_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/rules/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "enabled": false
+      },
+      "body_base64": "eyJlbmFibGVkIjpmYWxzZX0="
+    },
+    {
+      "command": "semantic-router rules enable",
+      "operation": "patch_project_id_v1_management_semantic_router_rules_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/rules/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "enabled": true
+      },
+      "body_base64": "eyJlbmFibGVkIjp0cnVlfQ=="
+    },
+    {
+      "command": "semantic-router rules list",
+      "operation": "get_project_id_v1_management_semantic_router_rules",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/rules",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "semantic-router rules update",
+      "operation": "patch_project_id_v1_management_semantic_router_rules_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/semantic-router/rules/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "SDK fixture"
+      },
+      "body_base64": "eyJuYW1lIjoiU0RLIGZpeHR1cmUifQ=="
+    },
+    {
+      "command": "workspaces files list",
+      "operation": "get_project_id_v1_workspaces_id_files",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/files",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces members add",
+      "operation": "get_project_id_v1_project_members_search",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [
+        [
+          "q",
+          "sdk-fixture@example.invalid"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/project-members/search",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces members list",
+      "operation": "get_project_id_v1_workspaces_id_members",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/members",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces members remove",
+      "operation": "delete_project_id_v1_workspaces_id_1_members_id_2",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id_1": "ws_fixture",
+        "id_2": "22222222-2222-4222-8222-222222222222"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/members/22222222-2222-4222-8222-222222222222",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces visibility get",
+      "operation": "get_project_id_v1_workspaces_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "workspaces visibility set",
+      "operation": "patch_project_id_v1_workspaces_id_visibility",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/visibility",
+      "content_type": "application/json",
+      "body_json": {
+        "visibility": "project"
+      },
+      "body_base64": "eyJ2aXNpYmlsaXR5IjoicHJvamVjdCJ9"
+    },
+    {
+      "command": "endpoints health config get",
+      "operation": "get_project_id_v1_management_endpoints_id_health_config",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/health/config",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "endpoints health config set",
+      "operation": "put_project_id_v1_management_endpoints_id_health_config",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/endpoints/11111111-1111-4111-8111-111111111111/health/config",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "files legacy list",
+      "operation": "get_project_id_v1_files",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [
+        [
+          "limit",
+          "20"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/files",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "files legacy retrieve",
+      "operation": "get_project_id_v1_files_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/files/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models legacy list",
+      "operation": "get_project_id_v1_models",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [
+        [
+          "extended",
+          "true"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/models",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models legacy retrieve",
+      "operation": "get_project_id_v1_models_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [
+        [
+          "extended",
+          "true"
+        ]
+      ],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "batches legacy list",
+      "operation": "get_project_id_v1_batches",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/batches",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "batches legacy retrieve",
+      "operation": "get_project_id_v1_batches_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/batches/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "webhooks legacy list",
+      "operation": "get_project_id_v1_webhooks",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/webhooks",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "webhooks legacy retrieve",
+      "operation": "get_project_id_v1_webhooks_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/webhooks/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "keys legacy list",
+      "operation": "get_project_id_v1_management_api_keys",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/api-keys",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "keys legacy retrieve",
+      "operation": "get_project_id_v1_management_api_keys_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/api-keys/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "agents legacy list",
+      "operation": "get_project_id_v1_management_agents",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "agents legacy retrieve",
+      "operation": "get_project_id_v1_management_agents_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "slos legacy list",
+      "operation": "get_project_id_v1_slos",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/slos",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "slos legacy retrieve",
+      "operation": "get_project_id_v1_slos_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/slos/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "uploads legacy list",
+      "operation": "get_project_id_v1_uploads",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/uploads",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "uploads legacy retrieve",
+      "operation": "get_project_id_v1_uploads_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/uploads/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models legacy delete",
+      "operation": "delete_project_id_v1_models_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models legacy share",
+      "operation": "post_project_id_v1_models_id_share",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/share",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models legacy unshare",
+      "operation": "post_project_id_v1_models_id_unshare",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/unshare",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models legacy revalidate",
+      "operation": "post_project_id_v1_models_id_revalidate",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/revalidate",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models legacy catalog-info",
+      "operation": "get_project_id_v1_models_id_catalog_info",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/catalog-info",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models versions legacy create",
+      "operation": "post_project_id_v1_models_id_versions",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/versions",
+      "content_type": "application/json",
+      "body_json": {
+        "version": "1.0.0"
+      },
+      "body_base64": "eyJ2ZXJzaW9uIjoiMS4wLjAifQ=="
+    },
+    {
+      "command": "models versions legacy promote",
+      "operation": "post_project_id_v1_models_id_versions_1_0_0_promote",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/versions/1.0.0/promote",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models versions legacy rollback",
+      "operation": "post_project_id_v1_models_id_versions_1_0_0_rollback",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/versions/1.0.0/rollback",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "models versions legacy list",
+      "operation": "get_project_id_v1_models_id_versions",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/models/11111111-1111-4111-8111-111111111111/versions",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "files legacy upload",
+      "operation": "post_project_id_v1_files",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/files",
+      "content_type": "multipart/form-data; boundary=ErebineBoundary-370CB2F3-5A8C-493B-97DD-32D7FB5D0731",
+      "body_json": null,
+      "body_base64": "LS1FcmViaW5lQm91bmRhcnktMzcwQ0IyRjMtNUE4Qy00OTNCLTk3REQtMzJEN0ZCNUQwNzMxDQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9InB1cnBvc2UiDQoNCmJhdGNoDQotLUVyZWJpbmVCb3VuZGFyeS0zNzBDQjJGMy01QThDLTQ5M0ItOTdERC0zMkQ3RkI1RDA3MzENCkNvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0tZGF0YTsgbmFtZT0iZmlsZSI7IGZpbGVuYW1lPSJpbnB1dC50eHQiDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbQ0KDQpvZmZsaW5lIGZpeHR1cmUKDQotLUVyZWJpbmVCb3VuZGFyeS0zNzBDQjJGMy01QThDLTQ5M0ItOTdERC0zMkQ3RkI1RDA3MzEtLQ0K"
+    },
+    {
+      "command": "files legacy download",
+      "operation": "get_project_id_v1_files_id_content",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/files/11111111-1111-4111-8111-111111111111/content",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "keys legacy create",
+      "operation": "post_project_id_v1_management_api_keys",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/api-keys",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "sdk-fixture",
+        "scopes": [
+          "inference",
+          "management"
+        ]
+      },
+      "body_base64": "eyJuYW1lIjoic2RrLWZpeHR1cmUiLCJzY29wZXMiOlsiaW5mZXJlbmNlIiwibWFuYWdlbWVudCJdfQ=="
+    },
+    {
+      "command": "keys legacy delete",
+      "operation": "delete_project_id_v1_management_api_keys_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/api-keys/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "keys legacy ip-filter",
+      "operation": "put_project_id_v1_management_api_keys_id_ip_filter",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/api-keys/11111111-1111-4111-8111-111111111111/ip-filter",
+      "content_type": "application/json",
+      "body_json": {
+        "allowed_ips": [
+          "192.0.2.1"
+        ]
+      },
+      "body_base64": "eyJhbGxvd2VkX2lwcyI6WyIxOTIuMC4yLjEiXX0="
+    },
+    {
+      "command": "keys legacy quota",
+      "operation": "put_project_id_v1_management_api_keys_id_quota",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/api-keys/11111111-1111-4111-8111-111111111111/quota",
+      "content_type": "application/json",
+      "body_json": {
+        "quota_window": 60,
+        "quota_requests": 10
+      },
+      "body_base64": "eyJxdW90YV93aW5kb3ciOjYwLCJxdW90YV9yZXF1ZXN0cyI6MTB9"
+    },
+    {
+      "command": "agents legacy delete",
+      "operation": "delete_project_id_v1_management_agents_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "agents legacy events",
+      "operation": "get_project_id_v1_management_agents_id_events",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents/11111111-1111-4111-8111-111111111111/events",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "agents legacy update",
+      "operation": "patch_project_id_v1_management_agents_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "sdk-fixture"
+      },
+      "body_base64": "eyJuYW1lIjoic2RrLWZpeHR1cmUifQ=="
+    },
+    {
+      "command": "agents join-keys legacy list",
+      "operation": "get_project_id_v1_management_join_keys",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/join-keys",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "agents join-keys legacy revoke",
+      "operation": "delete_project_id_v1_management_join_keys_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/join-keys/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "batches legacy create",
+      "operation": "post_project_id_v1_files",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/files",
+      "content_type": "multipart/form-data; boundary=ErebineBoundary-9967B087-77CC-48D6-945E-B13B99ACF61B",
+      "body_json": null,
+      "body_base64": "LS1FcmViaW5lQm91bmRhcnktOTk2N0IwODctNzdDQy00OEQ2LTk0NUUtQjEzQjk5QUNGNjFCDQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9InB1cnBvc2UiDQoNCmJhdGNoDQotLUVyZWJpbmVCb3VuZGFyeS05OTY3QjA4Ny03N0NDLTQ4RDYtOTQ1RS1CMTNCOTlBQ0Y2MUINCkNvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0tZGF0YTsgbmFtZT0iZmlsZSI7IGZpbGVuYW1lPSJpbnB1dC50eHQiDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbQ0KDQpvZmZsaW5lIGZpeHR1cmUKDQotLUVyZWJpbmVCb3VuZGFyeS05OTY3QjA4Ny03N0NDLTQ4RDYtOTQ1RS1CMTNCOTlBQ0Y2MUItLQ0K"
+    },
+    {
+      "command": "completions legacy delete",
+      "operation": "delete_project_id_endpoint_slug_v1_chat_completions_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/chat/completions/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "completions legacy messages",
+      "operation": "get_project_id_endpoint_slug_v1_chat_completions_id_messages",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/chat/completions/11111111-1111-4111-8111-111111111111/messages",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses legacy delete",
+      "operation": "get_project_id_v1_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses legacy delete",
+      "operation": "delete_project_id_endpoint_slug_v1_responses_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/responses/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses legacy cancel",
+      "operation": "get_project_id_v1_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses legacy cancel",
+      "operation": "post_project_id_endpoint_slug_v1_responses_id_cancel",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/responses/11111111-1111-4111-8111-111111111111/cancel",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses legacy input-items",
+      "operation": "get_project_id_v1_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses legacy input-items",
+      "operation": "get_project_id_endpoint_slug_v1_responses_id_input_items",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/responses/11111111-1111-4111-8111-111111111111/input_items",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "webhooks legacy create",
+      "operation": "post_project_id_v1_webhooks",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/webhooks",
+      "content_type": "application/json",
+      "body_json": {
+        "url": "https://example.invalid/webhook",
+        "events": [
+          "exec.completed"
+        ]
+      },
+      "body_base64": "eyJ1cmwiOiJodHRwczpcL1wvZXhhbXBsZS5pbnZhbGlkXC93ZWJob29rIiwiZXZlbnRzIjpbImV4ZWMuY29tcGxldGVkIl19"
+    },
+    {
+      "command": "webhooks legacy delete",
+      "operation": "delete_project_id_v1_webhooks_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/webhooks/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "webhooks legacy test",
+      "operation": "post_project_id_v1_webhooks_id_test",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/webhooks/11111111-1111-4111-8111-111111111111/test",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "webhooks legacy deliveries",
+      "operation": "get_project_id_v1_webhooks_id_deliveries",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/webhooks/11111111-1111-4111-8111-111111111111/deliveries",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "webhooks legacy update",
+      "operation": "put_project_id_v1_webhooks_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/webhooks/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "url": "https://example.invalid/webhook"
+      },
+      "body_base64": "eyJ1cmwiOiJodHRwczpcL1wvZXhhbXBsZS5pbnZhbGlkXC93ZWJob29rIn0="
+    },
+    {
+      "command": "slos legacy delete",
+      "operation": "delete_project_id_v1_slos_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/slos/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "slos legacy history",
+      "operation": "get_project_id_v1_slos_id_history",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/slos/11111111-1111-4111-8111-111111111111/history",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "slos legacy calculate",
+      "operation": "post_project_id_v1_slos_id_calculate",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/slos/11111111-1111-4111-8111-111111111111/calculate",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "slos legacy summary",
+      "operation": "get_project_id_v1_slos_summary",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/slos/summary",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "uploads legacy cancel",
+      "operation": "post_project_id_v1_uploads_id_cancel",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/uploads/11111111-1111-4111-8111-111111111111/cancel",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "uploads legacy delete",
+      "operation": "delete_project_id_v1_uploads_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/uploads/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates workspace list",
+      "operation": "get_project_id_v1_workspaces_id_chat_templates",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/chat-templates",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates workspace create",
+      "operation": "post_project_id_v1_workspaces_id_chat_templates",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ws_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/workspaces/ws_fixture/chat-templates",
+      "content_type": "application/json",
+      "body_json": {
+        "system_prompt": "Test fixture",
+        "name": "sdk-fixture",
+        "allowed_tools": [],
+        "approval_policy": "standard",
+        "description": "Offline contract fixture"
+      },
+      "body_base64": "eyJzeXN0ZW1fcHJvbXB0IjoiVGVzdCBmaXh0dXJlIiwibmFtZSI6InNkay1maXh0dXJlIiwiYWxsb3dlZF90b29scyI6W10sImFwcHJvdmFsX3BvbGljeSI6InN0YW5kYXJkIiwiZGVzY3JpcHRpb24iOiJPZmZsaW5lIGNvbnRyYWN0IGZpeHR1cmUifQ=="
+    },
+    {
+      "command": "templates workspace show",
+      "operation": "get_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates workspace update",
+      "operation": "patch_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture",
+      "content_type": "application/json",
+      "body_json": {
+        "allowed_tools": [],
+        "name": "sdk-fixture",
+        "system_prompt": "Test fixture",
+        "description": "Offline contract fixture",
+        "approval_policy": "standard"
+      },
+      "body_base64": "eyJhbGxvd2VkX3Rvb2xzIjpbXSwibmFtZSI6InNkay1maXh0dXJlIiwic3lzdGVtX3Byb21wdCI6IlRlc3QgZml4dHVyZSIsImRlc2NyaXB0aW9uIjoiT2ZmbGluZSBjb250cmFjdCBmaXh0dXJlIiwiYXBwcm92YWxfcG9saWN5Ijoic3RhbmRhcmQifQ=="
+    },
+    {
+      "command": "templates workspace delete",
+      "operation": "delete_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "templates workspace versions",
+      "operation": "get_project_id_v1_chat_templates_id_versions",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "ctpl_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/chat-templates/ctpl_fixture/versions",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "completions endpoint list",
+      "operation": "get_project_id_endpoint_slug_v1_chat_completions",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/chat/completions",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "completions endpoint retrieve",
+      "operation": "get_project_id_endpoint_slug_v1_chat_completions_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/chat/completions/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses endpoint list",
+      "operation": "get_project_id_v1_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses endpoint list",
+      "operation": "get_project_id_endpoint_slug_v1_responses",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/responses",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses endpoint retrieve",
+      "operation": "get_project_id_v1_endpoints",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/endpoints",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "responses endpoint retrieve",
+      "operation": "get_project_id_endpoint_slug_v1_responses_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/responses/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "files delete",
+      "operation": "delete_project_id_v1_files_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/files/11111111-1111-4111-8111-111111111111",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "keys rotate confirmed",
+      "operation": "post_project_id_v1_management_api_keys_id_rotate",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/api-keys/11111111-1111-4111-8111-111111111111/rotate",
+      "content_type": "application/json",
+      "body_json": {},
+      "body_base64": "e30="
+    },
+    {
+      "command": "agents create with region",
+      "operation": "post_project_id_v1_management_agents",
+      "parameters": {
+        "project_id": "proj_fixture"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/management/agents",
+      "content_type": "application/json",
+      "body_json": {
+        "name": "sdk-fixture",
+        "region": "us-east-1",
+        "agent_public_key": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "worker_id": "worker_fixture"
+      },
+      "body_base64": "eyJuYW1lIjoic2RrLWZpeHR1cmUiLCJyZWdpb24iOiJ1cy1lYXN0LTEiLCJhZ2VudF9wdWJsaWNfa2V5IjoiQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQT0iLCJ3b3JrZXJfaWQiOiJ3b3JrZXJfZml4dHVyZSJ9"
+    },
+    {
+      "command": "batches cancel",
+      "operation": "post_project_id_v1_batches_id_cancel",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/v1/batches/11111111-1111-4111-8111-111111111111/cancel",
+      "content_type": null,
+      "body_json": null,
+      "body_base64": ""
+    },
+    {
+      "command": "completions metadata update",
+      "operation": "post_project_id_endpoint_slug_v1_chat_completions_id",
+      "parameters": {
+        "project_id": "proj_fixture",
+        "endpoint_slug": "sdk-fixture",
+        "id": "11111111-1111-4111-8111-111111111111"
+      },
+      "query": [],
+      "expected_path": "/proj_fixture/sdk-fixture/v1/chat/completions/11111111-1111-4111-8111-111111111111",
+      "content_type": "application/json",
+      "body_json": {
+        "metadata": {
+          "sdk_fixture": "true"
+        }
+      },
+      "body_base64": "eyJtZXRhZGF0YSI6eyJzZGtfZml4dHVyZSI6InRydWUifX0="
+    }
+  ]
+}

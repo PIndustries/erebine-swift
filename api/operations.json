@@ -161,7 +161,8 @@
       "sources": [
         "https://erebine.ai/docs/completions",
         "https://erebine.ai/docs/tool-calling",
-        "https://erebine.ai/docs/zero-data-retention"
+        "https://erebine.ai/docs/zero-data-retention",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_endpoint_slug_v1_chat_completions_id",
       "parameters": [
@@ -170,14 +171,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "completions legacy delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/{endpoint_slug}/v1/responses/{id}",
       "sources": [
         "https://erebine.ai/docs/responses",
-        "https://erebine.ai/docs/zero-data-retention"
+        "https://erebine.ai/docs/zero-data-retention",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_endpoint_slug_v1_responses_id",
       "parameters": [
@@ -186,7 +191,97 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "responses legacy delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_admin_maintenance_windows_id",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/admin/maintenance/windows/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin maintenance delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_admin_storage_tiers_id",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/admin/storage-tiers/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin storage-tiers delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_chat_templates_id",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/chat-templates/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "templates delete",
+        "templates workspace delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_chats_id",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/chats/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_chats_id_1_artifacts_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/chats/{id_1}/artifacts/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge artifacts delete"
+      ]
     },
     {
       "method": "DELETE",
@@ -204,11 +299,47 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "delete_project_id_v1_chats_id_1_members_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/chats/{id_1}/members/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats members remove"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_chats_id_exec_workspace",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/chats/{id}/exec-workspace",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats unlink-exec-workspace"
+      ]
+    },
+    {
       "method": "DELETE",
       "path": "/{project_id}/v1/conversations/{id}",
       "sources": [
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/erectl/conversations"
+        "https://erebine.ai/docs/erectl/conversations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_conversations_id",
       "parameters": [
@@ -216,14 +347,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "conversations delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/conversations/{id_1}/items/{id_2}",
       "sources": [
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/erectl/conversations"
+        "https://erebine.ai/docs/erectl/conversations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_conversations_id_1_items_id_2",
       "parameters": [
@@ -232,13 +367,17 @@
         "id_2"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "conversations delete-item"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/exports/{id}",
       "sources": [
-        "https://erebine.ai/docs/data-export"
+        "https://erebine.ai/docs/data-export",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_exports_id",
       "parameters": [
@@ -246,13 +385,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exports cancel"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/files/{id}",
       "sources": [
-        "https://erebine.ai/docs/files"
+        "https://erebine.ai/docs/files",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_files_id",
       "parameters": [
@@ -260,13 +403,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "files delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/management/agents/{id}",
       "sources": [
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_management_agents_id",
       "parameters": [
@@ -274,13 +421,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "agents legacy delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/management/api-keys/{id}",
       "sources": [
-        "https://erebine.ai/docs/erectl/keys"
+        "https://erebine.ai/docs/erectl/keys",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_management_api_keys_id",
       "parameters": [
@@ -288,13 +439,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "keys legacy delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/management/endpoints/{id}",
       "sources": [
-        "https://erebine.ai/docs/endpoint-cors"
+        "https://erebine.ai/docs/endpoint-cors",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_management_endpoints_id",
       "parameters": [
@@ -302,13 +457,35 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "endpoints delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_management_endpoints_id_1_agents_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/endpoints/{id_1}/agents/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints agents remove"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/management/join-keys/{id}",
       "sources": [
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_management_join_keys_id",
       "parameters": [
@@ -316,13 +493,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "agents join-keys legacy revoke"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/management/maintenance/{id}",
       "sources": [
-        "https://erebine.ai/docs/status-maintenance"
+        "https://erebine.ai/docs/status-maintenance",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_management_maintenance_id",
       "parameters": [
@@ -330,13 +511,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "maintenance cancel"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/management/project/invitations/{id}",
       "sources": [
-        "https://erebine.ai/docs/teams"
+        "https://erebine.ai/docs/teams",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_management_project_invitations_id",
       "parameters": [
@@ -344,13 +529,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "project invitations revoke"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/management/project/members/{id}",
       "sources": [
-        "https://erebine.ai/docs/teams"
+        "https://erebine.ai/docs/teams",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_management_project_members_id",
       "parameters": [
@@ -358,13 +547,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "project members remove"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/management/semantic-router/rules/{id}",
       "sources": [
-        "https://erebine.ai/docs/api-reference"
+        "https://erebine.ai/docs/api-reference",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_management_semantic_router_rules_id",
       "parameters": [
@@ -372,7 +565,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "semantic-router rules delete"
+      ]
     },
     {
       "name": "delete_project_id_v1_mcp",
@@ -393,7 +589,8 @@
       "path": "/{project_id}/v1/models/{id}",
       "sources": [
         "https://erebine.ai/docs/erectl/models",
-        "https://erebine.ai/docs/model-management"
+        "https://erebine.ai/docs/model-management",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_models_id",
       "parameters": [
@@ -401,13 +598,33 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models legacy delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_settings_project",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/settings/project",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "settings delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/slos/{id}",
       "sources": [
-        "https://erebine.ai/docs/slo-tracking"
+        "https://erebine.ai/docs/slo-tracking",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_slos_id",
       "parameters": [
@@ -415,14 +632,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "slos legacy delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/uploads/{id}",
       "sources": [
         "https://erebine.ai/docs/erectl/uploads",
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_uploads_id",
       "parameters": [
@@ -430,13 +651,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "uploads legacy delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/webhooks/{id}",
       "sources": [
-        "https://erebine.ai/docs/webhooks"
+        "https://erebine.ai/docs/webhooks",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_webhooks_id",
       "parameters": [
@@ -444,13 +669,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "webhooks legacy delete"
+      ]
     },
     {
       "method": "DELETE",
       "path": "/{project_id}/v1/workspaces/{id}",
       "sources": [
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_workspaces_id",
       "parameters": [
@@ -458,7 +687,64 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "workspaces delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_workspaces_id_1_agents_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id_1}/agents/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces unbind-agent"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_workspaces_id_1_auto_approvals_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id_1}/auto-approvals/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces revoke-auto-approval"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_workspaces_id_1_decisions_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id_1}/decisions/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge decisions delete"
+      ]
     },
     {
       "method": "DELETE",
@@ -476,11 +762,30 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "delete_project_id_v1_workspaces_id_1_members_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id_1}/members/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces members remove"
+      ]
+    },
+    {
       "method": "DELETE",
       "path": "/{project_id}/v1/workspaces/{id_1}/memories/{id_2}",
       "sources": [
         "https://erebine.ai/docs/chat-memory",
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "delete_project_id_v1_workspaces_id_1_memories_id_2",
       "parameters": [
@@ -489,7 +794,28 @@
         "id_2"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "knowledge memories delete"
+      ]
+    },
+    {
+      "name": "delete_project_id_v1_workspaces_id_1_milestones_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id_1}/milestones/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge milestones delete"
+      ]
     },
     {
       "method": "DELETE",
@@ -877,7 +1203,8 @@
       "path": "/{project_id}/{endpoint_slug}/v1/chat/completions",
       "sources": [
         "https://erebine.ai/docs/completions",
-        "https://erebine.ai/docs/tool-calling"
+        "https://erebine.ai/docs/tool-calling",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_endpoint_slug_v1_chat_completions",
       "parameters": [
@@ -885,7 +1212,10 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "completions endpoint list"
+      ]
     },
     {
       "method": "GET",
@@ -893,7 +1223,8 @@
       "sources": [
         "https://erebine.ai/docs/completions",
         "https://erebine.ai/docs/sdk-integrations",
-        "https://erebine.ai/docs/tool-calling"
+        "https://erebine.ai/docs/tool-calling",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_endpoint_slug_v1_chat_completions_id",
       "parameters": [
@@ -902,14 +1233,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "completions endpoint retrieve"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}/messages",
       "sources": [
         "https://erebine.ai/docs/completions",
-        "https://erebine.ai/docs/tool-calling"
+        "https://erebine.ai/docs/tool-calling",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_endpoint_slug_v1_chat_completions_id_messages",
       "parameters": [
@@ -918,7 +1253,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "completions legacy messages"
+      ]
     },
     {
       "method": "GET",
@@ -954,7 +1292,8 @@
       "method": "GET",
       "path": "/{project_id}/{endpoint_slug}/v1/responses",
       "sources": [
-        "https://erebine.ai/docs/responses"
+        "https://erebine.ai/docs/responses",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_endpoint_slug_v1_responses",
       "parameters": [
@@ -962,13 +1301,17 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "responses endpoint list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/{endpoint_slug}/v1/responses/{id}",
       "sources": [
-        "https://erebine.ai/docs/responses"
+        "https://erebine.ai/docs/responses",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_endpoint_slug_v1_responses_id",
       "parameters": [
@@ -977,13 +1320,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "responses endpoint retrieve"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/{endpoint_slug}/v1/responses/{id}/input_items",
       "sources": [
-        "https://erebine.ai/docs/responses"
+        "https://erebine.ai/docs/responses",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_endpoint_slug_v1_responses_id_input_items",
       "parameters": [
@@ -992,26 +1339,244 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "responses legacy input-items"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_anchors",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/anchors",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "anchors list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_anchors_id",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/anchors/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "anchors show"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_cache_keys",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/cache/keys",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin cache keys"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_cache_stats",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/cache/stats",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin cache stats"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_consumption",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/consumption",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin consumption"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_health",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/health",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin health"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_maintenance_windows",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/maintenance/windows",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin maintenance list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_maintenance_windows_id",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/maintenance/windows/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin maintenance get"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_private_agents",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/private-agents",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin agents list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_project_endpoints",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/project-endpoints",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin endpoints"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_storage_dashboard",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/storage/dashboard",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin storage"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_storage_tiers",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/storage-tiers",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin storage-tiers list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_admin_users",
+      "method": "GET",
+      "path": "/{project_id}/v1/admin/users",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin users"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/batches",
       "sources": [
-        "https://erebine.ai/docs/batch"
+        "https://erebine.ai/docs/batch",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_batches",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "batches legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/batches/{id}",
       "sources": [
-        "https://erebine.ai/docs/batch"
+        "https://erebine.ai/docs/batch",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_batches_id",
       "parameters": [
@@ -1019,7 +1584,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "batches legacy retrieve"
+      ]
     },
     {
       "name": "get_project_id_v1_chat_templates",
@@ -1030,15 +1598,110 @@
       ],
       "surface": "router",
       "sources": [
-        "https://erebine.ai/docs/erectl/templates"
+        "https://erebine.ai/docs/erectl/templates",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
-      "verification": "HTTP 200 verified against live account; response shape inspected"
+      "verification": "HTTP 200 verified against live account; response shape inspected",
+      "cli_commands": [
+        "templates apply-from-dir",
+        "templates list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chat_templates_id",
+      "method": "GET",
+      "path": "/{project_id}/v1/chat-templates/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "templates apply-from-dir",
+        "templates show",
+        "templates workspace show"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chat_templates_id_versions",
+      "method": "GET",
+      "path": "/{project_id}/v1/chat-templates/{id}/versions",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "templates versions",
+        "templates workspace versions"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chats",
+      "method": "GET",
+      "path": "/{project_id}/v1/chats",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chats_id",
+      "method": "GET",
+      "path": "/{project_id}/v1/chats/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats show",
+        "chats visibility get"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chats_id_artifacts",
+      "method": "GET",
+      "path": "/{project_id}/v1/chats/{id}/artifacts",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge artifacts list",
+        "knowledge artifacts show"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/chats/{id}/branches",
       "sources": [
-        "https://erebine.ai/docs/chat-branching"
+        "https://erebine.ai/docs/chat-branching",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_chats_id_branches",
       "parameters": [
@@ -1046,28 +1709,121 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "chats branches list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chats_id_context",
+      "method": "GET",
+      "path": "/{project_id}/v1/chats/{id}/context",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats context"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chats_id_exec_workspace",
+      "method": "GET",
+      "path": "/{project_id}/v1/chats/{id}/exec-workspace",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats exec-workspace"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chats_id_members",
+      "method": "GET",
+      "path": "/{project_id}/v1/chats/{id}/members",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats members list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chats_id_memories",
+      "method": "GET",
+      "path": "/{project_id}/v1/chats/{id}/memories",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats memories list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_chats_id_messages",
+      "method": "GET",
+      "path": "/{project_id}/v1/chats/{id}/messages",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats messages list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/conversations",
       "sources": [
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/erectl/conversations"
+        "https://erebine.ai/docs/erectl/conversations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_conversations",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "conversations list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/conversations/{id}",
       "sources": [
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/erectl/conversations"
+        "https://erebine.ai/docs/erectl/conversations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_conversations_id",
       "parameters": [
@@ -1075,7 +1831,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "conversations get"
+      ]
     },
     {
       "method": "GET",
@@ -1097,7 +1856,8 @@
       "path": "/{project_id}/v1/conversations/{id}/items",
       "sources": [
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/erectl/conversations"
+        "https://erebine.ai/docs/erectl/conversations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_conversations_id_items",
       "parameters": [
@@ -1105,20 +1865,32 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "conversations list-items"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/endpoints",
       "sources": [
-        "https://erebine.ai/docs/api-reference"
+        "https://erebine.ai/docs/api-reference",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_endpoints",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "score",
+        "responses legacy delete",
+        "responses legacy cancel",
+        "responses legacy input-items",
+        "responses endpoint list",
+        "responses endpoint retrieve"
+      ]
     },
     {
       "method": "GET",
@@ -1152,20 +1924,26 @@
       "method": "GET",
       "path": "/{project_id}/v1/exec/approvals",
       "sources": [
-        "https://erebine.ai/docs/eem/approvals"
+        "https://erebine.ai/docs/eem/approvals",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_exec_approvals",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "approvals list",
+        "approvals watch"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/exec/approvals/{id}",
       "sources": [
-        "https://erebine.ai/docs/eem/approvals"
+        "https://erebine.ai/docs/eem/approvals",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_exec_approvals_id",
       "parameters": [
@@ -1173,7 +1951,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "approvals show"
+      ]
     },
     {
       "method": "GET",
@@ -1189,10 +1970,27 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "get_project_id_v1_exec_invocations",
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/invocations",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "exec history"
+      ]
+    },
+    {
       "method": "GET",
       "path": "/{project_id}/v1/exec/invocations/{id}",
       "sources": [
-        "https://erebine.ai/docs/eem"
+        "https://erebine.ai/docs/eem",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_exec_invocations_id",
       "parameters": [
@@ -1200,26 +1998,68 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exec show",
+        "exec watch"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_exec_learnings",
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/learnings",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "learnings list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_exec_learnings_id",
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/learnings/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "learnings show"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/exec/tools",
       "sources": [
-        "https://erebine.ai/docs/eem"
+        "https://erebine.ai/docs/eem",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_exec_tools",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exec tools"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/exec/tools/{id}",
       "sources": [
-        "https://erebine.ai/docs/erectl/exec"
+        "https://erebine.ai/docs/erectl/exec",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_exec_tools_id",
       "parameters": [
@@ -1227,7 +2067,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exec tool-show"
+      ]
     },
     {
       "method": "GET",
@@ -1246,7 +2089,8 @@
       "method": "GET",
       "path": "/{project_id}/v1/exports/{id}",
       "sources": [
-        "https://erebine.ai/docs/data-export"
+        "https://erebine.ai/docs/data-export",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_exports_id",
       "parameters": [
@@ -1254,13 +2098,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exports status"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/exports/{id}/download",
       "sources": [
-        "https://erebine.ai/docs/data-export"
+        "https://erebine.ai/docs/data-export",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_exports_id_download",
       "parameters": [
@@ -1268,26 +2116,34 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exports download"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/files",
       "sources": [
-        "https://erebine.ai/docs/files"
+        "https://erebine.ai/docs/files",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_files",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "files legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/files/{id}",
       "sources": [
-        "https://erebine.ai/docs/files"
+        "https://erebine.ai/docs/files",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_files_id",
       "parameters": [
@@ -1295,14 +2151,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "files legacy retrieve"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/files/{id}/content",
       "sources": [
         "https://erebine.ai/docs/api-reference",
-        "https://erebine.ai/docs/files"
+        "https://erebine.ai/docs/files",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_files_id_content",
       "parameters": [
@@ -1310,40 +2170,53 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "files legacy download"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/health/dashboard",
       "sources": [
         "https://erebine.ai/docs/erectl/platform",
-        "https://erebine.ai/docs/status-maintenance"
+        "https://erebine.ai/docs/status-maintenance",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_health_dashboard",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "health dashboard",
+        "health services"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/agents",
       "sources": [
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_agents",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "agents legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/agents/{id}",
       "sources": [
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_agents_id",
       "parameters": [
@@ -1351,14 +2224,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "agents legacy retrieve"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/agents/{id}/events",
       "sources": [
         "https://erebine.ai/docs/eem/guide/credential-rotation",
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_agents_id_events",
       "parameters": [
@@ -1366,26 +2243,51 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "agents legacy events"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_agents_id_logs_stream",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/agents/{id}/logs/stream",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "agents logs"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/api-keys",
       "sources": [
-        "https://erebine.ai/docs/erectl/keys"
+        "https://erebine.ai/docs/erectl/keys",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_api_keys",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "keys legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/api-keys/{id}",
       "sources": [
-        "https://erebine.ai/docs/erectl/keys"
+        "https://erebine.ai/docs/erectl/keys",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_api_keys_id",
       "parameters": [
@@ -1393,13 +2295,67 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "keys legacy retrieve"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_endpoints",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/endpoints",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_endpoints_id",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/endpoints/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints show"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_endpoints_id_agents",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/endpoints/{id}/agents",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints agents list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/endpoints/{id}/cors",
       "sources": [
-        "https://erebine.ai/docs/endpoint-cors"
+        "https://erebine.ai/docs/endpoint-cors",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_endpoints_id_cors",
       "parameters": [
@@ -1407,126 +2363,272 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "endpoints cors get"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_endpoints_id_health_check",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/endpoints/{id}/health/check",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints health check"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_endpoints_id_health_config",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/endpoints/{id}/health/config",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints health config get"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_evolution_id",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/evolution/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "evolution status"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_evolution_id_1_lane_runs_id_2",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/evolution/{id_1}/{lane}/runs/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "lane",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "evolution run-status"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_evolution_id_lane_active",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/evolution/{id}/{lane}/active",
+      "parameters": [
+        "project_id",
+        "id",
+        "lane"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "evolution show"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_management_evolution_id_lane_history",
+      "method": "GET",
+      "path": "/{project_id}/v1/management/evolution/{id}/{lane}/history",
+      "parameters": [
+        "project_id",
+        "id",
+        "lane"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "evolution history"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/join-keys",
       "sources": [
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_join_keys",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "agents join-keys legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/maintenance",
       "sources": [
-        "https://erebine.ai/docs/status-maintenance"
+        "https://erebine.ai/docs/status-maintenance",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_maintenance",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "maintenance list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/project/invitations",
       "sources": [
-        "https://erebine.ai/docs/teams"
+        "https://erebine.ai/docs/teams",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_project_invitations",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "project invitations list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/project/members",
       "sources": [
-        "https://erebine.ai/docs/teams"
+        "https://erebine.ai/docs/teams",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_project_members",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "project members list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/semantic-router/config",
       "sources": [
-        "https://erebine.ai/docs/api-reference"
+        "https://erebine.ai/docs/api-reference",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_semantic_router_config",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "semantic-router config show",
+        "semantic-router descriptions regenerate"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/semantic-router/decisions",
       "sources": [
         "https://erebine.ai/docs/api-reference",
-        "https://erebine.ai/docs/authentication"
+        "https://erebine.ai/docs/authentication",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_semantic_router_decisions",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "semantic-router decisions"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/semantic-router/health",
       "sources": [
         "https://erebine.ai/docs/api-reference",
-        "https://erebine.ai/docs/authentication"
+        "https://erebine.ai/docs/authentication",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_semantic_router_health",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "semantic-router health"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/semantic-router/rules",
       "sources": [
-        "https://erebine.ai/docs/api-reference"
+        "https://erebine.ai/docs/api-reference",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_semantic_router_rules",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "semantic-router rules list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/management/tiers",
       "sources": [
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_management_tiers",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "tiers"
+      ]
     },
     {
       "name": "get_project_id_v1_mcp",
@@ -1568,14 +2670,18 @@
         "https://erebine.ai/docs/model-management",
         "https://erebine.ai/docs/model-sharing",
         "https://erebine.ai/docs/rerank",
-        "https://erebine.ai/docs/systemone"
+        "https://erebine.ai/docs/systemone",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_models",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models legacy list"
+      ]
     },
     {
       "method": "GET",
@@ -1583,7 +2689,8 @@
       "sources": [
         "https://erebine.ai/docs/api-reference",
         "https://erebine.ai/docs/model-management",
-        "https://erebine.ai/docs/model-sharing"
+        "https://erebine.ai/docs/model-sharing",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_models_id",
       "parameters": [
@@ -1591,13 +2698,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models legacy retrieve"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/models/{id}/catalog-info",
       "sources": [
-        "https://erebine.ai/docs/model-management"
+        "https://erebine.ai/docs/model-management",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_models_id_catalog_info",
       "parameters": [
@@ -1605,13 +2716,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models legacy catalog-info"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/models/{id}/hf-overrides",
       "sources": [
-        "https://erebine.ai/docs/model-management"
+        "https://erebine.ai/docs/model-management",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_models_id_hf_overrides",
       "parameters": [
@@ -1619,13 +2734,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models hf-overrides"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/models/{id}/versions",
       "sources": [
-        "https://erebine.ai/docs/model-management"
+        "https://erebine.ai/docs/model-management",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_models_id_versions",
       "parameters": [
@@ -1633,39 +2752,69 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models versions legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/project-members/search",
       "sources": [
-        "https://erebine.ai/docs/teams"
+        "https://erebine.ai/docs/teams",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_project_members_search",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "chats members add",
+        "project members search",
+        "workspaces members add"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_settings_project",
+      "method": "GET",
+      "path": "/{project_id}/v1/settings/project",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "settings get"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/slos",
       "sources": [
-        "https://erebine.ai/docs/slo-tracking"
+        "https://erebine.ai/docs/slo-tracking",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_slos",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "slos legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/slos/{id}",
       "sources": [
-        "https://erebine.ai/docs/slo-tracking"
+        "https://erebine.ai/docs/slo-tracking",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_slos_id",
       "parameters": [
@@ -1673,13 +2822,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "slos legacy retrieve"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/slos/{id}/history",
       "sources": [
-        "https://erebine.ai/docs/slo-tracking"
+        "https://erebine.ai/docs/slo-tracking",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_slos_id_history",
       "parameters": [
@@ -1687,40 +2840,52 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "slos legacy history"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/slos/summary",
       "sources": [
-        "https://erebine.ai/docs/slo-tracking"
+        "https://erebine.ai/docs/slo-tracking",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_slos_summary",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "slos legacy summary"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/uploads",
       "sources": [
         "https://erebine.ai/docs/erectl/uploads",
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_uploads",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "uploads legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/uploads/{id}",
       "sources": [
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_uploads_id",
       "parameters": [
@@ -1728,78 +2893,118 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "uploads legacy retrieve"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/usage/endpoints",
       "sources": [
-        "https://erebine.ai/docs/usage-billing"
+        "https://erebine.ai/docs/usage-billing",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_usage_endpoints",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "usage endpoints"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/usage/events",
       "sources": [
-        "https://erebine.ai/docs/usage-billing"
+        "https://erebine.ai/docs/usage-billing",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_usage_events",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "usage events"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/usage/logs",
       "sources": [
-        "https://erebine.ai/docs/usage-billing"
+        "https://erebine.ai/docs/usage-billing",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_usage_logs",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "usage logs"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/usage/uptime",
       "sources": [
-        "https://erebine.ai/docs/usage-billing"
+        "https://erebine.ai/docs/usage-billing",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_usage_uptime",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "usage uptime"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_user_preferences",
+      "method": "GET",
+      "path": "/{project_id}/v1/user/preferences",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "preferences get"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/webhooks",
       "sources": [
-        "https://erebine.ai/docs/webhooks"
+        "https://erebine.ai/docs/webhooks",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_webhooks",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "webhooks legacy list"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/webhooks/{id}",
       "sources": [
-        "https://erebine.ai/docs/webhooks"
+        "https://erebine.ai/docs/webhooks",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_webhooks_id",
       "parameters": [
@@ -1807,14 +3012,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "webhooks legacy retrieve"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/webhooks/{id}/deliveries",
       "sources": [
         "https://erebine.ai/docs/eem/webhooks",
-        "https://erebine.ai/docs/webhooks"
+        "https://erebine.ai/docs/webhooks",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_webhooks_id_deliveries",
       "parameters": [
@@ -1822,20 +3031,27 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "webhooks legacy deliveries"
+      ]
     },
     {
       "method": "GET",
       "path": "/{project_id}/v1/workspaces",
       "sources": [
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_workspaces",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "workspaces list"
+      ]
     },
     {
       "method": "GET",
@@ -1843,7 +3059,8 @@
       "sources": [
         "https://erebine.ai/docs/queueing",
         "https://erebine.ai/docs/zero-data-retention",
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_workspaces_id",
       "parameters": [
@@ -1851,7 +3068,11 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "workspaces show",
+        "workspaces visibility get"
+      ]
     },
     {
       "method": "GET",
@@ -1869,10 +3090,80 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "get_project_id_v1_workspaces_id_agents",
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/agents",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces agents"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_workspaces_id_auto_approvals",
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/auto-approvals",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces auto-approvals"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_workspaces_id_chat_templates",
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/chat-templates",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "templates workspace list"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_workspaces_id_decisions",
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/decisions",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge decisions list",
+        "knowledge decisions show"
+      ]
+    },
+    {
       "method": "GET",
       "path": "/{project_id}/v1/workspaces/{id}/files",
       "sources": [
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_workspaces_id_files",
       "parameters": [
@@ -1880,7 +3171,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "workspaces files list"
+      ]
     },
     {
       "method": "GET",
@@ -1897,11 +3191,29 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "get_project_id_v1_workspaces_id_members",
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/members",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces members list"
+      ]
+    },
+    {
       "method": "GET",
       "path": "/{project_id}/v1/workspaces/{id}/memories",
       "sources": [
         "https://erebine.ai/docs/chat-memory",
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "get_project_id_v1_workspaces_id_memories",
       "parameters": [
@@ -1909,7 +3221,29 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "knowledge memories list",
+        "knowledge memories show"
+      ]
+    },
+    {
+      "name": "get_project_id_v1_workspaces_id_milestones",
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/milestones",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge milestones list",
+        "knowledge milestones show"
+      ]
     },
     {
       "method": "GET",
@@ -2109,10 +3443,139 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "patch_project_id_v1_admin_anchors_id",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/admin/anchors/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "anchors set-compliance",
+        "anchors set-deployment-region",
+        "anchors set-discount",
+        "anchors set-list-free",
+        "anchors set-marketplace-concurrency",
+        "anchors set-marketplace-price",
+        "anchors set-openrouter-slug"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_admin_maintenance_windows_id",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/admin/maintenance/windows/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin maintenance update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_admin_storage_tiers_id",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/admin/storage-tiers/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin storage-tiers update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_chat_templates_id",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/chat-templates/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "templates apply-from-dir",
+        "templates update",
+        "templates workspace update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_chats_id",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/chats/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_chats_id_1_artifacts_id_2",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/chats/{id_1}/artifacts/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge artifacts edit"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_chats_id_visibility",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/chats/{id}/visibility",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats visibility set"
+      ]
+    },
+    {
       "method": "PATCH",
       "path": "/{project_id}/v1/management/agents/{id}",
       "sources": [
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "patch_project_id_v1_management_agents_id",
       "parameters": [
@@ -2120,13 +3583,53 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "agents set-location",
+        "agents legacy update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_management_endpoints_id",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/management/endpoints/{id}",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_management_endpoints_id_1_agents_id_2",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/management/endpoints/{id_1}/agents/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints agents weight"
+      ]
     },
     {
       "method": "PATCH",
       "path": "/{project_id}/v1/management/maintenance/{id}",
       "sources": [
-        "https://erebine.ai/docs/status-maintenance"
+        "https://erebine.ai/docs/status-maintenance",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "patch_project_id_v1_management_maintenance_id",
       "parameters": [
@@ -2134,13 +3637,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "maintenance update"
+      ]
     },
     {
       "method": "PATCH",
       "path": "/{project_id}/v1/management/project/members/{id}",
       "sources": [
-        "https://erebine.ai/docs/teams"
+        "https://erebine.ai/docs/teams",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "patch_project_id_v1_management_project_members_id",
       "parameters": [
@@ -2148,26 +3655,34 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "project members update"
+      ]
     },
     {
       "method": "PATCH",
       "path": "/{project_id}/v1/management/semantic-router/config",
       "sources": [
-        "https://erebine.ai/docs/api-reference"
+        "https://erebine.ai/docs/api-reference",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "patch_project_id_v1_management_semantic_router_config",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "semantic-router config set"
+      ]
     },
     {
       "method": "PATCH",
       "path": "/{project_id}/v1/management/semantic-router/rules/{id}",
       "sources": [
-        "https://erebine.ai/docs/api-reference"
+        "https://erebine.ai/docs/api-reference",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "patch_project_id_v1_management_semantic_router_rules_id",
       "parameters": [
@@ -2175,7 +3690,12 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "semantic-router rules disable",
+        "semantic-router rules enable",
+        "semantic-router rules update"
+      ]
     },
     {
       "method": "PATCH",
@@ -2186,7 +3706,8 @@
         "https://erebine.ai/docs/model-management",
         "https://erebine.ai/docs/model-upload",
         "https://erebine.ai/docs/private-agents",
-        "https://erebine.ai/docs/systemone"
+        "https://erebine.ai/docs/systemone",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "patch_project_id_v1_models_id",
       "parameters": [
@@ -2194,13 +3715,49 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_settings_project",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/settings/project",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "settings update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_user_preferences",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/user/preferences",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "preferences set"
+      ]
     },
     {
       "method": "PATCH",
       "path": "/{project_id}/v1/workspaces/{id}",
       "sources": [
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "patch_project_id_v1_workspaces_id",
       "parameters": [
@@ -2208,14 +3765,36 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "workspaces update"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_workspaces_id_1_decisions_id_2",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/workspaces/{id_1}/decisions/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge decisions edit"
+      ]
     },
     {
       "method": "PATCH",
       "path": "/{project_id}/v1/workspaces/{id_1}/memories/{id_2}",
       "sources": [
         "https://erebine.ai/docs/chat-memory",
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "patch_project_id_v1_workspaces_id_1_memories_id_2",
       "parameters": [
@@ -2224,7 +3803,45 @@
         "id_2"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "knowledge memories edit"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_workspaces_id_1_milestones_id_2",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/workspaces/{id_1}/milestones/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "knowledge milestones edit"
+      ]
+    },
+    {
+      "name": "patch_project_id_v1_workspaces_id_visibility",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/workspaces/{id}/visibility",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces visibility set"
+      ]
     },
     {
       "method": "POST",
@@ -2623,7 +4240,8 @@
         "https://erebine.ai/docs/api-reference",
         "https://erebine.ai/docs/audio",
         "https://erebine.ai/docs/slo-tracking",
-        "https://erebine.ai/docs/streaming"
+        "https://erebine.ai/docs/streaming",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_endpoint_slug_v1_chat_completions",
       "parameters": [
@@ -2631,7 +4249,10 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "Live response shape verified by both SDKs with direct workspace routing on 2026-10-26; all other routing variants remain unverified"
+      "verification": "Live response shape verified by both SDKs with direct workspace routing on 2026-10-26; all other routing variants remain unverified",
+      "cli_commands": [
+        "chat send"
+      ]
     },
     {
       "method": "POST",
@@ -2639,7 +4260,8 @@
       "sources": [
         "https://erebine.ai/docs/completions",
         "https://erebine.ai/docs/sdk-integrations",
-        "https://erebine.ai/docs/tool-calling"
+        "https://erebine.ai/docs/tool-calling",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_endpoint_slug_v1_chat_completions_id",
       "parameters": [
@@ -2648,13 +4270,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "completions metadata update"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/{endpoint_slug}/v1/embeddings",
       "sources": [
-        "https://erebine.ai/docs/embeddings"
+        "https://erebine.ai/docs/embeddings",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_endpoint_slug_v1_embeddings",
       "parameters": [
@@ -2662,13 +4288,17 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "embeddings create"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/{endpoint_slug}/v1/rerank",
       "sources": [
-        "https://erebine.ai/docs/rerank"
+        "https://erebine.ai/docs/rerank",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_endpoint_slug_v1_rerank",
       "parameters": [
@@ -2676,14 +4306,18 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "rerank"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/{endpoint_slug}/v1/responses",
       "sources": [
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/responses"
+        "https://erebine.ai/docs/responses",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_endpoint_slug_v1_responses",
       "parameters": [
@@ -2691,13 +4325,17 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "Live response shape verified by both SDKs with direct workspace routing on 2026-10-26; all other routing variants remain unverified"
+      "verification": "Live response shape verified by both SDKs with direct workspace routing on 2026-10-26; all other routing variants remain unverified",
+      "cli_commands": [
+        "responses create"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/{endpoint_slug}/v1/responses/{id}/cancel",
       "sources": [
-        "https://erebine.ai/docs/responses"
+        "https://erebine.ai/docs/responses",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_endpoint_slug_v1_responses_id_cancel",
       "parameters": [
@@ -2706,7 +4344,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "responses legacy cancel"
+      ]
     },
     {
       "method": "POST",
@@ -2765,6 +4406,88 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "post_project_id_v1_admin_cache_clear",
+      "method": "POST",
+      "path": "/{project_id}/v1/admin/cache/clear",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin cache clear"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_admin_maintenance_windows",
+      "method": "POST",
+      "path": "/{project_id}/v1/admin/maintenance/windows",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin maintenance create"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_admin_private_agents_id_attach_project",
+      "method": "POST",
+      "path": "/{project_id}/v1/admin/private-agents/{id}/attach-project",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin agents attach"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_admin_storage_tiers",
+      "method": "POST",
+      "path": "/{project_id}/v1/admin/storage-tiers",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin storage-tiers create"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_admin_tasks_id_cancel",
+      "method": "POST",
+      "path": "/{project_id}/v1/admin/tasks/{id}/cancel",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "admin tasks cancel"
+      ]
+    },
+    {
       "method": "POST",
       "path": "/{project_id}/v1/batches",
       "sources": [
@@ -2781,7 +4504,8 @@
       "method": "POST",
       "path": "/{project_id}/v1/batches/{id}/cancel",
       "sources": [
-        "https://erebine.ai/docs/batch"
+        "https://erebine.ai/docs/batch",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_batches_id_cancel",
       "parameters": [
@@ -2789,7 +4513,59 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "batches cancel"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_chat_templates",
+      "method": "POST",
+      "path": "/{project_id}/v1/chat-templates",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "templates create"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_chat_templates_id_promote",
+      "method": "POST",
+      "path": "/{project_id}/v1/chat-templates/{id}/promote",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "templates promote"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_chats",
+      "method": "POST",
+      "path": "/{project_id}/v1/chats",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats create"
+      ]
     },
     {
       "method": "POST",
@@ -2809,7 +4585,8 @@
       "method": "POST",
       "path": "/{project_id}/v1/chats/{id}/branches",
       "sources": [
-        "https://erebine.ai/docs/chat-branching"
+        "https://erebine.ai/docs/chat-branching",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_chats_id_branches",
       "parameters": [
@@ -2817,28 +4594,36 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "chats branches fork"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/conversations",
       "sources": [
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/erectl/conversations"
+        "https://erebine.ai/docs/erectl/conversations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_conversations",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "conversations create"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/conversations/{id}",
       "sources": [
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/erectl/conversations"
+        "https://erebine.ai/docs/erectl/conversations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_conversations_id",
       "parameters": [
@@ -2846,7 +4631,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "conversations update"
+      ]
     },
     {
       "method": "POST",
@@ -2854,7 +4642,8 @@
       "sources": [
         "https://erebine.ai/docs/api-reference",
         "https://erebine.ai/docs/conversations",
-        "https://erebine.ai/docs/erectl/conversations"
+        "https://erebine.ai/docs/erectl/conversations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_conversations_id_items",
       "parameters": [
@@ -2862,14 +4651,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "conversations add-item"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/exec/approvals/{id}/approve",
       "sources": [
         "https://erebine.ai/docs/eem/approvals",
-        "https://erebine.ai/docs/eem/tutorials"
+        "https://erebine.ai/docs/eem/tutorials",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_exec_approvals_id_approve",
       "parameters": [
@@ -2877,13 +4670,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "approvals approve"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/exec/approvals/{id}/reject",
       "sources": [
-        "https://erebine.ai/docs/eem/approvals"
+        "https://erebine.ai/docs/eem/approvals",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_exec_approvals_id_reject",
       "parameters": [
@@ -2891,27 +4688,35 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "approvals reject"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/exec/invocations",
       "sources": [
         "https://erebine.ai/docs/eem",
-        "https://erebine.ai/docs/eem/glossary"
+        "https://erebine.ai/docs/eem/glossary",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_exec_invocations",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exec invoke"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/exec/invocations/{id}/cancel",
       "sources": [
-        "https://erebine.ai/docs/eem/approvals"
+        "https://erebine.ai/docs/eem/approvals",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_exec_invocations_id_cancel",
       "parameters": [
@@ -2919,7 +4724,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exec cancel"
+      ]
     },
     {
       "method": "POST",
@@ -2938,14 +4746,18 @@
       "method": "POST",
       "path": "/{project_id}/v1/exports/logs",
       "sources": [
-        "https://erebine.ai/docs/data-export"
+        "https://erebine.ai/docs/data-export",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_exports_logs",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "exports create"
+      ]
     },
     {
       "method": "POST",
@@ -2978,14 +4790,19 @@
       "path": "/{project_id}/v1/files",
       "sources": [
         "https://erebine.ai/docs/api-reference",
-        "https://erebine.ai/docs/files"
+        "https://erebine.ai/docs/files",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_files",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "files legacy upload",
+        "batches legacy create"
+      ]
     },
     {
       "method": "POST",
@@ -3001,25 +4818,63 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "post_project_id_v1_management_agents",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/agents",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "agents create with region"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_agents_id_curve_rotate",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/agents/{id}/curve-rotate",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "agents curve-rotate"
+      ]
+    },
+    {
       "method": "POST",
       "path": "/{project_id}/v1/management/api-keys",
       "sources": [
         "https://erebine.ai/docs/authentication",
         "https://erebine.ai/docs/erectl/keys",
-        "https://erebine.ai/docs/sdk-integrations"
+        "https://erebine.ai/docs/sdk-integrations",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_api_keys",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "keys legacy create"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/management/api-keys/{id}/rotate",
       "sources": [
-        "https://erebine.ai/docs/erectl/keys"
+        "https://erebine.ai/docs/erectl/keys",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_api_keys_id_rotate",
       "parameters": [
@@ -3027,7 +4882,148 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "keys rotate confirmed"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_endpoints",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/endpoints",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints create"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_endpoints_id_agents",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/endpoints/{id}/agents",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints agents add"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_endpoints_id_provision",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/endpoints/{id}/provision",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints provision"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_endpoints_id_regenerate_capabilities",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/endpoints/{id}/regenerate-capabilities",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints regenerate-capabilities"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_endpoints_id_unprovision",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/endpoints/{id}/unprovision",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints unprovision"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_evolution_id_lane_breaker_reset",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/evolution/{id}/{lane}/breaker/reset",
+      "parameters": [
+        "project_id",
+        "id",
+        "lane"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "evolution breaker-reset"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_evolution_id_lane_rollback",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/evolution/{id}/{lane}/rollback",
+      "parameters": [
+        "project_id",
+        "id",
+        "lane"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "evolution rollback"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_management_evolution_id_lane_run",
+      "method": "POST",
+      "path": "/{project_id}/v1/management/evolution/{id}/{lane}/run",
+      "parameters": [
+        "project_id",
+        "id",
+        "lane"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "evolution run"
+      ]
     },
     {
       "method": "POST",
@@ -3046,20 +5042,25 @@
       "method": "POST",
       "path": "/{project_id}/v1/management/maintenance",
       "sources": [
-        "https://erebine.ai/docs/status-maintenance"
+        "https://erebine.ai/docs/status-maintenance",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_maintenance",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "maintenance schedule"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/management/maintenance/{id}/complete",
       "sources": [
-        "https://erebine.ai/docs/status-maintenance"
+        "https://erebine.ai/docs/status-maintenance",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_maintenance_id_complete",
       "parameters": [
@@ -3067,13 +5068,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "maintenance complete"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/management/maintenance/{id}/purge",
       "sources": [
-        "https://erebine.ai/docs/status-maintenance"
+        "https://erebine.ai/docs/status-maintenance",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_maintenance_id_purge",
       "parameters": [
@@ -3081,13 +5086,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "maintenance purge"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/management/project/invitations/{id}/resend",
       "sources": [
-        "https://erebine.ai/docs/teams"
+        "https://erebine.ai/docs/teams",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_project_invitations_id_resend",
       "parameters": [
@@ -3095,33 +5104,44 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "project invitations resend"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/management/project/members",
       "sources": [
-        "https://erebine.ai/docs/teams"
+        "https://erebine.ai/docs/teams",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_project_members",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "project members add"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/management/semantic-router/rules",
       "sources": [
-        "https://erebine.ai/docs/api-reference"
+        "https://erebine.ai/docs/api-reference",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_semantic_router_rules",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "semantic-router rules add"
+      ]
     },
     {
       "name": "post_project_id_v1_mcp",
@@ -3156,7 +5176,8 @@
       "path": "/{project_id}/v1/models/{id}/revalidate",
       "sources": [
         "https://erebine.ai/docs/model-management",
-        "https://erebine.ai/docs/model-versioning"
+        "https://erebine.ai/docs/model-versioning",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_models_id_revalidate",
       "parameters": [
@@ -3164,14 +5185,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models legacy revalidate"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/models/{id}/share",
       "sources": [
         "https://erebine.ai/docs/model-management",
-        "https://erebine.ai/docs/model-sharing"
+        "https://erebine.ai/docs/model-sharing",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_models_id_share",
       "parameters": [
@@ -3179,14 +5204,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models legacy share"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/models/{id}/unshare",
       "sources": [
         "https://erebine.ai/docs/model-management",
-        "https://erebine.ai/docs/model-sharing"
+        "https://erebine.ai/docs/model-sharing",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_models_id_unshare",
       "parameters": [
@@ -3194,13 +5223,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models legacy unshare"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/models/{id}/versions",
       "sources": [
-        "https://erebine.ai/docs/model-management"
+        "https://erebine.ai/docs/model-management",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_models_id_versions",
       "parameters": [
@@ -3208,7 +5241,44 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "models versions legacy create"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_models_id_versions_1_0_0_promote",
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/versions/1.0.0/promote",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "models versions legacy promote"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_models_id_versions_1_0_0_rollback",
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/versions/1.0.0/rollback",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "models versions legacy rollback"
+      ]
     },
     {
       "method": "POST",
@@ -3258,7 +5328,8 @@
       "method": "POST",
       "path": "/{project_id}/v1/slos/{id}/calculate",
       "sources": [
-        "https://erebine.ai/docs/slo-tracking"
+        "https://erebine.ai/docs/slo-tracking",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_slos_id_calculate",
       "parameters": [
@@ -3266,7 +5337,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "slos legacy calculate"
+      ]
     },
     {
       "method": "POST",
@@ -3286,14 +5360,18 @@
       "path": "/{project_id}/v1/uploads/archive",
       "sources": [
         "https://erebine.ai/docs/model-upload",
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_uploads_archive",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "upload"
+      ]
     },
     {
       "method": "POST",
@@ -3313,7 +5391,8 @@
       "method": "POST",
       "path": "/{project_id}/v1/uploads/{id}/cancel",
       "sources": [
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_uploads_id_cancel",
       "parameters": [
@@ -3321,7 +5400,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "uploads legacy cancel"
+      ]
     },
     {
       "method": "POST",
@@ -3416,24 +5498,45 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "post_project_id_v1_uploads_preflight",
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/preflight",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "upload"
+      ]
+    },
+    {
       "method": "POST",
       "path": "/{project_id}/v1/webhooks",
       "sources": [
         "https://erebine.ai/docs/eem/webhooks",
-        "https://erebine.ai/docs/webhooks"
+        "https://erebine.ai/docs/webhooks",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_webhooks",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "webhooks legacy create"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/webhooks/{id}/test",
       "sources": [
-        "https://erebine.ai/docs/webhooks"
+        "https://erebine.ai/docs/webhooks",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_webhooks_id_test",
       "parameters": [
@@ -3441,20 +5544,133 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "webhooks legacy test"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/workspaces",
       "sources": [
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_workspaces",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "workspaces create"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_workspaces_id_1_agents_id_2_pause",
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id_1}/agents/{id_2}/pause",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces pause-agent"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_workspaces_id_1_agents_id_2_resume",
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id_1}/agents/{id_2}/resume",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces resume-agent"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_workspaces_id_1_chat_templates_id_2_apply",
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id_1}/chat-templates/{id_2}/apply",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chat new",
+        "templates apply"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_workspaces_id_agents",
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id}/agents",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces bind-agent"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_workspaces_id_auto_approvals",
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id}/auto-approvals",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces grant-auto-approval"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_workspaces_id_chat_templates",
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id}/chat-templates",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "templates workspace create"
+      ]
     },
     {
       "method": "POST",
@@ -3475,7 +5691,8 @@
       "path": "/{project_id}/v1/workspaces/{id}/memories",
       "sources": [
         "https://erebine.ai/docs/chat-memory",
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_workspaces_id_memories",
       "parameters": [
@@ -3483,13 +5700,34 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "knowledge memories create"
+      ]
+    },
+    {
+      "name": "post_project_id_v1_workspaces_id_revalidate_intelligence",
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id}/revalidate-intelligence",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "workspaces revalidate-intelligence"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/workspaces/{id}/search",
       "sources": [
-        "https://erebine.ai/docs/document-workspace"
+        "https://erebine.ai/docs/document-workspace",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_workspaces_id_search",
       "parameters": [
@@ -3497,7 +5735,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "workspaces search"
+      ]
     },
     {
       "method": "POST",
@@ -3692,10 +5933,28 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "put_project_id_v1_chats_id_exec_workspace",
+      "method": "PUT",
+      "path": "/{project_id}/v1/chats/{id}/exec-workspace",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "chats link-exec-workspace"
+      ]
+    },
+    {
       "method": "PUT",
       "path": "/{project_id}/v1/management/api-keys/{id}/ip-filter",
       "sources": [
-        "https://erebine.ai/docs/erectl/keys"
+        "https://erebine.ai/docs/erectl/keys",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "put_project_id_v1_management_api_keys_id_ip_filter",
       "parameters": [
@@ -3703,13 +5962,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "keys legacy ip-filter"
+      ]
     },
     {
       "method": "PUT",
       "path": "/{project_id}/v1/management/api-keys/{id}/quota",
       "sources": [
-        "https://erebine.ai/docs/erectl/keys"
+        "https://erebine.ai/docs/erectl/keys",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "put_project_id_v1_management_api_keys_id_quota",
       "parameters": [
@@ -3717,13 +5980,17 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "keys legacy quota"
+      ]
     },
     {
       "method": "PUT",
       "path": "/{project_id}/v1/management/endpoints/{id}/cors",
       "sources": [
-        "https://erebine.ai/docs/endpoint-cors"
+        "https://erebine.ai/docs/endpoint-cors",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "put_project_id_v1_management_endpoints_id_cors",
       "parameters": [
@@ -3731,7 +5998,46 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "endpoints cors set"
+      ]
+    },
+    {
+      "name": "put_project_id_v1_management_endpoints_id_health_config",
+      "method": "PUT",
+      "path": "/{project_id}/v1/management/endpoints/{id}/health/config",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "endpoints health config set"
+      ]
+    },
+    {
+      "name": "put_project_id_v1_management_evolution_id_lane_enable",
+      "method": "PUT",
+      "path": "/{project_id}/v1/management/evolution/{id}/{lane}/enable",
+      "parameters": [
+        "project_id",
+        "id",
+        "lane"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
+      ],
+      "verification": "HTTP request construction observed from official erectl v2.7.3 against a loopback fixture; remote behavior unverified",
+      "cli_commands": [
+        "evolution disable",
+        "evolution enable"
+      ]
     },
     {
       "method": "PUT",
@@ -3751,7 +6057,8 @@
       "method": "PUT",
       "path": "/{project_id}/v1/webhooks/{id}",
       "sources": [
-        "https://erebine.ai/docs/webhooks"
+        "https://erebine.ai/docs/webhooks",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "put_project_id_v1_webhooks_id",
       "parameters": [
@@ -3759,7 +6066,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "webhooks legacy update"
+      ]
     }
   ]
 }

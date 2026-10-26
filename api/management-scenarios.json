@@ -1,0 +1,1172 @@
+{
+  "schema_version": 1,
+  "description": "Disposable, project-scoped native SDK management validation; never changes preexisting resources or sends webhook test deliveries.",
+  "steps": [
+    {
+      "name": "management key listing",
+      "operation": "get_project_id_v1_management_api_keys",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "endpoint listing",
+      "operation": "get_project_id_v1_management_endpoints",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "agent listing",
+      "operation": "get_project_id_v1_management_agents",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "join key listing",
+      "operation": "get_project_id_v1_management_join_keys",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "tier listing",
+      "operation": "get_project_id_v1_management_tiers",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "model listing",
+      "operation": "get_project_id_v1_models",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "execution tool discovery",
+      "operation": "get_project_id_v1_exec_tools",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "execution invocation history",
+      "operation": "get_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "execution approval listing",
+      "operation": "get_project_id_v1_exec_approvals",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "learning listing",
+      "operation": "get_project_id_v1_exec_learnings",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "project settings read",
+      "operation": "get_project_id_v1_settings_project",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "project membership read",
+      "operation": "get_project_id_v1_management_project_members",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "maintenance listing",
+      "operation": "get_project_id_v1_management_maintenance",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "router configuration read",
+      "operation": "get_project_id_v1_management_semantic_router_config",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "router health read",
+      "operation": "get_project_id_v1_management_semantic_router_health",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "router rule listing",
+      "operation": "get_project_id_v1_management_semantic_router_rules",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "usage events read",
+      "operation": "get_project_id_v1_usage_events",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "usage logs read",
+      "operation": "get_project_id_v1_usage_logs",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "usage endpoint summary",
+      "operation": "get_project_id_v1_usage_endpoints",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "usage uptime read",
+      "operation": "get_project_id_v1_usage_uptime",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "export listing",
+      "operation": "get_project_id_v1_exports",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "upload session listing",
+      "operation": "get_project_id_v1_uploads",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "SLO summary",
+      "operation": "get_project_id_v1_slos_summary",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "create isolated workspace",
+      "operation": "post_project_id_v1_workspaces",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "name": "${prefix}",
+        "description": "Disposable native SDK validation workspace"
+      },
+      "save": {
+        "workspace_id": [
+          "/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/workspaces/{workspace_id}"
+      }
+    },
+    {
+      "name": "read isolated workspace",
+      "operation": "get_project_id_v1_workspaces_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${workspace_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "update isolated workspace",
+      "operation": "patch_project_id_v1_workspaces_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${workspace_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "name": "${prefix}-updated",
+        "description": "Updated by native SDK validation"
+      }
+    },
+    {
+      "name": "verify workspace update",
+      "operation": "get_project_id_v1_workspaces_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${workspace_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "assertions": {
+        "/name": "${prefix}-updated"
+      }
+    },
+    {
+      "name": "workspace visibility",
+      "operation": "patch_project_id_v1_workspaces_id_visibility",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${workspace_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "visibility": "private"
+      }
+    },
+    {
+      "name": "workspace members",
+      "operation": "get_project_id_v1_workspaces_id_members",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${workspace_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "workspace file listing",
+      "operation": "get_project_id_v1_workspaces_id_files",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${workspace_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "create isolated chat",
+      "operation": "post_project_id_v1_chats",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "title": "${prefix}",
+        "workspace_id": "${workspace_id}"
+      },
+      "save": {
+        "chat_id": [
+          "/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/chats/{chat_id}"
+      }
+    },
+    {
+      "name": "read isolated chat",
+      "operation": "get_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "update isolated chat",
+      "operation": "patch_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "title": "${prefix}-updated"
+      }
+    },
+    {
+      "name": "verify chat update",
+      "operation": "get_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "assertions": {
+        "/title": "${prefix}-updated"
+      }
+    },
+    {
+      "name": "chat messages",
+      "operation": "get_project_id_v1_chats_id_messages",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "chat context",
+      "operation": "get_project_id_v1_chats_id_context",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "chat branches",
+      "operation": "get_project_id_v1_chats_id_branches",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "chat memories",
+      "operation": "get_project_id_v1_chats_id_memories",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "chat visibility",
+      "operation": "patch_project_id_v1_chats_id_visibility",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "visibility": "private"
+      }
+    },
+    {
+      "name": "create chat template",
+      "operation": "post_project_id_v1_chat_templates",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "name": "${prefix}",
+        "description": "Temporary native SDK test",
+        "system_prompt": "This is a synthetic SDK validation template.",
+        "allowed_tools": [],
+        "approval_policy": "standard"
+      },
+      "save": {
+        "template_id": [
+          "/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/chat-templates/{template_id}"
+      }
+    },
+    {
+      "name": "read chat template",
+      "operation": "get_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${template_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "update chat template",
+      "operation": "patch_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${template_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "description": "Updated native SDK test",
+        "system_prompt": "Updated synthetic SDK template."
+      }
+    },
+    {
+      "name": "verify template update",
+      "operation": "get_project_id_v1_chat_templates_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${template_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "assertions": {
+        "/description": "Updated native SDK test"
+      }
+    },
+    {
+      "name": "template version history",
+      "operation": "get_project_id_v1_chat_templates_id_versions",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${template_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "min_array_lengths": {
+        "/data": 2
+      }
+    },
+    {
+      "name": "create isolated conversation",
+      "operation": "post_project_id_v1_conversations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "metadata": {
+          "sdk_validation": "${prefix}"
+        }
+      },
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      },
+      "save": {
+        "conversation_id": [
+          "/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/conversations/{conversation_id}",
+        "headers": {
+          "X-Workspace-Id": "${workspace_id}"
+        }
+      }
+    },
+    {
+      "name": "read isolated conversation",
+      "operation": "get_project_id_v1_conversations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${conversation_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      }
+    },
+    {
+      "name": "update isolated conversation",
+      "operation": "post_project_id_v1_conversations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${conversation_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "metadata": {
+          "sdk_validation": "${prefix}",
+          "updated": "true"
+        }
+      },
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      }
+    },
+    {
+      "name": "append conversation item",
+      "operation": "post_project_id_v1_conversations_id_items",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${conversation_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "type": "message",
+        "role": "user",
+        "content": "Synthetic SDK fixture only."
+      },
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      },
+      "save": {
+        "item_id": [
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "list conversation items",
+      "operation": "get_project_id_v1_conversations_id_items",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${conversation_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      }
+    },
+    {
+      "name": "read conversation item",
+      "operation": "get_project_id_v1_conversations_id_1_items_id_2",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id_1": "${conversation_id}",
+        "id_2": "${item_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      }
+    },
+    {
+      "name": "delete conversation item",
+      "operation": "delete_project_id_v1_conversations_id_1_items_id_2",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id_1": "${conversation_id}",
+        "id_2": "${item_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      }
+    },
+    {
+      "name": "upload temporary file",
+      "operation": "post_project_id_v1_files",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      },
+      "save": {
+        "file_id": [
+          "/id"
+        ]
+      },
+      "multipart": {
+        "fields": [
+          [
+            "purpose",
+            "assistants"
+          ]
+        ],
+        "file": {
+          "field": "file",
+          "filename": "sdk-validation.txt",
+          "content_type": "text/plain",
+          "text": "Synthetic SDK fixture only.\n"
+        }
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/files/{file_id}",
+        "headers": {
+          "X-Workspace-Id": "${workspace_id}"
+        }
+      }
+    },
+    {
+      "name": "read temporary file metadata",
+      "operation": "get_project_id_v1_files_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${file_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      }
+    },
+    {
+      "name": "download temporary file",
+      "operation": "get_project_id_v1_files_id_content",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${file_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "headers": {
+        "X-Workspace-Id": "${workspace_id}"
+      },
+      "expected_text": "Synthetic SDK fixture only.\n"
+    },
+    {
+      "name": "create temporary API key",
+      "operation": "post_project_id_v1_management_api_keys",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "name": "${prefix}",
+        "scopes": [
+          "inference"
+        ],
+        "expires_at": "${expires_at}"
+      },
+      "save": {
+        "key_id": [
+          "/id",
+          "/api_key/id",
+          "/data/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/management/api-keys/{key_id}"
+      }
+    },
+    {
+      "name": "read temporary API key",
+      "operation": "get_project_id_v1_management_api_keys_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${key_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "set temporary key quota",
+      "operation": "put_project_id_v1_management_api_keys_id_quota",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${key_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "quota_requests": 10,
+        "quota_window": 60
+      }
+    },
+    {
+      "name": "verify temporary key quota",
+      "operation": "get_project_id_v1_management_api_keys_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${key_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "assertions": {
+        "/quota_requests": 10,
+        "/quota_window": 60
+      }
+    },
+    {
+      "name": "set temporary key IP filter",
+      "operation": "put_project_id_v1_management_api_keys_id_ip_filter",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${key_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "allowed_ips": [
+          "192.0.2.1"
+        ],
+        "blocked_ips": []
+      }
+    },
+    {
+      "name": "verify temporary key IP filter",
+      "operation": "get_project_id_v1_management_api_keys_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${key_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "assertions": {
+        "/allowed_ips": [
+          "192.0.2.1"
+        ]
+      }
+    },
+    {
+      "name": "rotate temporary key",
+      "operation": "post_project_id_v1_management_api_keys_id_rotate",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${key_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "create temporary join key",
+      "operation": "post_project_id_v1_management_join_keys",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "name": "${prefix}",
+        "region": "us-east-1",
+        "expires_in_hours": 1,
+        "max_enrollments": 1,
+        "router_addresses": [
+          "tcp://127.0.0.1:5555"
+        ],
+        "supported_tiers": [
+          "self_hosted"
+        ]
+      },
+      "save": {
+        "join_key_id": [
+          "/id",
+          "/join_key/id",
+          "/data/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/management/join-keys/{join_key_id}"
+      }
+    },
+    {
+      "name": "create temporary SLO",
+      "operation": "post_project_id_v1_slos",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "name": "${prefix}",
+        "description": "Temporary SDK validation",
+        "metric": "availability",
+        "target": 99.0,
+        "comparison": "greater_than_or_equal",
+        "window_days": 1
+      },
+      "save": {
+        "slo_id": [
+          "/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/slos/{slo_id}"
+      }
+    },
+    {
+      "name": "read temporary SLO",
+      "operation": "get_project_id_v1_slos_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${slo_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "update temporary SLO",
+      "operation": "put_project_id_v1_slos_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${slo_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "name": "${prefix}-updated",
+        "description": "Temporary SDK validation",
+        "metric": "availability",
+        "target": 98.0,
+        "comparison": "greater_than_or_equal",
+        "window_days": 1
+      }
+    },
+    {
+      "name": "verify temporary SLO update",
+      "operation": "get_project_id_v1_slos_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${slo_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "assertions": {
+        "/target": 98
+      }
+    },
+    {
+      "name": "temporary SLO history",
+      "operation": "get_project_id_v1_slos_id_history",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${slo_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "create temporary webhook configuration",
+      "operation": "post_project_id_v1_webhooks",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "url": "https://example.invalid/sdk-validation",
+        "events": [
+          "exec.approval_requested"
+        ],
+        "description": "${prefix}"
+      },
+      "save": {
+        "webhook_id": [
+          "/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/{project_id}/v1/webhooks/{webhook_id}"
+      }
+    },
+    {
+      "name": "read temporary webhook configuration",
+      "operation": "get_project_id_v1_webhooks_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${webhook_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    },
+    {
+      "name": "update temporary webhook configuration",
+      "operation": "put_project_id_v1_webhooks_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${webhook_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ],
+      "body": {
+        "description": "${prefix}-updated",
+        "url": "https://example.invalid/sdk-validation",
+        "events": [
+          "exec.approval_requested"
+        ],
+        "is_active": false
+      }
+    },
+    {
+      "name": "temporary webhook delivery history",
+      "operation": "get_project_id_v1_webhooks_id_deliveries",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${webhook_id}"
+      },
+      "expected_status": [
+        200,
+        201,
+        204
+      ]
+    }
+  ]
+}

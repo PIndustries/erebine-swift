@@ -10,3 +10,8 @@ references; generated language-specific definitions and coverage notes.
 The source-attributed files under api/ are distributed under CC BY 4.0. SDK code,
 original prose, tests, and examples are MIT licensed. Erebine names and marks
 remain the property of their respective owners.
+
+Additional request-construction facts captured from official erectl v2.7.3
+(build e2f5a35a0aaf), https://github.com/erebine/binaries/releases/tag/v2.7.3
+Binary SHA256: e6dedd66403ba27eda263e71843fad3752f67b78e3c097f09bfe047dad405233
+Only synthetic request facts are included; no CLI binary is redistributed.

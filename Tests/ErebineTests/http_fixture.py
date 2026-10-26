@@ -48,7 +48,7 @@ class Handler(BaseHTTPRequestHandler):
     body+=self.rfile.read(size);self.rfile.read(2)
   path=self.path.split('?')[0]
   if path.endswith('/v1/realtime') and self.headers.get('Upgrade','').lower()=='websocket':self.websocket();return
-  if body and path.endswith(('/v1/chat/completions','/v1/responses','/v1/audio/speech')):
+  if body and self.headers.get('X-Fixture-Echo')!='1' and path.endswith(('/v1/chat/completions','/v1/responses','/v1/audio/speech')):
    obj=json.loads(body)
    if obj.get('stream') is True or obj.get('stream_format')=='sse':
     values=[{'fixture_request':obj,'fixture_path':self.path},
