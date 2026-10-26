@@ -1,0 +1,562 @@
+[
+  {
+    "url": "https://erebine.ai/docs/agent-types",
+    "retrieved": "2026-10-26",
+    "sha256": "91b7f20b864c0eb3cdea411de6ac9710b4a67954e0923f20d304fa2fec5c9829"
+  },
+  {
+    "url": "https://erebine.ai/docs/api-reference",
+    "retrieved": "2026-10-26",
+    "sha256": "5f3affb96b49ef85afe9a9ce2c3d42705d140cb2d4ac6051ffe280ec61137279"
+  },
+  {
+    "url": "https://erebine.ai/docs/audio",
+    "retrieved": "2026-10-26",
+    "sha256": "3ac8e5f6ea3c566ad90b2dbd5984adb0bbf1e631b4ed24360f2fafe0f270df82"
+  },
+  {
+    "url": "https://erebine.ai/docs/authentication",
+    "retrieved": "2026-10-26",
+    "sha256": "0d3f42f2ad413d6e98071ff4d5d2e766763fa9efaf5685aea91fe853ff46914f"
+  },
+  {
+    "url": "https://erebine.ai/docs/batch",
+    "retrieved": "2026-10-26",
+    "sha256": "7fbf9fa69917e79082176be5b1e90748ad7475a996df6d93d9d9e1e851c1c712"
+  },
+  {
+    "url": "https://erebine.ai/docs/billing-subscriptions",
+    "retrieved": "2026-10-26",
+    "sha256": "161b21a835d52f9746cb6dff9b8c014bb3d2e8cb937a7f5e31b405d163c7ae53"
+  },
+  {
+    "url": "https://erebine.ai/docs/budget-alerts",
+    "retrieved": "2026-10-26",
+    "sha256": "2e338f20cec28ff7e177edf645f275ccfccc22613871537b57f3e041892ada7e"
+  },
+  {
+    "url": "https://erebine.ai/docs/chat-branching",
+    "retrieved": "2026-10-26",
+    "sha256": "ef963b03eda0f10db0d0d99aadd79c0ce49112622f93cb4700630d3ea2ba4fcd"
+  },
+  {
+    "url": "https://erebine.ai/docs/chat-memory",
+    "retrieved": "2026-10-26",
+    "sha256": "23490809fec5c916792f720be1b132269920effd932f630d519826187d81d901"
+  },
+  {
+    "url": "https://erebine.ai/docs/claude-code",
+    "retrieved": "2026-10-26",
+    "sha256": "9d809b44bc993917187d97f37fb086c95c124ba00064709c0642aafb23770388"
+  },
+  {
+    "url": "https://erebine.ai/docs/claude-desktop",
+    "retrieved": "2026-10-26",
+    "sha256": "786afbf8c46c88a147f20b4f82be4d440692fec649bc728102b23fad18cec131"
+  },
+  {
+    "url": "https://erebine.ai/docs/cline",
+    "retrieved": "2026-10-26",
+    "sha256": "02c9c632f81f8787ace1d9a98e7873c911b6723160c48d1b9761b2d497412927"
+  },
+  {
+    "url": "https://erebine.ai/docs/completions",
+    "retrieved": "2026-10-26",
+    "sha256": "b4d806136cd54e977d546b9d72067d582c7d59611c872850fbda4e23971cd1a7"
+  },
+  {
+    "url": "https://erebine.ai/docs/conversations",
+    "retrieved": "2026-10-26",
+    "sha256": "0a8ef874f855746cbddb0dfb182320de32d0cee5eaec56f694d38a2df100667b"
+  },
+  {
+    "url": "https://erebine.ai/docs/cursor",
+    "retrieved": "2026-10-26",
+    "sha256": "cde348a485bedb1f421cc39eb54b94212c6620457ecd8fb44e9cb7fedd5e3cc4"
+  },
+  {
+    "url": "https://erebine.ai/docs/data-export",
+    "retrieved": "2026-10-26",
+    "sha256": "8ddf2bf5dc7ffd083ab597d90c86590bce2886be88a040ad767b917e79eb1812"
+  },
+  {
+    "url": "https://erebine.ai/docs/direct",
+    "retrieved": "2026-10-26",
+    "sha256": "cfb8e92f72e01539dd0bbde9b03bda2c7a672ff25f00d9684da088f19c4e651e"
+  },
+  {
+    "url": "https://erebine.ai/docs/document-workspace",
+    "retrieved": "2026-10-26",
+    "sha256": "6490fca30ba992ff56512db0a18bfb8976c55fbf3c996b47005ac6ba13d5b78b"
+  },
+  {
+    "url": "https://erebine.ai/docs/downloads",
+    "retrieved": "2026-10-26",
+    "sha256": "10fd86b7ea42bd907fceee07f21b6d07d2481ba2a7fa5f691d680114b11b37da"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem",
+    "retrieved": "2026-10-26",
+    "sha256": "32a6d76791822784eb46afb9493ae759657f81b1745fc5361c8d4b90676e202f"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/approvals",
+    "retrieved": "2026-10-26",
+    "sha256": "c9bf2e78dcdc26b32ebf5205585004b7561b61a4fb504a5b50952656a3c15eb5"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/architecture",
+    "retrieved": "2026-10-26",
+    "sha256": "9816f5167a5be95b982a5ba5b2d7c3b1270cf72f749ed0535802d0207d4ca176"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/config-files",
+    "retrieved": "2026-10-26",
+    "sha256": "96781f91d9013fb47c023c613f7c63128dd15535ecb446f21b6c1e3190a9d9e6"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/desktop-execution-manager",
+    "retrieved": "2026-10-26",
+    "sha256": "4e5562bc50cca2fda938eeb967a02e203b7c5a21492fbd20ca85f9a77b05c45f"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/env-vars",
+    "retrieved": "2026-10-26",
+    "sha256": "174a338d8e54d2520042e898db4fe6bea2c0e131f5771fffb696f10e774d8d1b"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/error-codes",
+    "retrieved": "2026-10-26",
+    "sha256": "c01a2d737f38cd5c008e39a1ef6083c806818b83d3510f58b0d85c2c96e42ecd"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/glossary",
+    "retrieved": "2026-10-26",
+    "sha256": "a5f43e7f435112860588afbc2d7a62569cb354516b4a67c94c8d0a2dff827410"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/guide/author-chat-template",
+    "retrieved": "2026-10-26",
+    "sha256": "14cc5225d1ed793a63ffd60bae8209d07d578e27ef82fab76646b78d73e27ff5"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/guide/connect-a-chat",
+    "retrieved": "2026-10-26",
+    "sha256": "03f0a2f6a3c55adf0edc7a25438298c1ae55412cca3f5196f3eb4c06d4ffa56a"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/guide/credential-rotation",
+    "retrieved": "2026-10-26",
+    "sha256": "489fc93e6bb9f6ea97c9503556baefa6dc905301b142d1d8fb12f1c7423e9839"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/guide/deploy-first-eem",
+    "retrieved": "2026-10-26",
+    "sha256": "60a3ffeae2d21b0639b4358c368d9485b6a494dc0df44564d881d4203abe4bd3"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/guide/incident-response",
+    "retrieved": "2026-10-26",
+    "sha256": "05ff01bf29f08358507b9d7b0e89490772ed6d382fdc0b77de57efc9615553ef"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/guide/slack-approval-bot",
+    "retrieved": "2026-10-26",
+    "sha256": "0eab9376d3f3d0be886203ae788af7c1d10dc73ba2538030e913c1d0b086e26e"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/operator-guides",
+    "retrieved": "2026-10-26",
+    "sha256": "29c01c9fd768e7e4846761cc67b61eb9f3ca790df6812fa8fee137b9cc8d9a89"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/ops-dashboard",
+    "retrieved": "2026-10-26",
+    "sha256": "c6cbf1f96f015bcb0948756bf552ec2762649eff569bc684488952de692912e0"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/tools/cloud",
+    "retrieved": "2026-10-26",
+    "sha256": "53a6c3b021a5b1ba4c053964d8158718ed49b70d558a0456eee41b1f321d6fa0"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/tools/ecosystem",
+    "retrieved": "2026-10-26",
+    "sha256": "1eea283f64b2787b07b2357e8214f495b02c89cb6cc7d9a4f5bbbe0aa9ed11c4"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/tools/kubernetes",
+    "retrieved": "2026-10-26",
+    "sha256": "fd1f7df5bda7400e1924876825cd01c56040b2586ac14a0dd5613d073e483f3f"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/tools/openstack",
+    "retrieved": "2026-10-26",
+    "sha256": "3e9ec69cdd0ae47da6700e9c34df3a647c2dfc0beed7e4096843fa422057ff35"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/troubleshooting",
+    "retrieved": "2026-10-26",
+    "sha256": "475426784f73f19183383905eceb80691c54abbabbf9357df6c30a4626dbe81f"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/tutorials",
+    "retrieved": "2026-10-26",
+    "sha256": "14b4c98cf36a8a8d6af3d0bbc3ec59ccf8189d27191fea71e0eafb167301a219"
+  },
+  {
+    "url": "https://erebine.ai/docs/eem/webhooks",
+    "retrieved": "2026-10-26",
+    "sha256": "60834eb686efd7ee8cc3518946e4f95fd09ce3947c7b226adba82683abb7d04f"
+  },
+  {
+    "url": "https://erebine.ai/docs/eim",
+    "retrieved": "2026-10-26",
+    "sha256": "d409e8b3ce2ecf14566654fc0e067396a1adc505a868a685d8254cd0ab64ff28"
+  },
+  {
+    "url": "https://erebine.ai/docs/eim/advanced",
+    "retrieved": "2026-10-26",
+    "sha256": "e650c266bccf087c6965e205a9a4058f65f31ea0bbc5bd450c3ab98691d54288"
+  },
+  {
+    "url": "https://erebine.ai/docs/eim/guide/deploy-first-eim",
+    "retrieved": "2026-10-26",
+    "sha256": "2ad627a4a1df21310934fce598be8c4374c1cc5c3d7128a3b18c3dafde58472a"
+  },
+  {
+    "url": "https://erebine.ai/docs/eim/macos",
+    "retrieved": "2026-10-26",
+    "sha256": "714d757c853c539335241174e08ed8abd83c6b6d4ecafda7588e67f7126c4154"
+  },
+  {
+    "url": "https://erebine.ai/docs/embeddings",
+    "retrieved": "2026-10-26",
+    "sha256": "3a6c530ab6cda47dfcc5883c8ba118d966b9cad6009ead5dcf15388320eb1444"
+  },
+  {
+    "url": "https://erebine.ai/docs/endpoint-cors",
+    "retrieved": "2026-10-26",
+    "sha256": "a5fd0503c13aa999f34610a60ef8d8ea0201266e4a42919115ba2e220f43afe7"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl",
+    "retrieved": "2026-10-26",
+    "sha256": "9823c574dbbe8816b4a7e78dd429375420ba6d415b05ae9f7e99cce54561d3ca"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/agents",
+    "retrieved": "2026-10-26",
+    "sha256": "278478bf32c1745e99093b49a269e8399a641ecaa410bc73194960bb7dfe1b52"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/approvals",
+    "retrieved": "2026-10-26",
+    "sha256": "5f5e729d55b4fc5fe96085f568549c912bfc4860aca5063fcc003d90e96618c3"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/batches",
+    "retrieved": "2026-10-26",
+    "sha256": "403248c87a79989eafe3eafb7286c7c7adfe124ee86ea2880b472572b770cafc"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/chat",
+    "retrieved": "2026-10-26",
+    "sha256": "6b90b5019f02ad183bf8ebd6bb02b1a430c31d9cb73d5d7d36788ca6a1a00b9e"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/config",
+    "retrieved": "2026-10-26",
+    "sha256": "224fe4a91e0f045c5dbc1dd70bdadf750257b27cbc6f1e503d32753aa5c498b9"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/conversations",
+    "retrieved": "2026-10-26",
+    "sha256": "6e3680f8f0182ad1d4a500d1745e0ea0dbc79e302361addfff4e8f87a2b7b59a"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/deploy",
+    "retrieved": "2026-10-26",
+    "sha256": "3bac269e2aa54797ce2843d87042f3c39fd375b2528c891daf85b1383d43511e"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/embeddings",
+    "retrieved": "2026-10-26",
+    "sha256": "d158d740cbbf83f658b5897bc7a07acb5a2cad7a414c64952ab2b64a37ae795e"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/endpoints",
+    "retrieved": "2026-10-26",
+    "sha256": "00b8ca7947b778b0f0f1ad64f17bfcea1bb5b877051de6e8929b80fe60d79e65"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/evolution",
+    "retrieved": "2026-10-26",
+    "sha256": "871ff300bad8a3ca07547304871c0ddd4ed421a1abb54d982bbc4de1114072d3"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/exec",
+    "retrieved": "2026-10-26",
+    "sha256": "3161b03f1dca5510061cbbae4e56397c866c710b72efc37ddc4b29b8e50d7900"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/files",
+    "retrieved": "2026-10-26",
+    "sha256": "c350d44e63c3d2a3366592053039e9737b8f329c3bcbede8a7e1bf24709a057f"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/keys",
+    "retrieved": "2026-10-26",
+    "sha256": "3bc76aabf8217d856136cee75dc87eafb07328bb34e0505ca26f9ef2d6def2d7"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/learnings",
+    "retrieved": "2026-10-26",
+    "sha256": "47ec3c1c17f885002d91668b688763069ae484bf9741d6ee2496d7a6210d19ad"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/models",
+    "retrieved": "2026-10-26",
+    "sha256": "45d09b263f472ed1194c4584fc1f888f5062576a50ae8ae0e92a3a296576b22c"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/platform",
+    "retrieved": "2026-10-26",
+    "sha256": "9bc447b5222a3e8f4c067711364b7321aa7d3411cad0f47b14ab0f07125dbd67"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/rerank",
+    "retrieved": "2026-10-26",
+    "sha256": "d2339562d8a65ead04992038b50415ff377a5de3bb53da39542afa9656d876c3"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/responses",
+    "retrieved": "2026-10-26",
+    "sha256": "4b89ad9f2f8391e6f4001a4e6c5c335bfc52329d66d5132fee75c013a91fafff"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/semantic-router",
+    "retrieved": "2026-10-26",
+    "sha256": "01b8fa159040d91825811c1f24c8e5a3e850a8a934d2cd95c581743cb975e98c"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/slos",
+    "retrieved": "2026-10-26",
+    "sha256": "cfbfe2538fd955df3b7aaa7a6105040147c7791bff5a629da5314f0a3e69f48d"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/templates",
+    "retrieved": "2026-10-26",
+    "sha256": "5ca5f3a8ae4b7f6ea6be108af7dee8b9921db3b4f2655e7d0413dc1dc9e03665"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/uploads",
+    "retrieved": "2026-10-26",
+    "sha256": "68a88861a4f48a0cf367f8c293f5c2f92049e5cc883c884dddcc603a4c7713cf"
+  },
+  {
+    "url": "https://erebine.ai/docs/erectl/webhooks",
+    "retrieved": "2026-10-26",
+    "sha256": "4ad33d3d6449e3548750893b5b23f8230c6fbb6b2cac4c8cba1fc823bec1769c"
+  },
+  {
+    "url": "https://erebine.ai/docs/erepress",
+    "retrieved": "2026-10-26",
+    "sha256": "f3cbcb314b431ecac5140db749d6dcdf1920679d39049ad64774c9f1895662b0"
+  },
+  {
+    "url": "https://erebine.ai/docs/error-handling",
+    "retrieved": "2026-10-26",
+    "sha256": "c4681a438a7dca508960a1322fd9e3051155b75e5438507668e76b1c62d60000"
+  },
+  {
+    "url": "https://erebine.ai/docs/files",
+    "retrieved": "2026-10-26",
+    "sha256": "53405331f8605d8a29a34d604207cabde796e73a6dc9026075f01dd9a1719e62"
+  },
+  {
+    "url": "https://erebine.ai/docs/getting-started",
+    "retrieved": "2026-10-26",
+    "sha256": "ee8e759bbb48a8c397d20923e604ed09a699ab7b57bb32af7b44edc982c96dbf"
+  },
+  {
+    "url": "https://erebine.ai/docs/guides",
+    "retrieved": "2026-10-26",
+    "sha256": "65320e74b071d8bc1186d6f6c26b9c17eb0e4a3070ed39a7ef86e897eacc2096"
+  },
+  {
+    "url": "https://erebine.ai/docs/hermes",
+    "retrieved": "2026-10-26",
+    "sha256": "ecf043ef57e27a2165a0eb37f5bfc00f9809004579c410161fa38c4a23576d75"
+  },
+  {
+    "url": "https://erebine.ai/docs/image-search-sources",
+    "retrieved": "2026-10-26",
+    "sha256": "7fb53bd86e3184d1d69e22f89ea83b40de207be9864d201b0422ef3fd3795fd4"
+  },
+  {
+    "url": "https://erebine.ai/docs/license",
+    "retrieved": "2026-10-26",
+    "sha256": "a62f9eb2e794570912f0f3ba20c4ff0e8bf48663a3382d1587ccd35785699088"
+  },
+  {
+    "url": "https://erebine.ai/docs/mcp",
+    "retrieved": "2026-10-26",
+    "sha256": "3704e49456ec71aec98a68023dce1bc4cb74ce2e2815276dab97bbe6e2ff8f32"
+  },
+  {
+    "url": "https://erebine.ai/docs/model-catalog",
+    "retrieved": "2026-10-26",
+    "sha256": "aa6a5e720ef019ac0cf4ef21de9127704a255829e97b83b3ddfc8ad69c0113a7"
+  },
+  {
+    "url": "https://erebine.ai/docs/model-management",
+    "retrieved": "2026-10-26",
+    "sha256": "e34099ddc134ac1bdd70e9a3899b05c881304b0d936db782bab3d4966265a9e1"
+  },
+  {
+    "url": "https://erebine.ai/docs/model-sharing",
+    "retrieved": "2026-10-26",
+    "sha256": "4d34f9ee3b011af936b2058532f7dc6d953a856f46580eda27ecfb21b7dff3b2"
+  },
+  {
+    "url": "https://erebine.ai/docs/model-upload",
+    "retrieved": "2026-10-26",
+    "sha256": "ec74825e80085d62c4ce333c550c5cad4bb2dfd52953f805dfef38858b6cfa92"
+  },
+  {
+    "url": "https://erebine.ai/docs/model-versioning",
+    "retrieved": "2026-10-26",
+    "sha256": "2cbb1a858ccd1c2d133303a6ee2ede3d4e1813d10bcabd0fb19055e3faf15dfc"
+  },
+  {
+    "url": "https://erebine.ai/docs/omp",
+    "retrieved": "2026-10-26",
+    "sha256": "ec435a36a8ae187a3eb12a55a070908315b1a55a7dcb740a71965286cf2786bc"
+  },
+  {
+    "url": "https://erebine.ai/docs/opencode",
+    "retrieved": "2026-10-26",
+    "sha256": "cdceb87ef89999d3ca58a54724575c1c4cba572cfdcf85e2753b0121838048ac"
+  },
+  {
+    "url": "https://erebine.ai/docs/pi",
+    "retrieved": "2026-10-26",
+    "sha256": "368979c635c61b36b7e913d7a605b6a55375b20c89b8295f4db6fc174ba77daf"
+  },
+  {
+    "url": "https://erebine.ai/docs/prefix-caching",
+    "retrieved": "2026-10-26",
+    "sha256": "ab9ecc6920890540ea84a8bbabb047885590c7ae7f7dc230b1a9e8d99e954589"
+  },
+  {
+    "url": "https://erebine.ai/docs/private-agents",
+    "retrieved": "2026-10-26",
+    "sha256": "c4b57c40e9256a77f271d106214681fecab9fb83fb96349d38b38b43c41f658d"
+  },
+  {
+    "url": "https://erebine.ai/docs/queueing",
+    "retrieved": "2026-10-26",
+    "sha256": "fa61d630b9ea8883173888e57e854ac8f274f614698454a9836993981f8ced91"
+  },
+  {
+    "url": "https://erebine.ai/docs/rerank",
+    "retrieved": "2026-10-26",
+    "sha256": "b507df27c4c21e9f24926559368a65b393614faaebb1e4d18195df06d1101e9f"
+  },
+  {
+    "url": "https://erebine.ai/docs/responses",
+    "retrieved": "2026-10-26",
+    "sha256": "06da58923a934c13584fba5663d7bcad6ab0a06c56509993fa6523ccab38ea11"
+  },
+  {
+    "url": "https://erebine.ai/docs/router",
+    "retrieved": "2026-10-26",
+    "sha256": "cee0f3bdcbbee3a8a6c93a34cf6326f4ecc2dfb5fed6b903eb053f7f1fa6f27e"
+  },
+  {
+    "url": "https://erebine.ai/docs/sdk-integrations",
+    "retrieved": "2026-10-26",
+    "sha256": "2af37bc8eb9594738f42bf4fd4f81c46378893b74b1af773dacb5233673371cd"
+  },
+  {
+    "url": "https://erebine.ai/docs/self-evolving",
+    "retrieved": "2026-10-26",
+    "sha256": "3e5f756ba32242297b3a78886d493c9127357d616b385c236891b0dafc735c83"
+  },
+  {
+    "url": "https://erebine.ai/docs/server-tools",
+    "retrieved": "2026-10-26",
+    "sha256": "b18fdab981579562371d081003ddbbb05e4668a084e27a98de64439a1b051b15"
+  },
+  {
+    "url": "https://erebine.ai/docs/service-tiers",
+    "retrieved": "2026-10-26",
+    "sha256": "4ad9882af39f4f5e8db5372f95e0b5279e1f2ba4336f28fdb5cbe2f13e7dbfa3"
+  },
+  {
+    "url": "https://erebine.ai/docs/slo-tracking",
+    "retrieved": "2026-10-26",
+    "sha256": "72c63d4e4fc8ea3fde75b015bd83ccd93b5eb5652bc8593f553ca481396cfafd"
+  },
+  {
+    "url": "https://erebine.ai/docs/status-maintenance",
+    "retrieved": "2026-10-26",
+    "sha256": "2d036201da797f14a72a1ef0f7f827ac27ee6e098cea1d2710a22623e18ec329"
+  },
+  {
+    "url": "https://erebine.ai/docs/storage",
+    "retrieved": "2026-10-26",
+    "sha256": "97828a94566638b20031b0188670d6273ed4cef30da703a8658e306e7d3fabe7"
+  },
+  {
+    "url": "https://erebine.ai/docs/streaming",
+    "retrieved": "2026-10-26",
+    "sha256": "29c3e5aee06c41586e29fcc6d8b1e87d2f2b9934e32a3b0e1d4b640ad24e9b89"
+  },
+  {
+    "url": "https://erebine.ai/docs/systemone",
+    "retrieved": "2026-10-26",
+    "sha256": "eb187f450c0f1ff8defdd7f762af9147a7efeb08133a5147801b1f210b273fe0"
+  },
+  {
+    "url": "https://erebine.ai/docs/teams",
+    "retrieved": "2026-10-26",
+    "sha256": "6a47245b93e8aaf6a18cfb8c7ddec1a987ddecf4049ad356dcaff5215680b3df"
+  },
+  {
+    "url": "https://erebine.ai/docs/tool-calling",
+    "retrieved": "2026-10-26",
+    "sha256": "9fbfe5eab07d2c1ef1b5858f69e31c0084ca947a06f6deb51be26d529b394691"
+  },
+  {
+    "url": "https://erebine.ai/docs/uploads",
+    "retrieved": "2026-10-26",
+    "sha256": "50bed3fd06ac2fe329407f8496c4c2ff4a70237b478991efc115f74057360d7d"
+  },
+  {
+    "url": "https://erebine.ai/docs/usage-billing",
+    "retrieved": "2026-10-26",
+    "sha256": "81ada52bfac103f03410798a5c29a99b78c64e4291e12e1e7a7a059f9262dc1d"
+  },
+  {
+    "url": "https://erebine.ai/docs/vscode",
+    "retrieved": "2026-10-26",
+    "sha256": "f78f4900b5e959cc2b79b7d3a500d0e4342cc3536bb605021777a9b3a17691a6"
+  },
+  {
+    "url": "https://erebine.ai/docs/webhooks",
+    "retrieved": "2026-10-26",
+    "sha256": "dd910567a0b1eff4db8ec164c1e83ceed37c796690549785ecd22552b062bdd5"
+  },
+  {
+    "url": "https://erebine.ai/docs/workspace-graph",
+    "retrieved": "2026-10-26",
+    "sha256": "7b34da0c9c6f953e3ba680aa615c1daa8373f340e6e77d814af6b9d7e6e7eeb9"
+  },
+  {
+    "url": "https://erebine.ai/docs/zero-data-retention",
+    "retrieved": "2026-10-26",
+    "sha256": "6dd7781f311878bf002388bebe48aaf436d2ed06141d800e8a6803e3e781c93c"
+  }
+]

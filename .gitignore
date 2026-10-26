@@ -1,0 +1,7 @@
+target/
+.build/
+.swiftpm/
+.DS_Store
+.env
+work/
+*.xcresult

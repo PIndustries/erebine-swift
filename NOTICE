@@ -1,0 +1,12 @@
+Community SDK by P.Industries. Not affiliated with or endorsed by Erebine.
+
+API route facts and catalog provenance derived from:
+Erebine Documentation, https://erebine.ai/docs
+Copyright 2026 Kevin Carter; licensed CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+Changes: extracted and normalized method/path facts, parameter names, and source
+references; generated language-specific definitions and coverage notes.
+The source-attributed files under api/ are distributed under CC BY 4.0. SDK code,
+original prose, tests, and examples are MIT licensed. Erebine names and marks
+remain the property of their respective owners.

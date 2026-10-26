@@ -1,0 +1,3695 @@
+{
+  "schema_version": 1,
+  "source": "Erebine Documentation, https://erebine.ai/docs",
+  "retrieved": "2026-10-26",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/billing/budgets/{id}",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "name": "delete_billing_budgets_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/{id_1}/branch/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "name": "delete_chat_api_id_1_branch_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/{id_1}/memories/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "name": "delete_chat_api_id_1_memories_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_chat_api_workspaces_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/workspaces/{id_1}/decisions/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_chat_api_workspaces_id_1_decisions_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/workspaces/{id_1}/files/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_chat_api_workspaces_id_1_files_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/workspaces/{id_1}/members/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_chat_api_workspaces_id_1_members_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/workspaces/{id_1}/memories/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_chat_api_workspaces_id_1_memories_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/workspaces/{id_1}/milestones/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_chat_api_workspaces_id_1_milestones_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat/api/workspaces/{id_1}/relations/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_chat_api_workspaces_id_1_relations_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/gdpr/export/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "delete_gdpr_export_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/tool-calling",
+        "https://erebine.ai/docs/zero-data-retention"
+      ],
+      "name": "delete_project_id_endpoint_slug_v1_chat_completions_id",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/{endpoint_slug}/v1/responses/{id}",
+      "sources": [
+        "https://erebine.ai/docs/responses",
+        "https://erebine.ai/docs/zero-data-retention"
+      ],
+      "name": "delete_project_id_endpoint_slug_v1_responses_id",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/chats/{id_1}/branches/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "name": "delete_project_id_v1_chats_id_1_branches_id_2",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/conversations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "name": "delete_project_id_v1_conversations_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/conversations/{id_1}/items/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "name": "delete_project_id_v1_conversations_id_1_items_id_2",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/exports/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "delete_project_id_v1_exports_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/files/{id}",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "name": "delete_project_id_v1_files_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/agents/{id}",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "delete_project_id_v1_management_agents_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/api-keys/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "name": "delete_project_id_v1_management_api_keys_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/endpoints/{id}",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "name": "delete_project_id_v1_management_endpoints_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/join-keys/{id}",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "delete_project_id_v1_management_join_keys_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/maintenance/{id}",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "name": "delete_project_id_v1_management_maintenance_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/project/invitations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "delete_project_id_v1_management_project_invitations_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/project/members/{id}",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "delete_project_id_v1_management_project_members_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/management/semantic-router/rules/{id}",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "delete_project_id_v1_management_semantic_router_rules_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/models/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/models",
+        "https://erebine.ai/docs/model-management"
+      ],
+      "name": "delete_project_id_v1_models_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/slos/{id}",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "delete_project_id_v1_slos_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/uploads/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/uploads",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "delete_project_id_v1_uploads_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/webhooks/{id}",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "name": "delete_project_id_v1_webhooks_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_project_id_v1_workspaces_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id_1}/files/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_project_id_v1_workspaces_id_1_files_id_2",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id_1}/memories/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "delete_project_id_v1_workspaces_id_1_memories_id_2",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "DELETE",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/responses/{id}",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "delete_project_id_workspace_id_direct_v1_responses_id",
+      "parameters": [
+        "project_id",
+        "workspace_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/account/api/invite",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "get_account_api_invite",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/billing",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "get_billing",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/billing/budgets",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "name": "get_billing_budgets",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/billing/budgets/{id}",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "name": "get_billing_budgets_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/billing/budgets/{id}/history",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "name": "get_billing_budgets_id_history",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/billing/checkout/cancel",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "get_billing_checkout_cancel",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/billing/checkout/success",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "get_billing_checkout_success",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/billing/invoices",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "get_billing_invoices",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/billing/plans",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "get_billing_plans",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/{id}/branches",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "name": "get_chat_api_id_branches",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/{id}/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "name": "get_chat_api_id_memories",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/templates",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "name": "get_chat_api_templates",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id_1}/files/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces_id_1_files_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id}/decisions",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces_id_decisions",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id}/files",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces_id_files",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id}/graph",
+      "sources": [
+        "https://erebine.ai/docs/workspace-graph"
+      ],
+      "name": "get_chat_api_workspaces_id_graph",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id}/members",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces_id_members",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id}/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces_id_memories",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id}/milestones",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces_id_milestones",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/chat/api/workspaces/{id}/preferences",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_chat_api_workspaces_id_preferences",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/gdpr/delete/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "get_gdpr_delete_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/gdpr/delete/preview",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "get_gdpr_delete_preview",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/gdpr/export/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "get_gdpr_export_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/gdpr/export/{id}/download",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "get_gdpr_export_id_download",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/gdpr/exports",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "get_gdpr_exports",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/healthz",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "name": "get_healthz",
+      "parameters": [],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/ops/api/activity/export",
+      "sources": [
+        "https://erebine.ai/docs/eem/ops-dashboard"
+      ],
+      "name": "get_ops_api_activity_export",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/_direct/v1/provider-manifest",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "get_project_id_direct_v1_provider_manifest",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{endpoint_slug}/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "name": "get_project_id_endpoint_slug_v1_chat_completions",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/sdk-integrations",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "name": "get_project_id_endpoint_slug_v1_chat_completions_id",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}/messages",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "name": "get_project_id_endpoint_slug_v1_chat_completions_id_messages",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{endpoint_slug}/v1/models",
+      "sources": [
+        "https://erebine.ai/docs/getting-started",
+        "https://erebine.ai/docs/sdk-integrations"
+      ],
+      "name": "get_project_id_endpoint_slug_v1_models",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{endpoint_slug}/v1/responses",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "name": "get_project_id_endpoint_slug_v1_responses",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{endpoint_slug}/v1/responses/{id}",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "name": "get_project_id_endpoint_slug_v1_responses_id",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{endpoint_slug}/v1/responses/{id}/input_items",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "name": "get_project_id_endpoint_slug_v1_responses_id_input_items",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/batches",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "name": "get_project_id_v1_batches",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/batches/{id}",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "name": "get_project_id_v1_batches_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/chats/{id}/branches",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "name": "get_project_id_v1_chats_id_branches",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/conversations",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "name": "get_project_id_v1_conversations",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/conversations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "name": "get_project_id_v1_conversations_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/conversations/{id_1}/items/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "name": "get_project_id_v1_conversations_id_1_items_id_2",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/conversations/{id}/items",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "name": "get_project_id_v1_conversations_id_items",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/endpoints",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "get_project_id_v1_endpoints",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/endpoints/{id}/slos",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "get_project_id_v1_endpoints_id_slos",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/agents/{id}/manifest",
+      "sources": [
+        "https://erebine.ai/docs/erectl/exec"
+      ],
+      "name": "get_project_id_v1_exec_agents_id_manifest",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/approvals",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "name": "get_project_id_v1_exec_approvals",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/approvals/{id}",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "name": "get_project_id_v1_exec_approvals_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/approvals/stream",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "name": "get_project_id_v1_exec_approvals_stream",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/invocations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/eem"
+      ],
+      "name": "get_project_id_v1_exec_invocations_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/tools",
+      "sources": [
+        "https://erebine.ai/docs/eem"
+      ],
+      "name": "get_project_id_v1_exec_tools",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exec/tools/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/exec"
+      ],
+      "name": "get_project_id_v1_exec_tools_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exports",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "get_project_id_v1_exports",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exports/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "get_project_id_v1_exports_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/exports/{id}/download",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "get_project_id_v1_exports_id_download",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/files",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "name": "get_project_id_v1_files",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/files/{id}",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "name": "get_project_id_v1_files_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/files/{id}/content",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/files"
+      ],
+      "name": "get_project_id_v1_files_id_content",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/health/dashboard",
+      "sources": [
+        "https://erebine.ai/docs/erectl/platform",
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "name": "get_project_id_v1_health_dashboard",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/agents",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "get_project_id_v1_management_agents",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/agents/{id}",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "get_project_id_v1_management_agents_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/agents/{id}/events",
+      "sources": [
+        "https://erebine.ai/docs/eem/guide/credential-rotation",
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "get_project_id_v1_management_agents_id_events",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/api-keys",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "name": "get_project_id_v1_management_api_keys",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/api-keys/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "name": "get_project_id_v1_management_api_keys_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/endpoints/{id}/cors",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "name": "get_project_id_v1_management_endpoints_id_cors",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/join-keys",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "get_project_id_v1_management_join_keys",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/maintenance",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "name": "get_project_id_v1_management_maintenance",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/project/invitations",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "get_project_id_v1_management_project_invitations",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/project/members",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "get_project_id_v1_management_project_members",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/semantic-router/config",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "get_project_id_v1_management_semantic_router_config",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/semantic-router/decisions",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/authentication"
+      ],
+      "name": "get_project_id_v1_management_semantic_router_decisions",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/semantic-router/health",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/authentication"
+      ],
+      "name": "get_project_id_v1_management_semantic_router_health",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/semantic-router/rules",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "get_project_id_v1_management_semantic_router_rules",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/management/tiers",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "get_project_id_v1_management_tiers",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/mockups/{id}/{path}",
+      "sources": [
+        "https://erebine.ai/docs/server-tools",
+        "https://erebine.ai/docs/streaming"
+      ],
+      "name": "get_project_id_v1_mockups_id_path",
+      "parameters": [
+        "project_id",
+        "id",
+        "path"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/models",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/authentication",
+        "https://erebine.ai/docs/eem/error-codes",
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-sharing",
+        "https://erebine.ai/docs/rerank",
+        "https://erebine.ai/docs/systemone"
+      ],
+      "name": "get_project_id_v1_models",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/models/{id}",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-sharing"
+      ],
+      "name": "get_project_id_v1_models_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/models/{id}/catalog-info",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "name": "get_project_id_v1_models_id_catalog_info",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/models/{id}/hf-overrides",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "name": "get_project_id_v1_models_id_hf_overrides",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/models/{id}/versions",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "name": "get_project_id_v1_models_id_versions",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/project-members/search",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "get_project_id_v1_project_members_search",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/slos",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "get_project_id_v1_slos",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/slos/{id}",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "get_project_id_v1_slos_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/slos/{id}/history",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "get_project_id_v1_slos_id_history",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/slos/summary",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "get_project_id_v1_slos_summary",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/uploads",
+      "sources": [
+        "https://erebine.ai/docs/erectl/uploads",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "get_project_id_v1_uploads",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/uploads/{id}",
+      "sources": [
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "get_project_id_v1_uploads_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/usage/endpoints",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "name": "get_project_id_v1_usage_endpoints",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/usage/events",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "name": "get_project_id_v1_usage_events",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/usage/logs",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "name": "get_project_id_v1_usage_logs",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/usage/uptime",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "name": "get_project_id_v1_usage_uptime",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/webhooks",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "name": "get_project_id_v1_webhooks",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/webhooks/{id}",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "name": "get_project_id_v1_webhooks_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/webhooks/{id}/deliveries",
+      "sources": [
+        "https://erebine.ai/docs/eem/webhooks",
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "name": "get_project_id_v1_webhooks_id_deliveries",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_project_id_v1_workspaces",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/queueing",
+        "https://erebine.ai/docs/zero-data-retention",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_project_id_v1_workspaces_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id_1}/files/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_project_id_v1_workspaces_id_1_files_id_2",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/files",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_project_id_v1_workspaces_id_files",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/graph",
+      "sources": [
+        "https://erebine.ai/docs/workspace-graph"
+      ],
+      "name": "get_project_id_v1_workspaces_id_graph",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/v1/workspaces/{id}/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "get_project_id_v1_workspaces_id_memories",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/models",
+      "sources": [
+        "https://erebine.ai/docs/direct",
+        "https://erebine.ai/docs/opencode",
+        "https://erebine.ai/docs/sdk-integrations",
+        "https://erebine.ai/docs/vscode"
+      ],
+      "name": "get_project_id_workspace_id_direct_v1_models",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/models/{id}",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "get_project_id_workspace_id_direct_v1_models_id",
+      "parameters": [
+        "project_id",
+        "workspace_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/provider-manifest",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "get_project_id_workspace_id_direct_v1_provider_manifest",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/responses",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "get_project_id_workspace_id_direct_v1_responses",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/responses/{id}",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "get_project_id_workspace_id_direct_v1_responses_id",
+      "parameters": [
+        "project_id",
+        "workspace_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/responses/{id}/input_items",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "get_project_id_workspace_id_direct_v1_responses_id_input_items",
+      "parameters": [
+        "project_id",
+        "workspace_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "GET",
+      "path": "/usage/export/uptime",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "name": "get_usage_export_uptime",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/chat/api/{id_1}/memories/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "name": "patch_chat_api_id_1_memories_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/chat/api/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "patch_chat_api_workspaces_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/chat/api/workspaces/{id_1}/decisions/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "patch_chat_api_workspaces_id_1_decisions_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/chat/api/workspaces/{id_1}/memories/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "patch_chat_api_workspaces_id_1_memories_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/chat/api/workspaces/{id_1}/milestones/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "patch_chat_api_workspaces_id_1_milestones_id_2",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/chat/api/workspaces/{id}/preferences",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "patch_chat_api_workspaces_id_preferences",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/chat/api/workspaces/{id}/visibility",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "patch_chat_api_workspaces_id_visibility",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/{project_id}/v1/management/agents/{id}",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "patch_project_id_v1_management_agents_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/{project_id}/v1/management/maintenance/{id}",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "name": "patch_project_id_v1_management_maintenance_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/{project_id}/v1/management/project/members/{id}",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "patch_project_id_v1_management_project_members_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/{project_id}/v1/management/semantic-router/config",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "patch_project_id_v1_management_semantic_router_config",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/{project_id}/v1/management/semantic-router/rules/{id}",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "patch_project_id_v1_management_semantic_router_rules_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/{project_id}/v1/models/{id}",
+      "sources": [
+        "https://erebine.ai/docs/eim/advanced",
+        "https://erebine.ai/docs/erectl/models",
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/private-agents",
+        "https://erebine.ai/docs/systemone"
+      ],
+      "name": "patch_project_id_v1_models_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/{project_id}/v1/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "patch_project_id_v1_workspaces_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PATCH",
+      "path": "/{project_id}/v1/workspaces/{id_1}/memories/{id_2}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "patch_project_id_v1_workspaces_id_1_memories_id_2",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/account/api/invite",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "post_account_api_invite",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/agents/{id}/disable",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "post_agents_id_disable",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/agents/{id}/enable",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "post_agents_id_enable",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/agents/{id}/reset",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "post_agents_id_reset",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/billing/budgets",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "name": "post_billing_budgets",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/billing/budgets/check",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "name": "post_billing_budgets_check",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/billing/cancel",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "post_billing_cancel",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/billing/checkout",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "post_billing_checkout",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/billing/credits",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "post_billing_credits",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/billing/portal",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "post_billing_portal",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/billing/reactivate",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "name": "post_billing_reactivate",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/{id_1}/memories/{id_2}/rerun-extraction",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "name": "post_chat_api_id_1_memories_id_2_rerun_extraction",
+      "parameters": [
+        "id_1",
+        "id_2"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/{id}/branch",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "name": "post_chat_api_id_branch",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/{id}/memory",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "name": "post_chat_api_id_memory",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/workspaces",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_chat_api_workspaces",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/workspaces/{id}/files",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_chat_api_workspaces_id_files",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/workspaces/{id}/members",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_chat_api_workspaces_id_members",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/workspaces/{id}/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_chat_api_workspaces_id_memories",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/workspaces/{id}/revalidate-embeddings",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_chat_api_workspaces_id_revalidate_embeddings",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/workspaces/{id}/revalidate-memories",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_chat_api_workspaces_id_revalidate_memories",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/workspaces/{id}/search",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_chat_api_workspaces_id_search",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/chat/api/workspaces/{id}/upload",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_chat_api_workspaces_id_upload",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/gdpr/delete",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_gdpr_delete",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/gdpr/delete/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_gdpr_delete_id_cancel",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/gdpr/delete/{id}/confirm",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_gdpr_delete_id_confirm",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/gdpr/export",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_gdpr_export",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/gdpr/export/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_gdpr_export_id_cancel",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/audio/speech",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/audio"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_audio_speech",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/audio/transcriptions",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/audio"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_audio_transcriptions",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/audio/translations",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/audio"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_audio_translations",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/batches",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_batches",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/audio",
+        "https://erebine.ai/docs/slo-tracking",
+        "https://erebine.ai/docs/streaming"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_chat_completions",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/sdk-integrations",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_chat_completions_id",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/embeddings",
+      "sources": [
+        "https://erebine.ai/docs/embeddings"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_embeddings",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/rerank",
+      "sources": [
+        "https://erebine.ai/docs/rerank"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_rerank",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/responses",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/responses"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_responses",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/responses/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_responses_id_cancel",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/score",
+      "sources": [
+        "https://erebine.ai/docs/rerank",
+        "https://erebine.ai/docs/sdk-integrations"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_score",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{endpoint_slug}/v1/systemone",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/systemone"
+      ],
+      "name": "post_project_id_endpoint_slug_v1_systemone",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/_semantic/router/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "post_project_id_semantic_router_v1_chat_completions",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/_semantic/router/v1/chat/completions/multimodel",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "post_project_id_semantic_router_v1_chat_completions_multimodel",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/batches",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "name": "post_project_id_v1_batches",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/batches/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "name": "post_project_id_v1_batches_id_cancel",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/chats/{id}/auto_fork",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "name": "post_project_id_v1_chats_id_auto_fork",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/chats/{id}/branches",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "name": "post_project_id_v1_chats_id_branches",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/conversations",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "name": "post_project_id_v1_conversations",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/conversations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "name": "post_project_id_v1_conversations_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/conversations/{id}/items",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "name": "post_project_id_v1_conversations_id_items",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/exec/approvals/{id}/approve",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals",
+        "https://erebine.ai/docs/eem/tutorials"
+      ],
+      "name": "post_project_id_v1_exec_approvals_id_approve",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/exec/approvals/{id}/reject",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "name": "post_project_id_v1_exec_approvals_id_reject",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/exec/invocations",
+      "sources": [
+        "https://erebine.ai/docs/eem",
+        "https://erebine.ai/docs/eem/glossary"
+      ],
+      "name": "post_project_id_v1_exec_invocations",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/exec/invocations/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "name": "post_project_id_v1_exec_invocations_id_cancel",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/exports/executions",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_project_id_v1_exports_executions",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/exports/logs",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_project_id_v1_exports_logs",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/exports/metrics",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_project_id_v1_exports_metrics",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/exports/usage",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "name": "post_project_id_v1_exports_usage",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/files",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/files"
+      ],
+      "name": "post_project_id_v1_files",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/internal/research",
+      "sources": [
+        "https://erebine.ai/docs/eem"
+      ],
+      "name": "post_project_id_v1_internal_research",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/api-keys",
+      "sources": [
+        "https://erebine.ai/docs/authentication",
+        "https://erebine.ai/docs/erectl/keys",
+        "https://erebine.ai/docs/sdk-integrations"
+      ],
+      "name": "post_project_id_v1_management_api_keys",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/api-keys/{id}/rotate",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "name": "post_project_id_v1_management_api_keys_id_rotate",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/join-keys",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "name": "post_project_id_v1_management_join_keys",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/maintenance",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "name": "post_project_id_v1_management_maintenance",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/maintenance/{id}/complete",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "name": "post_project_id_v1_management_maintenance_id_complete",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/maintenance/{id}/purge",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "name": "post_project_id_v1_management_maintenance_id_purge",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/project/invitations/{id}/resend",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "post_project_id_v1_management_project_invitations_id_resend",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/project/members",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "post_project_id_v1_management_project_members",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/management/semantic-router/rules",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "name": "post_project_id_v1_management_semantic_router_rules",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/hf-overrides/preview",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "name": "post_project_id_v1_models_id_hf_overrides_preview",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/revalidate",
+      "sources": [
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-versioning"
+      ],
+      "name": "post_project_id_v1_models_id_revalidate",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/share",
+      "sources": [
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-sharing"
+      ],
+      "name": "post_project_id_v1_models_id_share",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/unshare",
+      "sources": [
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-sharing"
+      ],
+      "name": "post_project_id_v1_models_id_unshare",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/versions",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "name": "post_project_id_v1_models_id_versions",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/versions/{version}/promote",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "name": "post_project_id_v1_models_id_versions_version_promote",
+      "parameters": [
+        "project_id",
+        "id",
+        "version"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/models/{id}/versions/{version}/rollback",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "name": "post_project_id_v1_models_id_versions_version_rollback",
+      "parameters": [
+        "project_id",
+        "id",
+        "version"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/slos",
+      "sources": [
+        "https://erebine.ai/docs/erectl/slos",
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "post_project_id_v1_slos",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/slos/{id}/calculate",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "post_project_id_v1_slos_id_calculate",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads",
+      "sources": [
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/archive",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_archive",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/directory",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_directory",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_id_cancel",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/{id}/complete",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_id_complete",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/{id}/file-chunks/{chunk_index}",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_id_file_chunks_chunk_index",
+      "parameters": [
+        "project_id",
+        "id",
+        "chunk_index"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/{id}/file-complete",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_id_file_complete",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/{id}/files/{relative_path}",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_id_files_relative_path",
+      "parameters": [
+        "project_id",
+        "id",
+        "relative_path"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/{id}/parts",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_id_parts",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/uploads/{id}/resume",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "name": "post_project_id_v1_uploads_id_resume",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/webhooks",
+      "sources": [
+        "https://erebine.ai/docs/eem/webhooks",
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "name": "post_project_id_v1_webhooks",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/webhooks/{id}/test",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "name": "post_project_id_v1_webhooks_id_test",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_project_id_v1_workspaces",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id}/files",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_project_id_v1_workspaces_id_files",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id}/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_project_id_v1_workspaces_id_memories",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/workspaces/{id}/search",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "name": "post_project_id_v1_workspaces_id_search",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/audio/speech",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_audio_speech",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/audio/transcriptions",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_audio_transcriptions",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/audio/translations",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_audio_translations",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_chat_completions",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/embeddings",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_embeddings",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/rerank",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_rerank",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/responses",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_responses",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/responses/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_responses_id_cancel",
+      "parameters": [
+        "project_id",
+        "workspace_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/score",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_score",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/{workspace_id}/_direct/v1/systemone",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/direct",
+        "https://erebine.ai/docs/systemone"
+      ],
+      "name": "post_project_id_workspace_id_direct_v1_systemone",
+      "parameters": [
+        "project_id",
+        "workspace_id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/projects/members",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "name": "post_projects_members",
+      "parameters": [],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/enroll",
+      "sources": [
+        "https://erebine.ai/docs/eem/architecture",
+        "https://erebine.ai/docs/eem/error-codes",
+        "https://erebine.ai/docs/eem/troubleshooting",
+        "https://erebine.ai/docs/eim"
+      ],
+      "name": "post_v1_enroll",
+      "parameters": [],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/enroll/refresh",
+      "sources": [
+        "https://erebine.ai/docs/eem/architecture"
+      ],
+      "name": "post_v1_enroll_refresh",
+      "parameters": [],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PUT",
+      "path": "/billing/budgets/{id}",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "name": "put_billing_budgets_id",
+      "parameters": [
+        "id"
+      ],
+      "surface": "dashboard",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PUT",
+      "path": "/{project_id}/v1/management/api-keys/{id}/ip-filter",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "name": "put_project_id_v1_management_api_keys_id_ip_filter",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PUT",
+      "path": "/{project_id}/v1/management/api-keys/{id}/quota",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "name": "put_project_id_v1_management_api_keys_id_quota",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PUT",
+      "path": "/{project_id}/v1/management/endpoints/{id}/cors",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "name": "put_project_id_v1_management_endpoints_id_cors",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PUT",
+      "path": "/{project_id}/v1/slos/{id}",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "name": "put_project_id_v1_slos_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    },
+    {
+      "method": "PUT",
+      "path": "/{project_id}/v1/webhooks/{id}",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "name": "put_project_id_v1_webhooks_id",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live behavior not verified"
+    }
+  ]
+}

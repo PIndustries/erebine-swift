@@ -1,0 +1,26 @@
+[
+  {
+    "method": "POST",
+    "path": "/billing/*",
+    "source": "https://erebine.ai/docs/billing-subscriptions",
+    "reason": "non-concrete route pattern"
+  },
+  {
+    "method": "POST",
+    "path": "/webhooks/stripe",
+    "source": "https://erebine.ai/docs/billing-subscriptions",
+    "reason": "example receiver or browser flow, not client API operation"
+  },
+  {
+    "method": "POST",
+    "path": "/erebine",
+    "source": "https://erebine.ai/docs/eem/webhooks",
+    "reason": "example receiver or browser flow, not client API operation"
+  },
+  {
+    "method": "POST",
+    "path": "/login",
+    "source": "https://erebine.ai/docs/server-tools",
+    "reason": "example receiver or browser flow, not client API operation"
+  }
+]
