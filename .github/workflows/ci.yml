@@ -11,8 +11,9 @@ jobs:
         with:
           python-version: '3.x'
       - run: swift --version
+      - run: python3 scripts/check_catalog.py
       - run: python3 scripts/generate.py
-      - run: git diff --exit-code -- Sources/Erebine/Operations.swift
+      - run: git diff --exit-code -- Sources/Erebine/Operations.swift Sources/Erebine/API.swift
       - run: swift test
       - run: xcodebuild -scheme Erebine -destination 'generic/platform=iOS Simulator' -derivedDataPath work/ios CODE_SIGNING_ALLOWED=NO build
       - run: xcodebuild -scheme Erebine -destination 'generic/platform=watchOS Simulator' -derivedDataPath work/watchos CODE_SIGNING_ALLOWED=NO build

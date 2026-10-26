@@ -2,7 +2,7 @@ import Foundation
 
 /// Request/response MCP sessions over Streamable HTTP (2025-06-18).
 /// Supports JSON and finite SSE POST responses. Does not advertise sampling,
-/// elicitation, roots, subscription listeners, or resumable reconnection.
+/// elicitation, roots, or automatic reconnection.
 public actor MCPSession {
     private let client: Client
     private var sessionID: String?
@@ -48,6 +48,36 @@ public actor MCPSession {
     }
     public func callTool(_ name: String, arguments: JSONValue = [:]) async throws -> JSONValue {
         try await call("tools/call", params:["name":.string(name), "arguments":arguments])
+    }
+    public func ping() async throws -> JSONValue { try await call("ping") }
+    public func listPrompts(cursor: String? = nil) async throws -> JSONValue {
+        try await call("prompts/list", params: cursor.map { ["cursor": .string($0)] } ?? [:])
+    }
+    public func getPrompt(_ name: String, arguments: [String: String] = [:]) async throws -> JSONValue {
+        try await call("prompts/get", params: ["name": .string(name), "arguments": .object(arguments.mapValues(JSONValue.string))])
+    }
+    public func listResources(cursor: String? = nil) async throws -> JSONValue {
+        try await call("resources/list", params: cursor.map { ["cursor": .string($0)] } ?? [:])
+    }
+    public func listResourceTemplates(cursor: String? = nil) async throws -> JSONValue {
+        try await call("resources/templates/list", params: cursor.map { ["cursor": .string($0)] } ?? [:])
+    }
+    public func readResource(_ uri: String) async throws -> JSONValue {
+        try await call("resources/read", params: ["uri": .string(uri)])
+    }
+    public func subscribeResource(_ uri: String) async throws -> JSONValue {
+        try await call("resources/subscribe", params: ["uri": .string(uri)])
+    }
+    public func unsubscribeResource(_ uri: String) async throws -> JSONValue {
+        try await call("resources/unsubscribe", params: ["uri": .string(uri)])
+    }
+    /// Open server notifications or explicitly resume using a previous event ID.
+    /// GET may return 405. Callers own reconnect/backoff and event dispatch;
+    /// this never replays an RPC or runs a received server request.
+    public func events(lastEventID: String? = nil) async throws -> EventStream {
+        var h = try headers()
+        if let lastEventID { h["Last-Event-ID"] = lastEventID }
+        return try await client.stream(Operations.mcpGet, options: .init(headers: h))
     }
     /// Explicit session termination. A server may refuse DELETE with HTTP 405.
     public func close() async throws {

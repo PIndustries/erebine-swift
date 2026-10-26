@@ -4,9 +4,9 @@ Native Swift SDK for Erebine, maintained by P.Industries. Uses Foundation,
 URLSession, async/await, and AsyncSequence. No Rust FFI or third-party runtime.
 Community project; not an official Erebine SDK. MIT licensed.
 
-**Experimental 0.1:** 376 documentation/CLI-derived HTTP operation bindings, sharing the same
+**Experimental 0.1:** 377 documentation/CLI-derived HTTP operation bindings, sharing the same
 catalog as [erebine-rs](https://github.com/PIndustries/erebine-rs). Full API/schema
-parity is the target; documentation gaps and live verification remain. See
+parity is the target; live verification and schema reconciliation remain. See
 [COVERAGE.md](COVERAGE.md).
 
 
@@ -15,6 +15,9 @@ messages, structured-output passthrough, stream assembly, audio, and native
 realtime transcription are available. Start with [INFERENCE.md](INFERENCE.md)
 for integration examples and a per-feature verification matrix. Management
 bindings and live validation are described in [MANAGEMENT.md](MANAGEMENT.md).
+
+Every binding also has a native method under `client.api`; see [API.md](API.md).
+MCP prompts, resources, subscriptions, and GET/resume are covered in [MCP.md](MCP.md).
 
 ## Swift Package Manager
 
@@ -134,8 +137,9 @@ resources, prompts, ping, and future JSON-RPC methods. Tool results containing
 
 Set `X-Erebine-Workspace` on the dedicated client's headers to scope MCP to an
 explicit workspace; inference routing alone does not set MCP's workspace header.
-No sampling, roots, elicitation, subscription listener, or reconnect/resume support
-is advertised. No tools are called implicitly.
+Prompts, resources, subscription notifications, and explicit Last-Event-ID resume
+are supported; see [MCP.md](MCP.md). Sampling, roots, elicitation, and automatic
+reconnection are not advertised. No tools are called implicitly.
 
 ```swift
 let session = try await MCPSession.connect(client)

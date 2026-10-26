@@ -1,7 +1,7 @@
 # Live validation — 2026-10-26
 
-Both SDKs were exercised against the user's authorized Erebine project, using
-workspace-scoped direct routing. The existing API key remained on an SSH host.
+Both SDKs were exercised in an authorized test environment using direct routing.
+Credentials remained outside the native SDK processes.
 A restrictive localhost proxy injected authentication on that host and forwarded
 only the bounded validation routes. Native SDK requests crossed the SSH tunnel;
 SDK processes never received the key. Fake-credential local tests independently
@@ -23,11 +23,9 @@ phase used an explicit synthetic client function as described below. No infrastr
 This validates transport and response shapes, not application-level task quality
 or all fields and error conditions.
 
-Separate account probes confirmed endpoint/workspace/template listings and the
-provider manifest returned HTTP 200. Management API-key and execution-tool listing
-returned HTTP 403. This credential does not establish administrative or execution
-API parity. An authoritative route/schema contract and appropriately scoped
-isolated test project are still needed for full one-to-one certification.
+Selected discovery routes also returned successful responses. These checks do
+not establish complete administrative or execution API parity. Per-account
+configuration, inventory, and diagnostics remain internal.
 
 No account IDs, keys, cookies, customer payloads, or raw account responses are
 committed. The live examples require an explicitly configured loopback validation
@@ -51,8 +49,7 @@ These checks used up to 128 output tokens, minimal reasoning where requested,
 store=false for generated responses, synthetic prompts/audio, and no external
 or server-owned tools. The local test suites also exercise speech binary/SSE,
 translation, System 1 request construction, fragmented parallel tool calls,
-reasoning/refusal separation, and native WebSocket transcription. No speech,
-System 1, or realtime deployment was identified in the available model catalog,
-so those successful local checks are not reported as live service verification.
+reasoning/refusal separation, and native WebSocket transcription. Speech, System 1, and realtime local checks are not reported as live service
+verification.
 Management was subsequently validated with a separate management-scoped key and
 project; see [MANAGEMENT.md](MANAGEMENT.md). See INFERENCE.md for inference proof.

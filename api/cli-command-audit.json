@@ -1,0 +1,1837 @@
+{
+  "version": "erectl v2.7.3",
+  "reviewed": "2026-10-26",
+  "scope": "All 286 help entries; captured means outgoing request construction, not successful server response conformance",
+  "commands": [
+    {
+      "command": "",
+      "status": "command_group"
+    },
+    {
+      "command": "admin",
+      "status": "command_group"
+    },
+    {
+      "command": "admin agents",
+      "status": "command_group"
+    },
+    {
+      "command": "admin agents attach",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_admin_private_agents_id_attach_project"
+      ]
+    },
+    {
+      "command": "admin agents list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_private_agents"
+      ]
+    },
+    {
+      "command": "admin cache",
+      "status": "command_group"
+    },
+    {
+      "command": "admin cache clear",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_admin_cache_clear"
+      ]
+    },
+    {
+      "command": "admin cache keys",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_cache_keys"
+      ]
+    },
+    {
+      "command": "admin cache stats",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_cache_stats"
+      ]
+    },
+    {
+      "command": "admin consumption",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_consumption"
+      ]
+    },
+    {
+      "command": "admin endpoints",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_project_endpoints"
+      ]
+    },
+    {
+      "command": "admin health",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_health"
+      ]
+    },
+    {
+      "command": "admin maintenance",
+      "status": "command_group"
+    },
+    {
+      "command": "admin maintenance create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_admin_maintenance_windows"
+      ]
+    },
+    {
+      "command": "admin maintenance delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_admin_maintenance_windows_id"
+      ]
+    },
+    {
+      "command": "admin maintenance get",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_maintenance_windows_id"
+      ]
+    },
+    {
+      "command": "admin maintenance list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_maintenance_windows"
+      ]
+    },
+    {
+      "command": "admin maintenance update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_maintenance_windows_id"
+      ]
+    },
+    {
+      "command": "admin storage",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_storage_dashboard"
+      ]
+    },
+    {
+      "command": "admin storage-tiers",
+      "status": "command_group"
+    },
+    {
+      "command": "admin storage-tiers create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_admin_storage_tiers"
+      ]
+    },
+    {
+      "command": "admin storage-tiers delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_admin_storage_tiers_id"
+      ]
+    },
+    {
+      "command": "admin storage-tiers list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_storage_tiers"
+      ]
+    },
+    {
+      "command": "admin storage-tiers update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_storage_tiers_id"
+      ]
+    },
+    {
+      "command": "admin tasks",
+      "status": "command_group"
+    },
+    {
+      "command": "admin tasks cancel",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_admin_tasks_id_cancel"
+      ]
+    },
+    {
+      "command": "admin users",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_users"
+      ]
+    },
+    {
+      "command": "agents",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_agents_id",
+        "get_project_id_v1_management_agents",
+        "get_project_id_v1_management_agents_id",
+        "get_project_id_v1_management_agents_id_events",
+        "patch_project_id_v1_management_agents_id"
+      ]
+    },
+    {
+      "command": "agents curve-rotate",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_agents_id_curve_rotate"
+      ]
+    },
+    {
+      "command": "agents join-keys",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_join_keys_id",
+        "get_project_id_v1_management_join_keys",
+        "post_project_id_v1_management_join_keys"
+      ]
+    },
+    {
+      "command": "agents logs",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_agents_id_logs_stream"
+      ]
+    },
+    {
+      "command": "agents set-location",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_agents_id"
+      ]
+    },
+    {
+      "command": "anchors",
+      "status": "command_group"
+    },
+    {
+      "command": "anchors list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_anchors"
+      ]
+    },
+    {
+      "command": "anchors set-compliance",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_anchors_id"
+      ]
+    },
+    {
+      "command": "anchors set-deployment-region",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_anchors_id"
+      ]
+    },
+    {
+      "command": "anchors set-discount",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_anchors_id"
+      ]
+    },
+    {
+      "command": "anchors set-list-free",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_anchors_id"
+      ]
+    },
+    {
+      "command": "anchors set-marketplace-concurrency",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_anchors_id"
+      ]
+    },
+    {
+      "command": "anchors set-marketplace-price",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_anchors_id"
+      ]
+    },
+    {
+      "command": "anchors set-openrouter-slug",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_admin_anchors_id"
+      ]
+    },
+    {
+      "command": "anchors show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_admin_anchors_id"
+      ]
+    },
+    {
+      "command": "approvals",
+      "status": "command_group"
+    },
+    {
+      "command": "approvals approve",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_exec_approvals_id_approve"
+      ]
+    },
+    {
+      "command": "approvals list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_approvals"
+      ]
+    },
+    {
+      "command": "approvals reject",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_exec_approvals_id_reject"
+      ]
+    },
+    {
+      "command": "approvals show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_approvals_id"
+      ]
+    },
+    {
+      "command": "approvals watch",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_approvals"
+      ]
+    },
+    {
+      "command": "batches",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_batches",
+        "get_project_id_v1_batches_id",
+        "post_project_id_v1_files"
+      ]
+    },
+    {
+      "command": "chat",
+      "status": "command_group"
+    },
+    {
+      "command": "chat new",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_1_chat_templates_id_2_apply"
+      ]
+    },
+    {
+      "command": "chat send",
+      "status": "captured",
+      "operations": [
+        "post_project_id_endpoint_slug_v1_chat_completions"
+      ]
+    },
+    {
+      "command": "chats",
+      "status": "command_group"
+    },
+    {
+      "command": "chats branches",
+      "status": "command_group"
+    },
+    {
+      "command": "chats branches fork",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_chats_id_branches"
+      ]
+    },
+    {
+      "command": "chats branches list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id_branches"
+      ]
+    },
+    {
+      "command": "chats context",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id_context"
+      ]
+    },
+    {
+      "command": "chats create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_chats"
+      ]
+    },
+    {
+      "command": "chats delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_chats_id"
+      ]
+    },
+    {
+      "command": "chats exec-workspace",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id_exec_workspace"
+      ]
+    },
+    {
+      "command": "chats link-exec-workspace",
+      "status": "captured",
+      "operations": [
+        "put_project_id_v1_chats_id_exec_workspace"
+      ]
+    },
+    {
+      "command": "chats list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats"
+      ]
+    },
+    {
+      "command": "chats members",
+      "status": "command_group"
+    },
+    {
+      "command": "chats members add",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_project_members_search"
+      ]
+    },
+    {
+      "command": "chats members list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id_members"
+      ]
+    },
+    {
+      "command": "chats members remove",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_chats_id_1_members_id_2"
+      ]
+    },
+    {
+      "command": "chats memories",
+      "status": "command_group"
+    },
+    {
+      "command": "chats memories list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id_memories"
+      ]
+    },
+    {
+      "command": "chats messages",
+      "status": "command_group"
+    },
+    {
+      "command": "chats messages list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id_messages"
+      ]
+    },
+    {
+      "command": "chats show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id"
+      ]
+    },
+    {
+      "command": "chats unlink-exec-workspace",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_chats_id_exec_workspace"
+      ]
+    },
+    {
+      "command": "chats update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_chats_id"
+      ]
+    },
+    {
+      "command": "chats visibility",
+      "status": "command_group"
+    },
+    {
+      "command": "chats visibility get",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id"
+      ]
+    },
+    {
+      "command": "chats visibility set",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_chats_id_visibility"
+      ]
+    },
+    {
+      "command": "completion",
+      "status": "command_group"
+    },
+    {
+      "command": "completion bash",
+      "status": "local_only"
+    },
+    {
+      "command": "completion fish",
+      "status": "local_only"
+    },
+    {
+      "command": "completion zsh",
+      "status": "local_only"
+    },
+    {
+      "command": "completions",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_endpoint_slug_v1_chat_completions_id",
+        "get_project_id_endpoint_slug_v1_chat_completions",
+        "get_project_id_endpoint_slug_v1_chat_completions_id",
+        "get_project_id_endpoint_slug_v1_chat_completions_id_messages"
+      ]
+    },
+    {
+      "command": "config",
+      "status": "command_group"
+    },
+    {
+      "command": "config add",
+      "status": "local_only"
+    },
+    {
+      "command": "config current",
+      "status": "local_only"
+    },
+    {
+      "command": "config get",
+      "status": "local_only"
+    },
+    {
+      "command": "config init",
+      "status": "local_only"
+    },
+    {
+      "command": "config list",
+      "status": "local_only"
+    },
+    {
+      "command": "config path",
+      "status": "local_only"
+    },
+    {
+      "command": "config remove",
+      "status": "local_only"
+    },
+    {
+      "command": "config set",
+      "status": "local_only"
+    },
+    {
+      "command": "config use",
+      "status": "local_only"
+    },
+    {
+      "command": "conversations",
+      "status": "command_group"
+    },
+    {
+      "command": "conversations add-item",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_conversations_id_items"
+      ]
+    },
+    {
+      "command": "conversations create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_conversations"
+      ]
+    },
+    {
+      "command": "conversations delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_conversations_id"
+      ]
+    },
+    {
+      "command": "conversations delete-item",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_conversations_id_1_items_id_2"
+      ]
+    },
+    {
+      "command": "conversations get",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_conversations_id"
+      ]
+    },
+    {
+      "command": "conversations list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_conversations"
+      ]
+    },
+    {
+      "command": "conversations list-items",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_conversations_id_items"
+      ]
+    },
+    {
+      "command": "conversations update",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_conversations_id"
+      ]
+    },
+    {
+      "command": "deploy",
+      "status": "command_group"
+    },
+    {
+      "command": "deploy agent",
+      "status": "command_group"
+    },
+    {
+      "command": "deploy agent eem",
+      "status": "local_only"
+    },
+    {
+      "command": "deploy agent eim",
+      "status": "local_only"
+    },
+    {
+      "command": "doctor",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_models"
+      ]
+    },
+    {
+      "command": "embeddings",
+      "status": "command_group"
+    },
+    {
+      "command": "embeddings create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_endpoint_slug_v1_embeddings"
+      ]
+    },
+    {
+      "command": "endpoints",
+      "status": "command_group"
+    },
+    {
+      "command": "endpoints agents",
+      "status": "command_group"
+    },
+    {
+      "command": "endpoints agents add",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_endpoints_id_agents"
+      ]
+    },
+    {
+      "command": "endpoints agents list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_endpoints_id_agents"
+      ]
+    },
+    {
+      "command": "endpoints agents remove",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_endpoints_id_1_agents_id_2"
+      ]
+    },
+    {
+      "command": "endpoints agents weight",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_endpoints_id_1_agents_id_2"
+      ]
+    },
+    {
+      "command": "endpoints cors",
+      "status": "command_group"
+    },
+    {
+      "command": "endpoints cors get",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_endpoints_id_cors"
+      ]
+    },
+    {
+      "command": "endpoints cors set",
+      "status": "captured",
+      "operations": [
+        "put_project_id_v1_management_endpoints_id_cors"
+      ]
+    },
+    {
+      "command": "endpoints create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_endpoints"
+      ]
+    },
+    {
+      "command": "endpoints delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_endpoints_id"
+      ]
+    },
+    {
+      "command": "endpoints health",
+      "status": "command_group"
+    },
+    {
+      "command": "endpoints health check",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_endpoints_id_health_check"
+      ]
+    },
+    {
+      "command": "endpoints health config",
+      "status": "command_group"
+    },
+    {
+      "command": "endpoints health config get",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_endpoints_id_health_config"
+      ]
+    },
+    {
+      "command": "endpoints health config set",
+      "status": "captured",
+      "operations": [
+        "put_project_id_v1_management_endpoints_id_health_config"
+      ]
+    },
+    {
+      "command": "endpoints list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_endpoints"
+      ]
+    },
+    {
+      "command": "endpoints provision",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_endpoints_id_provision"
+      ]
+    },
+    {
+      "command": "endpoints regenerate-capabilities",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_endpoints_id_regenerate_capabilities"
+      ]
+    },
+    {
+      "command": "endpoints show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_endpoints_id"
+      ]
+    },
+    {
+      "command": "endpoints unprovision",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_endpoints_id_unprovision"
+      ]
+    },
+    {
+      "command": "endpoints update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_endpoints_id"
+      ]
+    },
+    {
+      "command": "evolution",
+      "status": "command_group"
+    },
+    {
+      "command": "evolution breaker-reset",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_evolution_id_lane_breaker_reset"
+      ]
+    },
+    {
+      "command": "evolution disable",
+      "status": "captured",
+      "operations": [
+        "put_project_id_v1_management_evolution_id_lane_enable"
+      ]
+    },
+    {
+      "command": "evolution enable",
+      "status": "captured",
+      "operations": [
+        "put_project_id_v1_management_evolution_id_lane_enable"
+      ]
+    },
+    {
+      "command": "evolution history",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_evolution_id_lane_history"
+      ]
+    },
+    {
+      "command": "evolution rollback",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_evolution_id_lane_rollback"
+      ]
+    },
+    {
+      "command": "evolution run",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_evolution_id_lane_run"
+      ]
+    },
+    {
+      "command": "evolution run-status",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_evolution_id_1_lane_runs_id_2"
+      ]
+    },
+    {
+      "command": "evolution show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_evolution_id_lane_active"
+      ]
+    },
+    {
+      "command": "evolution status",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_evolution_id"
+      ]
+    },
+    {
+      "command": "exec",
+      "status": "command_group"
+    },
+    {
+      "command": "exec cancel",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_exec_invocations_id_cancel"
+      ]
+    },
+    {
+      "command": "exec history",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_invocations"
+      ]
+    },
+    {
+      "command": "exec invoke",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_exec_invocations"
+      ]
+    },
+    {
+      "command": "exec show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_invocations_id"
+      ]
+    },
+    {
+      "command": "exec tool-show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_tools_id"
+      ]
+    },
+    {
+      "command": "exec tools",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_tools"
+      ]
+    },
+    {
+      "command": "exec watch",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_invocations_id"
+      ]
+    },
+    {
+      "command": "exports",
+      "status": "command_group"
+    },
+    {
+      "command": "exports cancel",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_exports_id"
+      ]
+    },
+    {
+      "command": "exports create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_exports_logs"
+      ]
+    },
+    {
+      "command": "exports download",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exports_id_download"
+      ]
+    },
+    {
+      "command": "exports status",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exports_id"
+      ]
+    },
+    {
+      "command": "files",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_files",
+        "get_project_id_v1_files_id",
+        "get_project_id_v1_files_id_content",
+        "post_project_id_v1_files"
+      ]
+    },
+    {
+      "command": "guide",
+      "status": "command_group"
+    },
+    {
+      "command": "guide auth",
+      "status": "local_only"
+    },
+    {
+      "command": "guide config-file",
+      "status": "local_only"
+    },
+    {
+      "command": "guide endpoints",
+      "status": "local_only"
+    },
+    {
+      "command": "guide output",
+      "status": "local_only"
+    },
+    {
+      "command": "health",
+      "status": "command_group"
+    },
+    {
+      "command": "health dashboard",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_health_dashboard"
+      ]
+    },
+    {
+      "command": "health services",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_health_dashboard"
+      ]
+    },
+    {
+      "command": "keys",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_api_keys_id",
+        "get_project_id_v1_management_api_keys",
+        "get_project_id_v1_management_api_keys_id",
+        "post_project_id_v1_management_api_keys",
+        "put_project_id_v1_management_api_keys_id_ip_filter",
+        "put_project_id_v1_management_api_keys_id_quota"
+      ]
+    },
+    {
+      "command": "knowledge",
+      "status": "command_group"
+    },
+    {
+      "command": "knowledge artifacts",
+      "status": "command_group"
+    },
+    {
+      "command": "knowledge artifacts delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_chats_id_1_artifacts_id_2"
+      ]
+    },
+    {
+      "command": "knowledge artifacts edit",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_chats_id_1_artifacts_id_2"
+      ]
+    },
+    {
+      "command": "knowledge artifacts list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id_artifacts"
+      ]
+    },
+    {
+      "command": "knowledge artifacts show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chats_id_artifacts"
+      ]
+    },
+    {
+      "command": "knowledge decisions",
+      "status": "command_group"
+    },
+    {
+      "command": "knowledge decisions delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_workspaces_id_1_decisions_id_2"
+      ]
+    },
+    {
+      "command": "knowledge decisions edit",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_workspaces_id_1_decisions_id_2"
+      ]
+    },
+    {
+      "command": "knowledge decisions list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_decisions"
+      ]
+    },
+    {
+      "command": "knowledge decisions show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_decisions"
+      ]
+    },
+    {
+      "command": "knowledge memories",
+      "status": "command_group"
+    },
+    {
+      "command": "knowledge memories create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_memories"
+      ]
+    },
+    {
+      "command": "knowledge memories delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_workspaces_id_1_memories_id_2"
+      ]
+    },
+    {
+      "command": "knowledge memories edit",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_workspaces_id_1_memories_id_2"
+      ]
+    },
+    {
+      "command": "knowledge memories list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_memories"
+      ]
+    },
+    {
+      "command": "knowledge memories show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_memories"
+      ]
+    },
+    {
+      "command": "knowledge milestones",
+      "status": "command_group"
+    },
+    {
+      "command": "knowledge milestones delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_workspaces_id_1_milestones_id_2"
+      ]
+    },
+    {
+      "command": "knowledge milestones edit",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_workspaces_id_1_milestones_id_2"
+      ]
+    },
+    {
+      "command": "knowledge milestones list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_milestones"
+      ]
+    },
+    {
+      "command": "knowledge milestones show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_milestones"
+      ]
+    },
+    {
+      "command": "learnings",
+      "status": "command_group"
+    },
+    {
+      "command": "learnings list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_learnings"
+      ]
+    },
+    {
+      "command": "learnings show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_exec_learnings_id"
+      ]
+    },
+    {
+      "command": "license",
+      "status": "local_only"
+    },
+    {
+      "command": "maintenance",
+      "status": "command_group"
+    },
+    {
+      "command": "maintenance cancel",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_maintenance_id"
+      ]
+    },
+    {
+      "command": "maintenance complete",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_maintenance_id_complete"
+      ]
+    },
+    {
+      "command": "maintenance list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_maintenance"
+      ]
+    },
+    {
+      "command": "maintenance purge",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_maintenance_id_purge"
+      ]
+    },
+    {
+      "command": "maintenance schedule",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_maintenance"
+      ]
+    },
+    {
+      "command": "maintenance update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_maintenance_id"
+      ]
+    },
+    {
+      "command": "mcp",
+      "status": "command_group"
+    },
+    {
+      "command": "mcp setup",
+      "status": "local_only"
+    },
+    {
+      "command": "models",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_models_id",
+        "get_project_id_v1_models",
+        "get_project_id_v1_models_id",
+        "get_project_id_v1_models_id_catalog_info",
+        "post_project_id_v1_models_id_revalidate",
+        "post_project_id_v1_models_id_share",
+        "post_project_id_v1_models_id_unshare"
+      ]
+    },
+    {
+      "command": "models hf-overrides",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_models_id_hf_overrides"
+      ]
+    },
+    {
+      "command": "models update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_models_id"
+      ]
+    },
+    {
+      "command": "models versions",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_models_id_versions",
+        "post_project_id_v1_models_id_versions",
+        "post_project_id_v1_models_id_versions_1_0_0_promote",
+        "post_project_id_v1_models_id_versions_1_0_0_rollback"
+      ]
+    },
+    {
+      "command": "preferences",
+      "status": "command_group"
+    },
+    {
+      "command": "preferences get",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_user_preferences"
+      ]
+    },
+    {
+      "command": "preferences set",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_user_preferences"
+      ]
+    },
+    {
+      "command": "project",
+      "status": "command_group"
+    },
+    {
+      "command": "project invitations",
+      "status": "command_group"
+    },
+    {
+      "command": "project invitations list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_project_invitations"
+      ]
+    },
+    {
+      "command": "project invitations resend",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_project_invitations_id_resend"
+      ]
+    },
+    {
+      "command": "project invitations revoke",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_project_invitations_id"
+      ]
+    },
+    {
+      "command": "project members",
+      "status": "command_group"
+    },
+    {
+      "command": "project members add",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_project_members"
+      ]
+    },
+    {
+      "command": "project members list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_project_members"
+      ]
+    },
+    {
+      "command": "project members remove",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_project_members_id"
+      ]
+    },
+    {
+      "command": "project members search",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_project_members_search"
+      ]
+    },
+    {
+      "command": "project members update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_project_members_id"
+      ]
+    },
+    {
+      "command": "rerank",
+      "status": "captured",
+      "operations": [
+        "post_project_id_endpoint_slug_v1_rerank"
+      ]
+    },
+    {
+      "command": "responses",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_endpoint_slug_v1_responses_id",
+        "get_project_id_endpoint_slug_v1_responses",
+        "get_project_id_endpoint_slug_v1_responses_id",
+        "get_project_id_endpoint_slug_v1_responses_id_input_items",
+        "get_project_id_v1_endpoints",
+        "post_project_id_endpoint_slug_v1_responses_id_cancel"
+      ]
+    },
+    {
+      "command": "responses create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_endpoint_slug_v1_responses"
+      ]
+    },
+    {
+      "command": "score",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_endpoints"
+      ]
+    },
+    {
+      "command": "semantic-router",
+      "status": "command_group"
+    },
+    {
+      "command": "semantic-router config",
+      "status": "command_group"
+    },
+    {
+      "command": "semantic-router config set",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_semantic_router_config"
+      ]
+    },
+    {
+      "command": "semantic-router config show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_semantic_router_config"
+      ]
+    },
+    {
+      "command": "semantic-router decisions",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_semantic_router_decisions"
+      ]
+    },
+    {
+      "command": "semantic-router descriptions",
+      "status": "command_group"
+    },
+    {
+      "command": "semantic-router descriptions regenerate",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_semantic_router_config"
+      ]
+    },
+    {
+      "command": "semantic-router health",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_semantic_router_health"
+      ]
+    },
+    {
+      "command": "semantic-router rules",
+      "status": "command_group"
+    },
+    {
+      "command": "semantic-router rules add",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_management_semantic_router_rules"
+      ]
+    },
+    {
+      "command": "semantic-router rules delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_management_semantic_router_rules_id"
+      ]
+    },
+    {
+      "command": "semantic-router rules disable",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_semantic_router_rules_id"
+      ]
+    },
+    {
+      "command": "semantic-router rules enable",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_semantic_router_rules_id"
+      ]
+    },
+    {
+      "command": "semantic-router rules list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_semantic_router_rules"
+      ]
+    },
+    {
+      "command": "semantic-router rules update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_management_semantic_router_rules_id"
+      ]
+    },
+    {
+      "command": "settings",
+      "status": "command_group"
+    },
+    {
+      "command": "settings delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_settings_project"
+      ]
+    },
+    {
+      "command": "settings get",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_settings_project"
+      ]
+    },
+    {
+      "command": "settings update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_settings_project"
+      ]
+    },
+    {
+      "command": "slos",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_slos_id",
+        "get_project_id_v1_slos",
+        "get_project_id_v1_slos_id",
+        "get_project_id_v1_slos_id_history",
+        "get_project_id_v1_slos_summary",
+        "post_project_id_v1_slos_id_calculate"
+      ]
+    },
+    {
+      "command": "status",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_endpoints",
+        "get_project_id_v1_models"
+      ]
+    },
+    {
+      "command": "templates",
+      "status": "command_group"
+    },
+    {
+      "command": "templates apply",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_1_chat_templates_id_2_apply"
+      ]
+    },
+    {
+      "command": "templates apply-from-dir",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chat_templates",
+        "get_project_id_v1_chat_templates_id",
+        "patch_project_id_v1_chat_templates_id"
+      ]
+    },
+    {
+      "command": "templates create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_chat_templates"
+      ]
+    },
+    {
+      "command": "templates delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_chat_templates_id"
+      ]
+    },
+    {
+      "command": "templates list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chat_templates"
+      ]
+    },
+    {
+      "command": "templates promote",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_chat_templates_id_promote"
+      ]
+    },
+    {
+      "command": "templates show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chat_templates_id"
+      ]
+    },
+    {
+      "command": "templates update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_chat_templates_id"
+      ]
+    },
+    {
+      "command": "templates versions",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_chat_templates_id_versions"
+      ]
+    },
+    {
+      "command": "tiers",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_management_tiers"
+      ]
+    },
+    {
+      "command": "upload",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_uploads_archive",
+        "post_project_id_v1_uploads_directory",
+        "post_project_id_v1_uploads_id_complete",
+        "post_project_id_v1_uploads_id_files_relative_path",
+        "post_project_id_v1_uploads_id_parts",
+        "post_project_id_v1_uploads_id_resume",
+        "post_project_id_v1_uploads_preflight"
+      ]
+    },
+    {
+      "command": "uploads",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_uploads_id",
+        "get_project_id_v1_uploads",
+        "get_project_id_v1_uploads_id",
+        "post_project_id_v1_uploads_id_cancel"
+      ]
+    },
+    {
+      "command": "usage",
+      "status": "command_group"
+    },
+    {
+      "command": "usage endpoints",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_usage_endpoints"
+      ]
+    },
+    {
+      "command": "usage events",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_usage_events"
+      ]
+    },
+    {
+      "command": "usage logs",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_usage_logs"
+      ]
+    },
+    {
+      "command": "usage uptime",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_usage_uptime"
+      ]
+    },
+    {
+      "command": "version",
+      "status": "local_only"
+    },
+    {
+      "command": "webhooks",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_webhooks_id",
+        "get_project_id_v1_webhooks",
+        "get_project_id_v1_webhooks_id",
+        "get_project_id_v1_webhooks_id_deliveries",
+        "post_project_id_v1_webhooks",
+        "post_project_id_v1_webhooks_id_test",
+        "put_project_id_v1_webhooks_id"
+      ]
+    },
+    {
+      "command": "workspaces",
+      "status": "command_group"
+    },
+    {
+      "command": "workspaces agents",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_agents"
+      ]
+    },
+    {
+      "command": "workspaces auto-approvals",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_auto_approvals"
+      ]
+    },
+    {
+      "command": "workspaces bind-agent",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_agents"
+      ]
+    },
+    {
+      "command": "workspaces create",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces"
+      ]
+    },
+    {
+      "command": "workspaces declare",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces"
+      ]
+    },
+    {
+      "command": "workspaces delete",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_workspaces_id"
+      ]
+    },
+    {
+      "command": "workspaces files",
+      "status": "command_group"
+    },
+    {
+      "command": "workspaces files list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_files"
+      ]
+    },
+    {
+      "command": "workspaces grant-auto-approval",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_auto_approvals"
+      ]
+    },
+    {
+      "command": "workspaces list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces"
+      ]
+    },
+    {
+      "command": "workspaces members",
+      "status": "command_group"
+    },
+    {
+      "command": "workspaces members add",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_project_members_search"
+      ]
+    },
+    {
+      "command": "workspaces members list",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id_members"
+      ]
+    },
+    {
+      "command": "workspaces members remove",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_workspaces_id_1_members_id_2"
+      ]
+    },
+    {
+      "command": "workspaces pause-agent",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_1_agents_id_2_pause"
+      ]
+    },
+    {
+      "command": "workspaces resume-agent",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_1_agents_id_2_resume"
+      ]
+    },
+    {
+      "command": "workspaces revalidate-intelligence",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_revalidate_intelligence"
+      ]
+    },
+    {
+      "command": "workspaces revoke-auto-approval",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_workspaces_id_1_auto_approvals_id_2"
+      ]
+    },
+    {
+      "command": "workspaces search",
+      "status": "captured",
+      "operations": [
+        "post_project_id_v1_workspaces_id_search"
+      ]
+    },
+    {
+      "command": "workspaces show",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id"
+      ]
+    },
+    {
+      "command": "workspaces unbind-agent",
+      "status": "captured",
+      "operations": [
+        "delete_project_id_v1_workspaces_id_1_agents_id_2"
+      ]
+    },
+    {
+      "command": "workspaces update",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_workspaces_id"
+      ]
+    },
+    {
+      "command": "workspaces visibility",
+      "status": "command_group"
+    },
+    {
+      "command": "workspaces visibility get",
+      "status": "captured",
+      "operations": [
+        "get_project_id_v1_workspaces_id"
+      ]
+    },
+    {
+      "command": "workspaces visibility set",
+      "status": "captured",
+      "operations": [
+        "patch_project_id_v1_workspaces_id_visibility"
+      ]
+    }
+  ]
+}

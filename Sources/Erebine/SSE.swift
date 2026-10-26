@@ -58,7 +58,7 @@ public struct SSEDecoder: Sendable {
     /// SSE EOF discards an event lacking a blank-line terminator.
     public mutating func finish() { line.removeAll(); data = "" }
 }
-public struct EventStream: AsyncSequence {
+public struct EventStream: AsyncSequence, Sendable {
     public typealias Element = ServerEvent
     public let status: Int
     public let headers: [String: String]

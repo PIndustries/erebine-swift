@@ -1,6 +1,6 @@
 # Operation catalog
 
-376 documentation/CLI-derived bindings. See [coverage](../COVERAGE.md), [inference](../INFERENCE.md), and [management](../MANAGEMENT.md).
+377 documentation/CLI-derived bindings and native methods. See [coverage](../COVERAGE.md), [native API](../API.md), [inference](../INFERENCE.md), and [management](../MANAGEMENT.md).
 
 | Name | Method | Path | Surface | Source |
 | --- | --- | --- | --- | --- |
@@ -208,6 +208,7 @@
 | `get_project_id_workspace_id_direct_v1_responses_id` | GET | `/{project_id}/{workspace_id}/_direct/v1/responses/{id}` | router | [source](https://erebine.ai/docs/direct) |
 | `get_project_id_workspace_id_direct_v1_responses_id_input_items` | GET | `/{project_id}/{workspace_id}/_direct/v1/responses/{id}/input_items` | router | [source](https://erebine.ai/docs/direct) |
 | `get_usage_export_uptime` | GET | `/usage/export/uptime` | dashboard | [source](https://erebine.ai/docs/usage-billing) |
+| `options_project_id_endpoint_slug_v1_chat_completions` | OPTIONS | `/{project_id}/{endpoint_slug}/v1/chat/completions` | router | [source](https://erebine.ai/docs/endpoint-cors) |
 | `patch_chat_api_id_1_memories_id_2` | PATCH | `/chat/api/{id_1}/memories/{id_2}` | dashboard | [source](https://erebine.ai/docs/chat-memory) |
 | `patch_chat_api_workspaces_id` | PATCH | `/chat/api/workspaces/{id}` | dashboard | [source](https://erebine.ai/docs/document-workspace) |
 | `patch_chat_api_workspaces_id_1_decisions_id_2` | PATCH | `/chat/api/workspaces/{id_1}/decisions/{id_2}` | dashboard | [source](https://erebine.ai/docs/document-workspace) |
@@ -315,7 +316,7 @@
 | `post_project_id_v1_management_evolution_id_lane_breaker_reset` | POST | `/{project_id}/v1/management/evolution/{id}/{lane}/breaker/reset` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_management_evolution_id_lane_rollback` | POST | `/{project_id}/v1/management/evolution/{id}/{lane}/rollback` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_management_evolution_id_lane_run` | POST | `/{project_id}/v1/management/evolution/{id}/{lane}/run` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
-| `post_project_id_v1_management_join_keys` | POST | `/{project_id}/v1/management/join-keys` | router | [source](https://erebine.ai/docs/private-agents) |
+| `post_project_id_v1_management_join_keys` | POST | `/{project_id}/v1/management/join-keys` | router | [source](https://erebine.ai/docs/private-agents), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_management_maintenance` | POST | `/{project_id}/v1/management/maintenance` | router | [source](https://erebine.ai/docs/status-maintenance), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_management_maintenance_id_complete` | POST | `/{project_id}/v1/management/maintenance/{id}/complete` | router | [source](https://erebine.ai/docs/status-maintenance), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_management_maintenance_id_purge` | POST | `/{project_id}/v1/management/maintenance/{id}/purge` | router | [source](https://erebine.ai/docs/status-maintenance), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
@@ -336,14 +337,14 @@
 | `post_project_id_v1_slos_id_calculate` | POST | `/{project_id}/v1/slos/{id}/calculate` | router | [source](https://erebine.ai/docs/slo-tracking), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_uploads` | POST | `/{project_id}/v1/uploads` | router | [source](https://erebine.ai/docs/uploads) |
 | `post_project_id_v1_uploads_archive` | POST | `/{project_id}/v1/uploads/archive` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
-| `post_project_id_v1_uploads_directory` | POST | `/{project_id}/v1/uploads/directory` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads) |
+| `post_project_id_v1_uploads_directory` | POST | `/{project_id}/v1/uploads/directory` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_uploads_id_cancel` | POST | `/{project_id}/v1/uploads/{id}/cancel` | router | [source](https://erebine.ai/docs/uploads), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
-| `post_project_id_v1_uploads_id_complete` | POST | `/{project_id}/v1/uploads/{id}/complete` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads) |
+| `post_project_id_v1_uploads_id_complete` | POST | `/{project_id}/v1/uploads/{id}/complete` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_uploads_id_file_chunks_chunk_index` | POST | `/{project_id}/v1/uploads/{id}/file-chunks/{chunk_index}` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads) |
 | `post_project_id_v1_uploads_id_file_complete` | POST | `/{project_id}/v1/uploads/{id}/file-complete` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads) |
-| `post_project_id_v1_uploads_id_files_relative_path` | POST | `/{project_id}/v1/uploads/{id}/files/{relative_path}` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads) |
-| `post_project_id_v1_uploads_id_parts` | POST | `/{project_id}/v1/uploads/{id}/parts` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads) |
-| `post_project_id_v1_uploads_id_resume` | POST | `/{project_id}/v1/uploads/{id}/resume` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads) |
+| `post_project_id_v1_uploads_id_files_relative_path` | POST | `/{project_id}/v1/uploads/{id}/files/{relative_path}` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
+| `post_project_id_v1_uploads_id_parts` | POST | `/{project_id}/v1/uploads/{id}/parts` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
+| `post_project_id_v1_uploads_id_resume` | POST | `/{project_id}/v1/uploads/{id}/resume` | router | [source](https://erebine.ai/docs/model-upload), [source](https://erebine.ai/docs/uploads), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_uploads_preflight` | POST | `/{project_id}/v1/uploads/preflight` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_webhooks` | POST | `/{project_id}/v1/webhooks` | router | [source](https://erebine.ai/docs/eem/webhooks), [source](https://erebine.ai/docs/webhooks), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `post_project_id_v1_webhooks_id_test` | POST | `/{project_id}/v1/webhooks/{id}/test` | router | [source](https://erebine.ai/docs/webhooks), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |

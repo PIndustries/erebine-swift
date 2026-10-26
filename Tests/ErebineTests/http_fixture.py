@@ -60,14 +60,20 @@ class Handler(BaseHTTPRequestHandler):
     self.send_response(200);self.send_header('Content-Type','text/event-stream');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data);return
   if path.endswith('/v1/audio/speech') and self.headers.get('X-Fixture-Echo')!='1':
    data=b'RIFFfixtureWAVE';self.send_response(200);self.send_header('Content-Type','audio/wav');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data);return
-  if path.endswith('/v1/mcp'):
+  if path.endswith('/v1/mcp') and self.headers.get('X-Fixture-Echo')!='1':
+   if self.command=='GET':
+    if self.headers.get('X-Fixture-MCP-Refuse-GET')=='1':self.send_error(405);return
+    if self.headers.get('Mcp-Session-Id')!='fixture-mcp' or self.headers.get('MCP-Protocol-Version')!='2025-06-18':self.send_error(400);return
+    message={'jsonrpc':'2.0','method':'notifications/resources/updated','params':{'uri':'erebine://fixture/resource'},'x_last_event_id':self.headers.get('Last-Event-ID')}
+    data=b'id: fixture-event-2\nevent: message\ndata: '+json.dumps(message).encode()+b'\n\n'
+    self.send_response(200);self.send_header('Content-Type','text/event-stream');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data);return
    if self.command=='DELETE':
     status,data,ct=204,b'','application/json'
    else:
     rpc=json.loads(body);method=rpc.get('method');rid=rpc.get('id')
     if method=='initialize':
      self.server.mcp_initialized=False
-     result={'protocolVersion':'2025-06-18','capabilities':{'tools':{}}}
+     result={'protocolVersion':'2025-06-18','capabilities':{'tools':{},'prompts':{},'resources':{'subscribe':True}}}
     else:
      if self.headers.get('Mcp-Session-Id')!='fixture-mcp' or self.headers.get('MCP-Protocol-Version')!='2025-06-18':self.send_error(400);return
      if method=='notifications/initialized':
@@ -75,6 +81,14 @@ class Handler(BaseHTTPRequestHandler):
       self.send_response(202);self.send_header('Content-Length','0');self.end_headers();return
      if not getattr(self.server,'mcp_initialized',False):self.send_error(400);return
      result={'tools':[{'name':'fixture.echo','inputSchema':{'type':'object'}}]} if method=='tools/list' else {'content':[],'structuredContent':rpc.get('params',{}).get('arguments')}
+    if method in ['prompts/list','resources/list','resources/templates/list']:
+     key={'prompts/list':'prompts','resources/list':'resources','resources/templates/list':'resourceTemplates'}[method]
+     result={key:[{'name':'fixture','uri':'erebine://fixture/resource','x_vendor':True}],'fixture_params':rpc.get('params',{})}
+     if not rpc.get('params',{}).get('cursor'):result['nextCursor']='fixture-next'
+    elif method=='prompts/get':result={'messages':[{'role':'user','content':{'type':'text','text':'fixture'}}],'fixture_params':rpc.get('params',{})}
+    elif method=='resources/read':result={'contents':[{'uri':rpc['params']['uri'],'mimeType':'text/plain','text':'héllo 🌎'}]}
+    elif method in ['resources/subscribe','resources/unsubscribe']:result={'fixture_params':rpc.get('params',{})}
+    elif method=='ping':result={}
     reply={'jsonrpc':'2.0','id':rid,'result':result}
     if method=='unknown':reply={'jsonrpc':'2.0','id':rid,'error':{'code':-32601,'message':'unknown method','x_vendor':True}}
     data=json.dumps(reply).encode();status=200;ct='application/json'
@@ -95,7 +109,7 @@ class Handler(BaseHTTPRequestHandler):
   else:
    status,data,ct=200,json.dumps({'method':self.command,'path':self.path,'headers':dict(self.headers),'body':body.decode('utf-8',errors='replace')}).encode(),'application/json'
   self.send_response(status);self.send_header('Content-Type',ct);self.send_header('X-Request-ID','fixture-request');self.send_header('Retry-After','3');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
- do_GET=handle_request;do_POST=handle_request;do_PUT=handle_request;do_PATCH=handle_request;do_DELETE=handle_request
+ do_OPTIONS=handle_request;do_GET=handle_request;do_POST=handle_request;do_PUT=handle_request;do_PATCH=handle_request;do_DELETE=handle_request
 class FixtureServer(ThreadingHTTPServer):
  def server_bind(self):
   # HTTPServer calls getfqdn(), which may stall on CI macOS reverse DNS.

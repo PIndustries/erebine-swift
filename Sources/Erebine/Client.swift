@@ -13,11 +13,13 @@ public struct Operation: Sendable {
 }
 public enum Routing: Sendable {
     case endpoint(String)
+    case workspaceEndpoint(workspace: String, endpoint: String)
     case direct(workspace: String? = nil)
     case semantic(workspace: String)
     var segments: [String] {
         switch self {
         case .endpoint(let slug): return [slug]
+        case .workspaceEndpoint(let workspace, let endpoint): return [workspace, endpoint]
         case .direct(let workspace): return workspace.map { [$0, "_direct"] } ?? ["_direct"]
         case .semantic(let workspace): return [workspace, "_semantic", "router"]
         }

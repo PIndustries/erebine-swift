@@ -1,0 +1,3016 @@
+{
+  "reviewed": "2026-10-26",
+  "scope": "Concrete method/path references in 112 public Erebine documentation pages, including curl examples; sample IDs normalized to catalog resource parameters",
+  "references": [
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/semantic-router/config",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "get_project_id_v1_management_semantic_router_config",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/{project_id}/v1/management/semantic-router/config",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "patch_project_id_v1_management_semantic_router_config",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/semantic-router/rules",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "get_project_id_v1_management_semantic_router_rules",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/semantic-router/rules",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "post_project_id_v1_management_semantic_router_rules",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/{project_id}/v1/management/semantic-router/rules/{id}",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "patch_project_id_v1_management_semantic_router_rules_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/semantic-router/rules/{id}",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "delete_project_id_v1_management_semantic_router_rules_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/semantic-router/decisions",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/authentication"
+      ],
+      "operation": "get_project_id_v1_management_semantic_router_decisions",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/semantic-router/health",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/authentication"
+      ],
+      "operation": "get_project_id_v1_management_semantic_router_health",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/audio",
+        "https://erebine.ai/docs/authentication",
+        "https://erebine.ai/docs/getting-started",
+        "https://erebine.ai/docs/guides",
+        "https://erebine.ai/docs/index",
+        "https://erebine.ai/docs/sdk-integrations",
+        "https://erebine.ai/docs/server-tools",
+        "https://erebine.ai/docs/service-tiers",
+        "https://erebine.ai/docs/slo-tracking",
+        "https://erebine.ai/docs/streaming",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_chat_completions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/_semantic/router/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "post_project_id_semantic_router_v1_chat_completions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/_semantic/router/v1/chat/completions/multimodel",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "post_project_id_semantic_router_v1_chat_completions_multimodel",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/audio/transcriptions",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/audio",
+        "https://erebine.ai/docs/index"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_audio_transcriptions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/audio/translations",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/audio"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_audio_translations",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/audio/speech",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/audio",
+        "https://erebine.ai/docs/index"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_audio_speech",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/systemone",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/index",
+        "https://erebine.ai/docs/systemone"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_systemone",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/systemone",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/direct",
+        "https://erebine.ai/docs/systemone"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_systemone",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/files",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/files"
+      ],
+      "operation": "post_project_id_v1_files",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/files/{id}/content",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/files"
+      ],
+      "operation": "get_project_id_v1_files_id_content",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/conversations/{id}/items",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "operation": "post_project_id_v1_conversations_id_items",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/models",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/authentication",
+        "https://erebine.ai/docs/eem/error-codes",
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-sharing",
+        "https://erebine.ai/docs/rerank",
+        "https://erebine.ai/docs/systemone"
+      ],
+      "operation": "get_project_id_v1_models",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/models/{id}",
+      "sources": [
+        "https://erebine.ai/docs/api-reference",
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-sharing"
+      ],
+      "operation": "get_project_id_v1_models_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/endpoints",
+      "sources": [
+        "https://erebine.ai/docs/api-reference"
+      ],
+      "operation": "get_project_id_v1_endpoints",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/api-keys",
+      "sources": [
+        "https://erebine.ai/docs/authentication",
+        "https://erebine.ai/docs/erectl/keys",
+        "https://erebine.ai/docs/sdk-integrations"
+      ],
+      "operation": "post_project_id_v1_management_api_keys",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/batches",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "operation": "post_project_id_v1_batches",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/batches",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_batches",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/batches",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "operation": "get_project_id_v1_batches",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/batches/{id}",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "operation": "get_project_id_v1_batches_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/batches/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "operation": "post_project_id_v1_batches_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/batches/batch_abc123def456",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "operation": "get_project_id_v1_batches_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/batches/batch_abc123def456/cancel",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "operation": "post_project_id_v1_batches_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/files/file-output789/content",
+      "sources": [
+        "https://erebine.ai/docs/batch"
+      ],
+      "operation": "get_project_id_v1_files_id_content",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "get_billing",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing/plans",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "get_billing_plans",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing/invoices",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "get_billing_invoices",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/billing/checkout",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "post_billing_checkout",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing/checkout/success",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "get_billing_checkout_success",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing/checkout/cancel",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "get_billing_checkout_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/billing/credits",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "post_billing_credits",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/billing/cancel",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "post_billing_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/billing/reactivate",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "post_billing_reactivate",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/billing/portal",
+      "sources": [
+        "https://erebine.ai/docs/billing-subscriptions"
+      ],
+      "operation": "post_billing_portal",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing/budgets",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "get_billing_budgets",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/billing/budgets",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "post_billing_budgets",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing/budgets/{id}",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "get_billing_budgets_id",
+      "status": "bound"
+    },
+    {
+      "method": "PUT",
+      "reference_path": "/billing/budgets/{id}",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "put_billing_budgets_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/billing/budgets/{id}",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "delete_billing_budgets_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing/budgets/{id}/history",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "get_billing_budgets_id_history",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/billing/budgets/check",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "post_billing_budgets_check",
+      "status": "bound"
+    },
+    {
+      "method": "PUT",
+      "reference_path": "/billing/budgets/budget-uuid",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "put_billing_budgets_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/billing/budgets/budget-uuid/history",
+      "sources": [
+        "https://erebine.ai/docs/budget-alerts"
+      ],
+      "operation": "get_billing_budgets_id_history",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/chats/{id}/branches",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "get_project_id_v1_chats_id_branches",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/chats/{id}/branches",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "post_project_id_v1_chats_id_branches",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/chats/{id}/branches/{id}",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "delete_project_id_v1_chats_id_1_branches_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/chats/{id}/auto_fork",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "post_project_id_v1_chats_id_auto_fork",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/templates",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "get_chat_api_templates",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/{id}/branches",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "get_chat_api_id_branches",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/{id}/branch",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "post_chat_api_id_branch",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/{id}/branch/{id}",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "delete_chat_api_id_1_branch_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/{id}/branch/branch_XYZabc987654321098765432",
+      "sources": [
+        "https://erebine.ai/docs/chat-branching"
+      ],
+      "operation": "delete_chat_api_id_1_branch_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/{id}/memory",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "post_chat_api_id_memory",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/{id}/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "get_chat_api_id_memories",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/{id}/memories/{id}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "patch_chat_api_id_1_memories_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/{id}/memories/{id}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "delete_chat_api_id_1_memories_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/{id}/memories/{id}/rerun-extraction",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "post_chat_api_id_1_memories_id_2_rerun_extraction",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/{id}/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_memories",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_memories",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/workspaces/{id}/memories/{id}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "patch_chat_api_workspaces_id_1_memories_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/{id}/memories/{id}",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id_1_memories_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/chat_abc123/memory",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "post_chat_api_id_memory",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/chat_abc123/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "get_chat_api_id_memories",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/chat_abc123/memories/mem_abc123",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "patch_chat_api_id_1_memories_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/chat_abc123/memories/mem_abc123",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "delete_chat_api_id_1_memories_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/chat_abc123/memories/mem_abc123/rerun-extraction",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory"
+      ],
+      "operation": "post_chat_api_id_1_memories_id_2_rerun_extraction",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/ws_abc123/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_memories",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/ws_abc123/memories",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_memories",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/workspaces/ws_abc123/memories/mem_abc123",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "patch_chat_api_workspaces_id_1_memories_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/ws_abc123/memories/mem_abc123",
+      "sources": [
+        "https://erebine.ai/docs/chat-memory",
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id_1_memories_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_chat_completions",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/sdk-integrations",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_chat_completions_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/sdk-integrations",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_chat_completions_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/tool-calling",
+        "https://erebine.ai/docs/zero-data-retention"
+      ],
+      "operation": "delete_project_id_endpoint_slug_v1_chat_completions_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions/{id}/messages",
+      "sources": [
+        "https://erebine.ai/docs/completions",
+        "https://erebine.ai/docs/tool-calling"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_chat_completions_id_messages",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions/chatcmpl-abc123",
+      "sources": [
+        "https://erebine.ai/docs/completions"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_chat_completions_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions/chatcmpl-abc123",
+      "sources": [
+        "https://erebine.ai/docs/completions"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_chat_completions_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions/chatcmpl-abc123",
+      "sources": [
+        "https://erebine.ai/docs/completions"
+      ],
+      "operation": "delete_project_id_endpoint_slug_v1_chat_completions_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions/chatcmpl-abc123/messages",
+      "sources": [
+        "https://erebine.ai/docs/completions"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_chat_completions_id_messages",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/conversations",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "operation": "post_project_id_v1_conversations",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/conversations",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "operation": "get_project_id_v1_conversations",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/conversations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "operation": "get_project_id_v1_conversations_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/conversations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "operation": "post_project_id_v1_conversations_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/conversations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "operation": "delete_project_id_v1_conversations_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/conversations/{id}/items",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "operation": "get_project_id_v1_conversations_id_items",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/conversations/{id}/items/{id}",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "operation": "get_project_id_v1_conversations_id_1_items_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/conversations/{id}/items/{id}",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/erectl/conversations"
+      ],
+      "operation": "delete_project_id_v1_conversations_id_1_items_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses",
+      "sources": [
+        "https://erebine.ai/docs/conversations",
+        "https://erebine.ai/docs/index",
+        "https://erebine.ai/docs/responses",
+        "https://erebine.ai/docs/server-tools"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_responses",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/conversations/conv_abc123/items",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "operation": "post_project_id_v1_conversations_id_items",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/conversations/conv_abc123",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "operation": "get_project_id_v1_conversations_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/conversations/conv_abc123",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "operation": "post_project_id_v1_conversations_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/conversations/conv_abc123",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "operation": "delete_project_id_v1_conversations_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/conversations/conv_abc123/items",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "operation": "get_project_id_v1_conversations_id_items",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/conversations/conv_abc123/items/item_xyz789",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "operation": "get_project_id_v1_conversations_id_1_items_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/conversations/conv_abc123/items/item_xyz789",
+      "sources": [
+        "https://erebine.ai/docs/conversations"
+      ],
+      "operation": "delete_project_id_v1_conversations_id_1_items_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/exports/logs",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_project_id_v1_exports_logs",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/exports/metrics",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_project_id_v1_exports_metrics",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/exports/usage",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_project_id_v1_exports_usage",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/exports/executions",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_project_id_v1_exports_executions",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exports",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_project_id_v1_exports",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exports/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_project_id_v1_exports_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exports/{id}/download",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_project_id_v1_exports_id_download",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/exports/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "delete_project_id_v1_exports_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/gdpr/export",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_gdpr_export",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/gdpr/exports",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_gdpr_exports",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/gdpr/export/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_gdpr_export_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/gdpr/export/{id}/download",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_gdpr_export_id_download",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/gdpr/export/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "delete_gdpr_export_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/gdpr/export/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_gdpr_export_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/gdpr/delete",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_gdpr_delete",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/gdpr/delete/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_gdpr_delete_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/gdpr/delete/{id}/confirm",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_gdpr_delete_id_confirm",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/gdpr/delete/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_gdpr_delete_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/gdpr/delete/preview",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_gdpr_delete_preview",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/proj_abc123/v1/exports/logs",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "post_project_id_v1_exports_logs",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/proj_abc123/v1/exports/{id}",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_project_id_v1_exports_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/proj_abc123/v1/exports/{id}/download",
+      "sources": [
+        "https://erebine.ai/docs/data-export"
+      ],
+      "operation": "get_project_id_v1_exports_id_download",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/models",
+      "sources": [
+        "https://erebine.ai/docs/direct",
+        "https://erebine.ai/docs/opencode",
+        "https://erebine.ai/docs/sdk-integrations",
+        "https://erebine.ai/docs/vscode"
+      ],
+      "operation": "get_project_id_workspace_id_direct_v1_models",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_chat_completions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/responses",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_responses",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/responses",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "get_project_id_workspace_id_direct_v1_responses",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/responses/{id}",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "get_project_id_workspace_id_direct_v1_responses_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/responses/{id}/input_items",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "get_project_id_workspace_id_direct_v1_responses_id_input_items",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/responses/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_responses_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/responses/{id}",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "delete_project_id_workspace_id_direct_v1_responses_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/embeddings",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_embeddings",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/rerank",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_rerank",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/score",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_score",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/audio/speech",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_audio_speech",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/audio/transcriptions",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_audio_transcriptions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/audio/translations",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "post_project_id_workspace_id_direct_v1_audio_translations",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/provider-manifest",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "get_project_id_workspace_id_direct_v1_provider_manifest",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{workspace_id}/_direct/v1/models/{id}",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "get_project_id_workspace_id_direct_v1_models_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/_direct/v1/provider-manifest",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "get_project_id_direct_v1_provider_manifest",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/ws_abc123/_direct/v1/provider-manifest",
+      "sources": [
+        "https://erebine.ai/docs/direct"
+      ],
+      "operation": "get_project_id_workspace_id_direct_v1_provider_manifest",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/workspaces/{id}/visibility",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "patch_chat_api_workspaces_id_visibility",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}/members",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_members",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/{id}/members",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_members",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/{id}/members/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id_1_members_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}/decisions",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_decisions",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/workspaces/{id}/decisions/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "patch_chat_api_workspaces_id_1_decisions_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/{id}/decisions/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id_1_decisions_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}/milestones",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_milestones",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/workspaces/{id}/milestones/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "patch_chat_api_workspaces_id_1_milestones_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/{id}/milestones/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id_1_milestones_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/{id}/relations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id_1_relations_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/{id}/revalidate-memories",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_revalidate_memories",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/{id}/revalidate-embeddings",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_revalidate_embeddings",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}/preferences",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_preferences",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/workspaces/{id}/preferences",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "patch_chat_api_workspaces_id_preferences",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "patch_chat_api_workspaces_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/{id}/upload",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_upload",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/{id}/files",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_files",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}/files",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_files",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}/files/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_1_files_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/{id}/files/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id_1_files_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/{id}/search",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_search",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/workspaces/{id}/files",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_project_id_v1_workspaces_id_files",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/workspaces/{id}/files/{id}",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_project_id_v1_workspaces_id_1_files_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/workspaces/{id}/search",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_project_id_v1_workspaces_id_search",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/ws_abc123",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/chat/api/workspaces/ws_abc123",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "patch_chat_api_workspaces_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/ws_abc123",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/ws_abc123/upload",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_upload",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/ws_abc123/files",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "get_chat_api_workspaces_id_files",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/chat/api/workspaces/ws_abc123/files/cart_xyz789",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "delete_chat_api_workspaces_id_1_files_id_2",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/chat/api/workspaces/ws_abc123/search",
+      "sources": [
+        "https://erebine.ai/docs/document-workspace"
+      ],
+      "operation": "post_chat_api_workspaces_id_search",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/internal/research",
+      "sources": [
+        "https://erebine.ai/docs/eem"
+      ],
+      "operation": "post_project_id_v1_internal_research",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exec/tools",
+      "sources": [
+        "https://erebine.ai/docs/eem"
+      ],
+      "operation": "get_project_id_v1_exec_tools",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/exec/invocations",
+      "sources": [
+        "https://erebine.ai/docs/eem",
+        "https://erebine.ai/docs/eem/glossary"
+      ],
+      "operation": "post_project_id_v1_exec_invocations",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exec/invocations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/eem"
+      ],
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exec/approvals",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "operation": "get_project_id_v1_exec_approvals",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exec/approvals/stream",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "operation": "get_project_id_v1_exec_approvals_stream",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exec/approvals/{id}",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "operation": "get_project_id_v1_exec_approvals_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/exec/approvals/{id}/approve",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals",
+        "https://erebine.ai/docs/eem/tutorials"
+      ],
+      "operation": "post_project_id_v1_exec_approvals_id_approve",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/exec/approvals/{id}/reject",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "operation": "post_project_id_v1_exec_approvals_id_reject",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/exec/invocations/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/eem/approvals"
+      ],
+      "operation": "post_project_id_v1_exec_invocations_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/v1/enroll",
+      "sources": [
+        "https://erebine.ai/docs/eem/architecture",
+        "https://erebine.ai/docs/eem/error-codes",
+        "https://erebine.ai/docs/eem/troubleshooting",
+        "https://erebine.ai/docs/eim"
+      ],
+      "operation": "post_v1_enroll",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/v1/enroll/refresh",
+      "sources": [
+        "https://erebine.ai/docs/eem/architecture"
+      ],
+      "operation": "post_v1_enroll_refresh",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/agents/{id}/events",
+      "sources": [
+        "https://erebine.ai/docs/eem/guide/credential-rotation",
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "get_project_id_v1_management_agents_id_events",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/ops/api/activity/export",
+      "sources": [
+        "https://erebine.ai/docs/eem/ops-dashboard"
+      ],
+      "operation": "get_ops_api_activity_export",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/webhooks",
+      "sources": [
+        "https://erebine.ai/docs/eem/webhooks",
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "operation": "post_project_id_v1_webhooks",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/webhooks/{id}/deliveries",
+      "sources": [
+        "https://erebine.ai/docs/eem/webhooks",
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "operation": "get_project_id_v1_webhooks_id_deliveries",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/{project_id}/v1/models/{id}",
+      "sources": [
+        "https://erebine.ai/docs/eim/advanced",
+        "https://erebine.ai/docs/erectl/models",
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/private-agents",
+        "https://erebine.ai/docs/systemone"
+      ],
+      "operation": "patch_project_id_v1_models_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/embeddings",
+      "sources": [
+        "https://erebine.ai/docs/embeddings",
+        "https://erebine.ai/docs/index"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_embeddings",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/endpoints/{id}/cors",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "operation": "get_project_id_v1_management_endpoints_id_cors",
+      "status": "bound"
+    },
+    {
+      "method": "PUT",
+      "reference_path": "/{project_id}/v1/management/endpoints/{id}/cors",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/endpoints/{id}",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "operation": "delete_project_id_v1_management_endpoints_id",
+      "status": "bound"
+    },
+    {
+      "method": "PUT",
+      "reference_path": "/{project_id}/v1/management/endpoints/ENDPOINT-UUID/cors",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/endpoints/ENDPOINT-UUID/cors",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "operation": "get_project_id_v1_management_endpoints_id_cors",
+      "status": "bound"
+    },
+    {
+      "method": "OPTIONS",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "operation": "options_project_id_endpoint_slug_v1_chat_completions",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exec/tools/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/exec"
+      ],
+      "operation": "get_project_id_v1_exec_tools_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/exec/agents/{id}/manifest",
+      "sources": [
+        "https://erebine.ai/docs/erectl/exec"
+      ],
+      "operation": "get_project_id_v1_exec_agents_id_manifest",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/api-keys",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "operation": "get_project_id_v1_management_api_keys",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/api-keys/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "operation": "get_project_id_v1_management_api_keys_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/api-keys/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "operation": "delete_project_id_v1_management_api_keys_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/api-keys/{id}/rotate",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "operation": "post_project_id_v1_management_api_keys_id_rotate",
+      "status": "bound"
+    },
+    {
+      "method": "PUT",
+      "reference_path": "/{project_id}/v1/management/api-keys/{id}/ip-filter",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "operation": "put_project_id_v1_management_api_keys_id_ip_filter",
+      "status": "bound"
+    },
+    {
+      "method": "PUT",
+      "reference_path": "/{project_id}/v1/management/api-keys/{id}/quota",
+      "sources": [
+        "https://erebine.ai/docs/erectl/keys"
+      ],
+      "operation": "put_project_id_v1_management_api_keys_id_quota",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/models/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/models",
+        "https://erebine.ai/docs/model-management"
+      ],
+      "operation": "delete_project_id_v1_models_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/health/dashboard",
+      "sources": [
+        "https://erebine.ai/docs/erectl/platform",
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "get_project_id_v1_health_dashboard",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/slos",
+      "sources": [
+        "https://erebine.ai/docs/erectl/slos",
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "post_project_id_v1_slos",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/uploads",
+      "sources": [
+        "https://erebine.ai/docs/erectl/uploads",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "get_project_id_v1_uploads",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/uploads/{id}",
+      "sources": [
+        "https://erebine.ai/docs/erectl/uploads",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "delete_project_id_v1_uploads_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/files",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "operation": "get_project_id_v1_files",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/files/{id}",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "operation": "get_project_id_v1_files_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/files/{id}",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "operation": "delete_project_id_v1_files_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/files/file-1a2b3c4d5e6f7890abcd1234",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "operation": "get_project_id_v1_files_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/files/file-1a2b3c4d5e6f7890abcd1234/content",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "operation": "get_project_id_v1_files_id_content",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/files/file-1a2b3c4d5e6f7890abcd1234",
+      "sources": [
+        "https://erebine.ai/docs/files"
+      ],
+      "operation": "delete_project_id_v1_files_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/models",
+      "sources": [
+        "https://erebine.ai/docs/getting-started",
+        "https://erebine.ai/docs/sdk-integrations"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_models",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/MODEL_ID/share",
+      "sources": [
+        "https://erebine.ai/docs/model-catalog"
+      ],
+      "operation": "post_project_id_v1_models_id_share",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/MODEL_ID/unshare",
+      "sources": [
+        "https://erebine.ai/docs/model-catalog"
+      ],
+      "operation": "post_project_id_v1_models_id_unshare",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/models/{id}/versions",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "operation": "get_project_id_v1_models_id_versions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/{id}/versions",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "operation": "post_project_id_v1_models_id_versions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/{id}/versions/{version}/promote",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "operation": "post_project_id_v1_models_id_versions_version_promote",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/{id}/versions/{version}/rollback",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "operation": "post_project_id_v1_models_id_versions_version_rollback",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/models/{id}/hf-overrides",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "operation": "get_project_id_v1_models_id_hf_overrides",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/{id}/hf-overrides/preview",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "operation": "post_project_id_v1_models_id_hf_overrides_preview",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/{id}/revalidate",
+      "sources": [
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-versioning"
+      ],
+      "operation": "post_project_id_v1_models_id_revalidate",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/{id}/share",
+      "sources": [
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-sharing"
+      ],
+      "operation": "post_project_id_v1_models_id_share",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/{id}/unshare",
+      "sources": [
+        "https://erebine.ai/docs/model-management",
+        "https://erebine.ai/docs/model-sharing"
+      ],
+      "operation": "post_project_id_v1_models_id_unshare",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/models/{id}/catalog-info",
+      "sources": [
+        "https://erebine.ai/docs/model-management"
+      ],
+      "operation": "get_project_id_v1_models_id_catalog_info",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/archive",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_archive",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/{id}/parts",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_id_parts",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/{id}/complete",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_id_complete",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/directory",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_directory",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/{id}/files/{relative_path}",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_id_files_relative_path",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/{id}/file-chunks/{chunk_index}",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_id_file_chunks_chunk_index",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/{id}/file-complete",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_id_file_complete",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/{id}/resume",
+      "sources": [
+        "https://erebine.ai/docs/model-upload",
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_id_resume",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/$SESSION_ID/files/config.json",
+      "sources": [
+        "https://erebine.ai/docs/model-upload"
+      ],
+      "operation": "post_project_id_v1_uploads_id_files_relative_path",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/$SESSION_ID/file-chunks/0",
+      "sources": [
+        "https://erebine.ai/docs/model-upload"
+      ],
+      "operation": "post_project_id_v1_uploads_id_file_chunks_chunk_index",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/$SESSION_ID/file-complete",
+      "sources": [
+        "https://erebine.ai/docs/model-upload"
+      ],
+      "operation": "post_project_id_v1_uploads_id_file_complete",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/models/MODEL_ID/versions",
+      "sources": [
+        "https://erebine.ai/docs/model-versioning"
+      ],
+      "operation": "get_project_id_v1_models_id_versions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/MODEL_ID/versions",
+      "sources": [
+        "https://erebine.ai/docs/model-versioning"
+      ],
+      "operation": "post_project_id_v1_models_id_versions",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/MODEL_ID/versions/2.0.0/promote",
+      "sources": [
+        "https://erebine.ai/docs/model-versioning"
+      ],
+      "operation": "post_project_id_v1_models_id_versions_version_promote",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/models/MODEL_ID/versions/1.0.0/rollback",
+      "sources": [
+        "https://erebine.ai/docs/model-versioning"
+      ],
+      "operation": "post_project_id_v1_models_id_versions_version_rollback",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{workspace_id}/{endpoint_slug}/v1/chat/completions",
+      "sources": [
+        "https://erebine.ai/docs/opencode",
+        "https://erebine.ai/docs/vscode"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_chat_completions",
+      "status": "workspace_endpoint_routing"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/docs/pi/erebine.ts",
+      "sources": [
+        "https://erebine.ai/docs/pi"
+      ],
+      "status": "excluded_asset",
+      "reason": "Client integration source download, not an Erebine API operation"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/join-keys",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "post_project_id_v1_management_join_keys",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/join-keys",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "get_project_id_v1_management_join_keys",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/join-keys/{id}",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "delete_project_id_v1_management_join_keys_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/tiers",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "get_project_id_v1_management_tiers",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/agents",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "get_project_id_v1_management_agents",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/agents/{id}",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "get_project_id_v1_management_agents_id",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/{project_id}/v1/management/agents/{id}",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "patch_project_id_v1_management_agents_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/agents/{id}",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "delete_project_id_v1_management_agents_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/agents/{id}/reset",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "post_agents_id_reset",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/agents/{id}/disable",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "post_agents_id_disable",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/agents/{id}/enable",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "post_agents_id_enable",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/join-keys/KEY_ID",
+      "sources": [
+        "https://erebine.ai/docs/private-agents"
+      ],
+      "operation": "delete_project_id_v1_management_join_keys_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/workspaces/{id}",
+      "sources": [
+        "https://erebine.ai/docs/queueing",
+        "https://erebine.ai/docs/zero-data-retention"
+      ],
+      "operation": "get_project_id_v1_workspaces_id",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/{project_id}/v1/workspaces/ws_abc123",
+      "sources": [
+        "https://erebine.ai/docs/queueing",
+        "https://erebine.ai/docs/zero-data-retention"
+      ],
+      "operation": "patch_project_id_v1_workspaces_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/rerank",
+      "sources": [
+        "https://erebine.ai/docs/rerank"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_rerank",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/score",
+      "sources": [
+        "https://erebine.ai/docs/rerank",
+        "https://erebine.ai/docs/sdk-integrations"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_score",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_responses",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses/{id}",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_responses_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses/{id}",
+      "sources": [
+        "https://erebine.ai/docs/responses",
+        "https://erebine.ai/docs/zero-data-retention"
+      ],
+      "operation": "delete_project_id_endpoint_slug_v1_responses_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_responses_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses/{id}/input_items",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_responses_id_input_items",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses/resp_abc123",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_responses_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses/resp_abc123",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "operation": "delete_project_id_endpoint_slug_v1_responses_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses/resp_abc123/cancel",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "operation": "post_project_id_endpoint_slug_v1_responses_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/{endpoint_slug}/v1/responses/resp_abc123/input_items",
+      "sources": [
+        "https://erebine.ai/docs/responses"
+      ],
+      "operation": "get_project_id_endpoint_slug_v1_responses_id_input_items",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/mockups/{id}/{path}",
+      "sources": [
+        "https://erebine.ai/docs/server-tools",
+        "https://erebine.ai/docs/streaming"
+      ],
+      "operation": "get_project_id_v1_mockups_id_path",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/slos",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "get_project_id_v1_slos",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/slos/{id}",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "get_project_id_v1_slos_id",
+      "status": "bound"
+    },
+    {
+      "method": "PUT",
+      "reference_path": "/{project_id}/v1/slos/{id}",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "put_project_id_v1_slos_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/slos/{id}",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "delete_project_id_v1_slos_id",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/slos/{id}/history",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "get_project_id_v1_slos_id_history",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/slos/{id}/calculate",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "post_project_id_v1_slos_id_calculate",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/slos/summary",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "get_project_id_v1_slos_summary",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/endpoints/{id}/slos",
+      "sources": [
+        "https://erebine.ai/docs/slo-tracking"
+      ],
+      "operation": "get_project_id_v1_endpoints_id_slos",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/healthz",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "get_healthz",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/maintenance",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "get_project_id_v1_management_maintenance",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/maintenance",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "post_project_id_v1_management_maintenance",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/{project_id}/v1/management/maintenance/{id}",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "patch_project_id_v1_management_maintenance_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/maintenance/{id}",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "delete_project_id_v1_management_maintenance_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/maintenance/{id}/complete",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "post_project_id_v1_management_maintenance_id_complete",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/maintenance/{id}/purge",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "post_project_id_v1_management_maintenance_id_purge",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/$PROJECT_ID/v1/health/dashboard",
+      "sources": [
+        "https://erebine.ai/docs/status-maintenance"
+      ],
+      "operation": "get_project_id_v1_health_dashboard",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/usage/endpoints",
+      "sources": [
+        "https://erebine.ai/docs/storage",
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "operation": "get_project_id_v1_usage_endpoints",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/project/members",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "get_project_id_v1_management_project_members",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/project-members/search",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "get_project_id_v1_project_members_search",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/management/project/invitations",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "get_project_id_v1_management_project_invitations",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/project/members",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "post_project_id_v1_management_project_members",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/{project_id}/v1/management/project/members/{id}",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "patch_project_id_v1_management_project_members_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/project/members/{id}",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "delete_project_id_v1_management_project_members_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/project/invitations/{id}/resend",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "post_project_id_v1_management_project_invitations_id_resend",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/project/invitations/{id}",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "delete_project_id_v1_management_project_invitations_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/projects/members",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "post_projects_members",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/account/api/invite",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "get_account_api_invite",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/account/api/invite",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "post_account_api_invite",
+      "status": "bound"
+    },
+    {
+      "method": "PATCH",
+      "reference_path": "/{project_id}/v1/management/project/members/USER_ID",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "patch_project_id_v1_management_project_members_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/project/members/USER_ID",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "delete_project_id_v1_management_project_members_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/management/project/invitations/INVITATION_ID/resend",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "post_project_id_v1_management_project_invitations_id_resend",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/management/project/invitations/INVITATION_ID",
+      "sources": [
+        "https://erebine.ai/docs/teams"
+      ],
+      "operation": "delete_project_id_v1_management_project_invitations_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads",
+      "sources": [
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/uploads/{id}",
+      "sources": [
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "get_project_id_v1_uploads_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/uploads/{id}/cancel",
+      "sources": [
+        "https://erebine.ai/docs/uploads"
+      ],
+      "operation": "post_project_id_v1_uploads_id_cancel",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/usage/events",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "operation": "get_project_id_v1_usage_events",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/usage/logs",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "operation": "get_project_id_v1_usage_logs",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/usage/uptime",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "operation": "get_project_id_v1_usage_uptime",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/usage/export/uptime",
+      "sources": [
+        "https://erebine.ai/docs/usage-billing"
+      ],
+      "operation": "get_usage_export_uptime",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/webhooks",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "operation": "get_project_id_v1_webhooks",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/webhooks/{id}",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "operation": "get_project_id_v1_webhooks_id",
+      "status": "bound"
+    },
+    {
+      "method": "PUT",
+      "reference_path": "/{project_id}/v1/webhooks/{id}",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "operation": "put_project_id_v1_webhooks_id",
+      "status": "bound"
+    },
+    {
+      "method": "DELETE",
+      "reference_path": "/{project_id}/v1/webhooks/{id}",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "operation": "delete_project_id_v1_webhooks_id",
+      "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/webhooks/{id}/test",
+      "sources": [
+        "https://erebine.ai/docs/webhooks"
+      ],
+      "operation": "post_project_id_v1_webhooks_id_test",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/chat/api/workspaces/{id}/graph",
+      "sources": [
+        "https://erebine.ai/docs/workspace-graph"
+      ],
+      "operation": "get_chat_api_workspaces_id_graph",
+      "status": "bound"
+    },
+    {
+      "method": "GET",
+      "reference_path": "/{project_id}/v1/workspaces/{id}/graph",
+      "sources": [
+        "https://erebine.ai/docs/workspace-graph"
+      ],
+      "operation": "get_project_id_v1_workspaces_id_graph",
+      "status": "bound"
+    }
+  ]
+}

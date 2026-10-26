@@ -1889,7 +1889,8 @@
         "responses legacy cancel",
         "responses legacy input-items",
         "responses endpoint list",
-        "responses endpoint retrieve"
+        "responses endpoint retrieve",
+        "status discovery"
       ]
     },
     {
@@ -2680,7 +2681,9 @@
       "surface": "router",
       "verification": "documented; live behavior not verified",
       "cli_commands": [
-        "models legacy list"
+        "models legacy list",
+        "status discovery",
+        "doctor discovery"
       ]
     },
     {
@@ -3050,7 +3053,8 @@
       "surface": "router",
       "verification": "documented; live behavior not verified",
       "cli_commands": [
-        "workspaces list"
+        "workspaces list",
+        "workspaces declare stdout"
       ]
     },
     {
@@ -3345,6 +3349,20 @@
       "parameters": [],
       "surface": "dashboard",
       "verification": "documented; live behavior not verified"
+    },
+    {
+      "name": "options_project_id_endpoint_slug_v1_chat_completions",
+      "method": "OPTIONS",
+      "path": "/{project_id}/{endpoint_slug}/v1/chat/completions",
+      "parameters": [
+        "project_id",
+        "endpoint_slug"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://erebine.ai/docs/endpoint-cors"
+      ],
+      "verification": "documented CORS preflight; locally transport-tested"
     },
     {
       "method": "PATCH",
@@ -5029,14 +5047,18 @@
       "method": "POST",
       "path": "/{project_id}/v1/management/join-keys",
       "sources": [
-        "https://erebine.ai/docs/private-agents"
+        "https://erebine.ai/docs/private-agents",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_management_join_keys",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "join-keys create with router addresses"
+      ]
     },
     {
       "method": "POST",
@@ -5370,7 +5392,8 @@
       "surface": "router",
       "verification": "documented; live behavior not verified",
       "cli_commands": [
-        "upload"
+        "upload",
+        "upload archive completed"
       ]
     },
     {
@@ -5378,14 +5401,18 @@
       "path": "/{project_id}/v1/uploads/directory",
       "sources": [
         "https://erebine.ai/docs/model-upload",
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_uploads_directory",
       "parameters": [
         "project_id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "upload directory completed"
+      ]
     },
     {
       "method": "POST",
@@ -5410,7 +5437,8 @@
       "path": "/{project_id}/v1/uploads/{id}/complete",
       "sources": [
         "https://erebine.ai/docs/model-upload",
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_uploads_id_complete",
       "parameters": [
@@ -5418,7 +5446,11 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "upload archive completed",
+        "upload directory completed"
+      ]
     },
     {
       "method": "POST",
@@ -5456,7 +5488,8 @@
       "path": "/{project_id}/v1/uploads/{id}/files/{relative_path}",
       "sources": [
         "https://erebine.ai/docs/model-upload",
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_uploads_id_files_relative_path",
       "parameters": [
@@ -5465,14 +5498,18 @@
         "relative_path"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "upload directory completed"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/uploads/{id}/parts",
       "sources": [
         "https://erebine.ai/docs/model-upload",
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_uploads_id_parts",
       "parameters": [
@@ -5480,14 +5517,18 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "upload archive completed"
+      ]
     },
     {
       "method": "POST",
       "path": "/{project_id}/v1/uploads/{id}/resume",
       "sources": [
         "https://erebine.ai/docs/model-upload",
-        "https://erebine.ai/docs/uploads"
+        "https://erebine.ai/docs/uploads",
+        "https://github.com/erebine/binaries/releases/tag/v2.7.3"
       ],
       "name": "post_project_id_v1_uploads_id_resume",
       "parameters": [
@@ -5495,7 +5536,10 @@
         "id"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "documented; live behavior not verified",
+      "cli_commands": [
+        "upload directory completed"
+      ]
     },
     {
       "name": "post_project_id_v1_uploads_preflight",

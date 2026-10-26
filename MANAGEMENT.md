@@ -51,11 +51,11 @@ SLOs, and webhooks were deleted or revoked. The proxy cleanup ledger reported
 zero remaining active fixtures. Services may retain audit or soft-deleted records.
 Only newly created credentials were rotated/revoked.
 
-Chat creation returned `400 no_active_endpoint`: this project had no endpoints,
-models, or agents. Its eight dependent checks were skipped. Platform admin
-access returned `403 platform_admin_required`. Provisioning, agent execution,
-chat context/branches/memory, template application to a chat, webhook delivery,
-invites, billing, and destructive execution are not live-verified.
+Additional live validation requires suitably configured disposable resources and
+separate administrator access. Deployment inventories, project identifiers,
+account scopes, and per-account diagnostics remain internal. Provisioning, agent
+execution, chat context/branches/memory, template application to a chat, webhook
+delivery, invites, billing, and destructive execution are not live-verified.
 
 ## Observed contract details
 
@@ -68,5 +68,5 @@ invites, billing, and destructive execution are not live-verified.
   decimals. Scenario assertions compare the returned numeric representation.
 
 These are observed server behaviors, not guarantees for every deployment.
-Sanitized per-step results are saved in `api/management-validation.json`; they
-contain no account identifiers, response bodies, resource IDs, or credentials.
+Per-account live reports are retained internally. Public scenarios use only
+synthetic identifiers, names, addresses, and content.

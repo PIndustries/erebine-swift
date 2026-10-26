@@ -1,60 +1,58 @@
 # API coverage and verification
 
-Full one-to-one API coverage is the goal. This experimental SDK does not yet
-certify complete Erebine API or schema parity.
+The native Rust and Swift SDKs cover the reviewed public HTTP surface with
+**377 operation bindings and 377 native API methods each**. Project/routing
+configuration is inherited from Client, resource IDs are explicit arguments,
+and all request/response JSON fields remain available. This is HTTP binding
+coverage; complete typed schemas and live server conformance are separate gates.
 
-## Implemented bindings
+## Public contract audit — 2026-10-26
 
-Both SDKs share **376 method/path bindings** in `api/operations.json`, sourced
-from public documentation and the official erectl v2.7.3 client. Every entry has
-a named operation, source URL, and router/dashboard surface. The latest expansion
-adds 103 bindings for endpoint lifecycle, chats/templates, execution, settings,
-model management, and related CLI features.
+- 112 public documentation pages reviewed, including curl examples.
+- 323 concrete method/path references reconciled in `api/reference-audit.json`.
+  Example identifiers normalize to resource parameters; workspace-scoped endpoint
+  paths use a dedicated routing variant. One integration source download is
+  classified as a static asset rather than an API.
+- All 286 erectl v2.7.3 help entries classified in
+  `api/cli-command-audit.json`: captured requests, command groups, or local CLI
+  behavior (configuration files, shell completion, host deployment, help).
+- 283 synthetic outgoing CLI requests replayed through each native transport.
+  This includes complete archive/directory request chains: initialization,
+  chunk/file transfer, checksum headers, resume, and completion. CLI captures
+  used fake credentials and a loopback server. Synthetic server replies drove
+  later requests; they are not authoritative response schemas.
+- Every one of the 377 catalog bindings is sent through each SDK's native HTTP
+  transport in local tests. CORS OPTIONS, workspace endpoint/direct/semantic
+  routing, JSON/multipart/binary bodies, errors, SSE, MCP, and realtime are covered.
+- `scripts/check_catalog.py` runs in CI to reject missing audit bindings,
+  duplicate route shapes, invalid parameters, or credential-bearing fixtures.
+  Code generation is deterministic and checked for drift.
 
-Requests preserve arbitrary JSON, queries, headers, multipart files, and binary
-bytes. Responses preserve status, headers, and body. Typed inference helpers are
-optional; management bindings accept JSON rather than claiming complete typed
-schemas. Native SSE, MCP request/response sessions, and WebSocket transcription
-are also implemented. See [INFERENCE.md](INFERENCE.md).
+See [API.md](API.md), [INFERENCE.md](INFERENCE.md), [MCP.md](MCP.md), and
+[MANAGEMENT.md](MANAGEMENT.md) for usage. Both libraries support raw method/path
+requests as an escape hatch. Dashboard operations require caller-supplied
+session/CSRF headers; a router API key does not create a dashboard session.
 
-Dashboard operations require caller-supplied dashboard authentication, including
-cookies/CSRF where applicable. A router management key does not establish a
-browser session. Raw method/path requests remain available.
+## Live verification and remaining gates
 
-## Evidence
+Selected inference and disposable management workflows passed live validation;
+see [LIVE_VALIDATION.md](LIVE_VALIDATION.md). Live results are narrower than the
+complete local transport matrix. Account credentials, project configuration,
+resource identifiers, deployment inventory, and per-account diagnostics remain
+internal.
 
-- Local transport tests cover escaping, queries, JSON/multipart/binary bodies,
-  errors, SSE, MCP, realtime, and construction of every catalog entry.
-- `api/cli-contracts.json` contains 271 synthetic outgoing requests captured from
-  the official CLI against a loopback server with fake credentials. Each is
-  replayed through each SDK's native HTTP transport. This verifies CLI request
-  construction, not remote acceptance or response schema completeness.
-- Both SDKs passed 62 live management checks on 2026-10-26, with eight successful
-  resource cleanups each. Chat creation was environment-unavailable and eight
-  dependent checks were skipped. See [MANAGEMENT.md](MANAGEMENT.md).
-- Earlier live inference checks passed on a separate deployment; see
-  [LIVE_VALIDATION.md](LIVE_VALIDATION.md). Local tests alone do not prove live
-  realtime, speech generation, translation, or System1 compatibility.
+Provisioning/traffic changes, model version lifecycles, agent execution/approvals,
+webhook delivery, billing, dashboard authentication, large/resumable uploads,
+and pagination at scale still need an appropriate live test environment. Existing
+bindings and CLI request evidence do not establish successful end-to-end behavior.
+MCP GET notifications and explicit Last-Event-ID resume are locally verified;
+automatic reconnect, sampling, roots, and elicitation are not implemented.
 
-## Remaining parity gates
+No authoritative OpenAPI document or server route inventory was available. The
+reviewed docs and CLI version bound the claim: there are no unresolved references
+in that inventory, but undocumented server operations and complete request/response
+schema parity cannot be certified from those sources. Full parity certification
+and a stable release must wait for those contracts and remaining live checks.
 
-The supplied management project has no deployed models, endpoints, or agents.
-Endpoint provisioning, traffic changes, model uploads/version lifecycles, and
-agent/execution/approval workflows have bindings and CLI request evidence but
-lack live end-to-end validation. Platform administrator discovery returned
-`403 platform_admin_required`. Billing, authentication/SSO/2FA browser flows,
-invites, webhook delivery, destructive execution, pagination at scale, and
-resumable uploads also remain unverified. No infrastructure was provisioned or
-existing routing/billing configuration changed during validation.
-
-MCP subscription listeners, reconnect/resume, sampling, roots, and elicitation
-remain unsupported. Complete authoritative request/response schemas and a server
-route inventory are still needed to certify full parity. Public OpenAPI URLs
-returned 404 during discovery; CLI coverage is evidence for that CLI version,
-not proof of every server route.
-
-`api/sources.json` records public documentation hashes;
-`api/cli-contracts.json` records CLI version, binary hash, and capture provenance.
-`api/extraction-exclusions.json` lists incomplete/wildcard references excluded
-from extraction. Stable releases should follow schema reconciliation and the
-remaining live workflow checks.
+Public documentation hashes are recorded in `api/sources.json`; CLI version,
+binary hash, and capture provenance are in `api/cli-contracts.json`.
