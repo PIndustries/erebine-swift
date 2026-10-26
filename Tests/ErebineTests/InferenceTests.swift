@@ -48,10 +48,10 @@ final class InferenceTests: XCTestCase {
         XCTAssertEqual(try firstSpeech.json()["fixture_request"]?["stream_format"],"sse")
     }
     func testStreamInterleavingAndToolResults() throws {
-        let data = Data(#"[{"choices":[{"index":1,"delta":{"content":"B","reasoning_content":null,"reasoning":"R"}},{"index":0,"delta":{"tool_calls":[{"index":1,"id":"b","function":{"name":"sum","arguments":"{\"b\":"}},{"index":0,"id":"a","function":{"name":"echo","arguments":"{\"a\":"}}]}}]},{"choices":[{"index":0,"delta":{"tool_calls":[{"index":0,"function":{"arguments":"1}"}},{"index":1,"function":{"arguments":"2}"}}]}},{"index":1,"delta":{"content":"2"},"finish_reason":"future_reason"}]},{"type":"x_future","vendor":{"kept":true},"error":null}]"#.utf8)
+        let data = Data(#"[{"choices":[{"index":1,"delta":{"content":"B","refusal":"refused","reasoning_content":null,"reasoning":"R"}},{"index":0,"delta":{"tool_calls":[{"index":1,"id":"b","function":{"name":"sum","arguments":"{\"b\":"}},{"index":0,"id":"a","function":{"name":"echo","arguments":"{\"a\":"}}]}}]},{"choices":[{"index":0,"delta":{"tool_calls":[{"index":0,"function":{"arguments":"1}"}},{"index":1,"function":{"arguments":"2}"}}]}},{"index":1,"delta":{"content":"2"},"finish_reason":"future_reason"}]},{"type":"x_future","vendor":{"kept":true},"error":null}]"#.utf8)
         let events = try JSONDecoder().decode([JSONValue].self,from:data); var a = ChatAccumulator()
         for event in events { try a.pushJSON(event) }
-        XCTAssertEqual(a.choices[1]?.content,"B2"); XCTAssertEqual(a.choices[1]?.reasoning,"R"); XCTAssertEqual(a.choices[0]?.toolCalls[1]?.arguments,"{\"b\":2}"); XCTAssertEqual(a.raw.count,3)
+        XCTAssertEqual(a.choices[1]?.content,"B2"); XCTAssertEqual(a.choices[1]?.refusal,"refused"); XCTAssertEqual(a.choices[1]?.reasoning,"R"); XCTAssertEqual(a.choices[0]?.toolCalls[1]?.arguments,"{\"b\":2}"); XCTAssertEqual(a.raw.count,3)
         XCTAssertThrowsError(try a.pushJSON(["error":["code":"future_error"]])); XCTAssertEqual(a.raw.count,4)
         let tool = try JSONDecoder().decode(JSONValue.self,from:JSONEncoder().encode(ChatMessage.tool(callID:"call_test",output:"ok")))
         XCTAssertEqual(tool["tool_call_id"],"call_test")

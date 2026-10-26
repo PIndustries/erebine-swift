@@ -4,6 +4,15 @@ import Foundation
 enum InferenceChecks {
     static func require(_ condition: Bool, _ message: String) throws { if !condition { throw ErebineError.invalid(message) } }
     static func run(_ client: Client, _ config: JSONValue, _ model: String) async throws {
+        let responseEvents = try await client.inference.streamResponses(ResponsesRequest(model:model, input:"Reply only with SDK_OK.", extra:["max_output_tokens":64,"store":false]))
+        var responseCount = 0; var terminal = false
+        for try await event in responseEvents {
+            let value = try event.json()
+            try require(value["type"] != "response.failed" && value["type"] != "error", "Responses streaming error")
+            terminal = terminal || value["type"] == "response.completed" || value["type"] == "response.incomplete"; responseCount += 1
+        }
+        try require(terminal && responseCount > 0, "Responses terminal event missing")
+        print("responses SSE: \(responseCount) JSON events and terminal response decoded")
         let metadata = try await client.inference.model(model)
         try require(try metadata.json()["id"]?.string == model, "Retrieved model ID differs")
         print("model retrieval: HTTP \(metadata.status)")
