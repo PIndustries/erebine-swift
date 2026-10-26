@@ -100,3 +100,22 @@ final class TransportTests: XCTestCase {
         XCTAssertEqual(try JSONDecoder().decode(JSONValue.self, from: JSONEncoder().encode(value)), value)
     }
 }
+
+extension TransportTests {
+    func testMCPSessionNegotiationJSONSSECallsErrorsAndClose() async throws {
+        let f = try Fixture(); let client = try f.client()
+        let session = try await MCPSession.connect(client)
+        let initialization = await session.initialization
+        XCTAssertEqual(initialization["protocolVersion"]?.string, "2025-06-18")
+        let tools = try await session.listTools()
+        guard case .array(let list) = tools["tools"] else { return XCTFail("No tools") }
+        XCTAssertEqual(list[0]["name"]?.string, "fixture.echo")
+        let result = try await session.callTool("fixture.echo", arguments:["text":"hello"])
+        XCTAssertEqual(result["structuredContent"]?["text"]?.string, "hello")
+        do { _ = try await session.call("unknown"); XCTFail("Expected RPC error") }
+        catch ErebineError.rpc(let error) { XCTAssertEqual(error["code"], .integer(-32601)); XCTAssertEqual(error["x_vendor"], .bool(true)) }
+        try await session.close()
+        do { _ = try await session.listTools(); XCTFail("Closed session accepted call") }
+        catch ErebineError.invalid { }
+    }
+}

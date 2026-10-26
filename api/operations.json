@@ -375,6 +375,20 @@
       "verification": "documented; live behavior not verified"
     },
     {
+      "name": "delete_project_id_v1_mcp",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/mcp",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://erebine.ai/docs/mcp",
+        "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports"
+      ],
+      "verification": "Live explicit session termination verified by both SDKs on 2026-10-26"
+    },
+    {
       "method": "DELETE",
       "path": "/{project_id}/v1/models/{id}",
       "sources": [
@@ -919,7 +933,7 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "Live response shape verified by both SDKs with direct workspace routing on 2026-10-26; all other routing variants remain unverified"
     },
     {
       "method": "GET",
@@ -991,6 +1005,19 @@
       ],
       "surface": "router",
       "verification": "documented; live behavior not verified"
+    },
+    {
+      "name": "get_project_id_v1_chat_templates",
+      "method": "GET",
+      "path": "/{project_id}/v1/chat-templates",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://erebine.ai/docs/erectl/templates"
+      ],
+      "verification": "HTTP 200 verified against live account; response shape inspected"
     },
     {
       "method": "GET",
@@ -1485,6 +1512,20 @@
       ],
       "surface": "router",
       "verification": "documented; live behavior not verified"
+    },
+    {
+      "name": "get_project_id_v1_mcp",
+      "method": "GET",
+      "path": "/{project_id}/v1/mcp",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://erebine.ai/docs/mcp",
+        "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports"
+      ],
+      "verification": "Defined by MCP Streamable HTTP protocol; live subscription behavior unverified"
     },
     {
       "method": "GET",
@@ -2575,7 +2616,7 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "Live response shape verified by both SDKs with direct workspace routing on 2026-10-26; all other routing variants remain unverified"
     },
     {
       "method": "POST",
@@ -2635,7 +2676,7 @@
         "endpoint_slug"
       ],
       "surface": "router",
-      "verification": "documented; live behavior not verified"
+      "verification": "Live response shape verified by both SDKs with direct workspace routing on 2026-10-26; all other routing variants remain unverified"
     },
     {
       "method": "POST",
@@ -3066,6 +3107,20 @@
       ],
       "surface": "router",
       "verification": "documented; live behavior not verified"
+    },
+    {
+      "name": "post_project_id_v1_mcp",
+      "method": "POST",
+      "path": "/{project_id}/v1/mcp",
+      "parameters": [
+        "project_id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://erebine.ai/docs/mcp",
+        "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports"
+      ],
+      "verification": "Live initialize, initialized notification, and tools/list verified by both SDKs on 2026-10-26"
     },
     {
       "method": "POST",

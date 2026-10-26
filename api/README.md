@@ -1,6 +1,6 @@
 # Operation catalog
 
-268 documented method/path entries. See [coverage and limitations](../COVERAGE.md).
+272 documented/protocol-defined method/path entries. See [coverage and limitations](../COVERAGE.md).
 
 | Name | Method | Path | Surface | Source |
 | --- | --- | --- | --- | --- |
@@ -30,6 +30,7 @@
 | `delete_project_id_v1_management_project_invitations_id` | DELETE | `/{project_id}/v1/management/project/invitations/{id}` | router | [docs](https://erebine.ai/docs/teams) |
 | `delete_project_id_v1_management_project_members_id` | DELETE | `/{project_id}/v1/management/project/members/{id}` | router | [docs](https://erebine.ai/docs/teams) |
 | `delete_project_id_v1_management_semantic_router_rules_id` | DELETE | `/{project_id}/v1/management/semantic-router/rules/{id}` | router | [docs](https://erebine.ai/docs/api-reference) |
+| `delete_project_id_v1_mcp` | DELETE | `/{project_id}/v1/mcp` | router | [docs](https://erebine.ai/docs/mcp) |
 | `delete_project_id_v1_models_id` | DELETE | `/{project_id}/v1/models/{id}` | router | [docs](https://erebine.ai/docs/erectl/models) |
 | `delete_project_id_v1_slos_id` | DELETE | `/{project_id}/v1/slos/{id}` | router | [docs](https://erebine.ai/docs/slo-tracking) |
 | `delete_project_id_v1_uploads_id` | DELETE | `/{project_id}/v1/uploads/{id}` | router | [docs](https://erebine.ai/docs/erectl/uploads) |
@@ -77,6 +78,7 @@
 | `get_project_id_endpoint_slug_v1_responses_id_input_items` | GET | `/{project_id}/{endpoint_slug}/v1/responses/{id}/input_items` | router | [docs](https://erebine.ai/docs/responses) |
 | `get_project_id_v1_batches` | GET | `/{project_id}/v1/batches` | router | [docs](https://erebine.ai/docs/batch) |
 | `get_project_id_v1_batches_id` | GET | `/{project_id}/v1/batches/{id}` | router | [docs](https://erebine.ai/docs/batch) |
+| `get_project_id_v1_chat_templates` | GET | `/{project_id}/v1/chat-templates` | router | [docs](https://erebine.ai/docs/erectl/templates) |
 | `get_project_id_v1_chats_id_branches` | GET | `/{project_id}/v1/chats/{id}/branches` | router | [docs](https://erebine.ai/docs/chat-branching) |
 | `get_project_id_v1_conversations` | GET | `/{project_id}/v1/conversations` | router | [docs](https://erebine.ai/docs/conversations) |
 | `get_project_id_v1_conversations_id` | GET | `/{project_id}/v1/conversations/{id}` | router | [docs](https://erebine.ai/docs/conversations) |
@@ -113,6 +115,7 @@
 | `get_project_id_v1_management_semantic_router_health` | GET | `/{project_id}/v1/management/semantic-router/health` | router | [docs](https://erebine.ai/docs/api-reference) |
 | `get_project_id_v1_management_semantic_router_rules` | GET | `/{project_id}/v1/management/semantic-router/rules` | router | [docs](https://erebine.ai/docs/api-reference) |
 | `get_project_id_v1_management_tiers` | GET | `/{project_id}/v1/management/tiers` | router | [docs](https://erebine.ai/docs/private-agents) |
+| `get_project_id_v1_mcp` | GET | `/{project_id}/v1/mcp` | router | [docs](https://erebine.ai/docs/mcp) |
 | `get_project_id_v1_mockups_id_path` | GET | `/{project_id}/v1/mockups/{id}/{path}` | router | [docs](https://erebine.ai/docs/server-tools) |
 | `get_project_id_v1_models` | GET | `/{project_id}/v1/models` | router | [docs](https://erebine.ai/docs/api-reference) |
 | `get_project_id_v1_models_id` | GET | `/{project_id}/v1/models/{id}` | router | [docs](https://erebine.ai/docs/api-reference) |
@@ -228,6 +231,7 @@
 | `post_project_id_v1_management_project_invitations_id_resend` | POST | `/{project_id}/v1/management/project/invitations/{id}/resend` | router | [docs](https://erebine.ai/docs/teams) |
 | `post_project_id_v1_management_project_members` | POST | `/{project_id}/v1/management/project/members` | router | [docs](https://erebine.ai/docs/teams) |
 | `post_project_id_v1_management_semantic_router_rules` | POST | `/{project_id}/v1/management/semantic-router/rules` | router | [docs](https://erebine.ai/docs/api-reference) |
+| `post_project_id_v1_mcp` | POST | `/{project_id}/v1/mcp` | router | [docs](https://erebine.ai/docs/mcp) |
 | `post_project_id_v1_models_id_hf_overrides_preview` | POST | `/{project_id}/v1/models/{id}/hf-overrides/preview` | router | [docs](https://erebine.ai/docs/model-management) |
 | `post_project_id_v1_models_id_revalidate` | POST | `/{project_id}/v1/models/{id}/revalidate` | router | [docs](https://erebine.ai/docs/model-management) |
 | `post_project_id_v1_models_id_share` | POST | `/{project_id}/v1/models/{id}/share` | router | [docs](https://erebine.ai/docs/model-management) |

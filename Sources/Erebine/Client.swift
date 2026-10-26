@@ -27,6 +27,7 @@ public enum ErebineError: Error, Sendable {
     case invalid(String)
     case api(status: Int, headers: [String: String], body: Data)
     case stream(String)
+    case rpc(JSONValue)
     public var requestID: String? { if case .api(_, let headers, _) = self { return headers["x-request-id"] }; return nil }
     public var retryAfter: String? { if case .api(_, let headers, _) = self { return headers["retry-after"] }; return nil }
     public var apiBody: JSONValue? { if case .api(_, _, let body) = self { return try? JSONDecoder().decode(JSONValue.self, from: body) }; return nil }

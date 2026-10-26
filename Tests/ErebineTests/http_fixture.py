@@ -16,6 +16,26 @@ class Handler(BaseHTTPRequestHandler):
      break
     body+=self.rfile.read(size);self.rfile.read(2)
   path=self.path.split('?')[0]
+  if path.endswith('/v1/mcp'):
+   if self.command=='DELETE':
+    status,data,ct=204,b'','application/json'
+   else:
+    rpc=json.loads(body);method=rpc.get('method');rid=rpc.get('id')
+    if method=='initialize':
+     self.server.mcp_initialized=False
+     result={'protocolVersion':'2025-06-18','capabilities':{'tools':{}}}
+    else:
+     if self.headers.get('Mcp-Session-Id')!='fixture-mcp' or self.headers.get('MCP-Protocol-Version')!='2025-06-18':self.send_error(400);return
+     if method=='notifications/initialized':
+      self.server.mcp_initialized=True
+      self.send_response(202);self.send_header('Content-Length','0');self.end_headers();return
+     if not getattr(self.server,'mcp_initialized',False):self.send_error(400);return
+     result={'tools':[{'name':'fixture.echo','inputSchema':{'type':'object'}}]} if method=='tools/list' else {'content':[],'structuredContent':rpc.get('params',{}).get('arguments')}
+    reply={'jsonrpc':'2.0','id':rid,'result':result}
+    if method=='unknown':reply={'jsonrpc':'2.0','id':rid,'error':{'code':-32601,'message':'unknown method','x_vendor':True}}
+    data=json.dumps(reply).encode();status=200;ct='application/json'
+    if method=='initialize':data=b'event: message\ndata: '+data+b'\n\n';ct='text/event-stream'
+   self.send_response(status);self.send_header('Content-Type',ct);self.send_header('Mcp-Session-Id','fixture-mcp');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data);return
   if path=='/redirect':
    self.send_response(302);self.send_header('Location','/echo');self.send_header('Content-Length','0');self.end_headers();return
   if path=='/empty':status,data,ct=204,b'','application/json'

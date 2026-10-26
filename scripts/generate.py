@@ -11,7 +11,7 @@ for op in ops:
  out.append('    /// '+op['method']+' '+op['path'])
  out.append('    public static let '+camel(op['name'])+' = Operation(name: '+json.dumps(op['name'])+', method: '+json.dumps(op['method'])+', path: '+json.dumps(op['path'])+', surface: .'+op['surface']+', sources: ['+','.join(json.dumps(s) for s in op['sources'])+'])')
 out.append('    public static let all: [Operation] = ['+','.join(camel(o['name']) for o in ops)+']')
-for alias,name in [('chatCompletionsCreate','post_project_id_endpoint_slug_v1_chat_completions'),('responsesCreate','post_project_id_endpoint_slug_v1_responses'),('modelsList','get_project_id_endpoint_slug_v1_models'),('embeddingsCreate','post_project_id_endpoint_slug_v1_embeddings'),('filesCreate','post_project_id_v1_files')]:
+for alias,name in [('mcpPost','post_project_id_v1_mcp'),('mcpGet','get_project_id_v1_mcp'),('mcpDelete','delete_project_id_v1_mcp'),('chatCompletionsCreate','post_project_id_endpoint_slug_v1_chat_completions'),('responsesCreate','post_project_id_endpoint_slug_v1_responses'),('modelsList','get_project_id_endpoint_slug_v1_models'),('embeddingsCreate','post_project_id_endpoint_slug_v1_embeddings'),('filesCreate','post_project_id_v1_files')]:
  out.append('    public static let '+alias+' = '+camel(name))
 out.append('}')
 (root/'Sources/Erebine/Operations.swift').write_text('\n'.join(out)+'\n')

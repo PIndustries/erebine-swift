@@ -6,7 +6,7 @@ API or schema parity**.
 
 ## What is implemented
 
-Both native SDKs use the same reviewed `api/operations.json` catalog (268
+Both native SDKs use the same reviewed `api/operations.json` catalog (272
 method/path entries, documentation retrieved 2026-10-26). Every catalog entry has
 a named operation definition, a source URL, and a router/dashboard surface.
 Requests preserve caller-supplied JSON, query parameters, headers, and binary
@@ -41,11 +41,11 @@ and request/response contract. These are **not implemented as guessed bindings**
 | --- | --- |
 | Endpoint lifecycle | create/update/provision/unprovision, agent membership and traffic weights, health probes |
 | Chat lifecycle | full create/list/update/archive and execution workspace linking |
-| Chat templates | create/update/promote/version/apply; project/workspace mount differences |
+| Chat templates | create/update/promote/version/apply; listing is bound and live-verified |
 | Execution | full executions/history/cancellation, preferences, context, learnings |
 | Settings | exact project update/delete route and payload |
 | Authentication | complete login/SSO/2FA/session lifecycle API; browser-facing flows are not an SDK login implementation |
-| MCP | use a standards-compliant MCP client against the documented MCP URL; no MCP session transport is bundled |
+| MCP | native request/response sessions are implemented; subscription listeners, reconnect/resume, sampling, roots, and elicitation remain unsupported |
 | Realtime | no undocumented WebSocket protocol is inferred from chat/audio HTTP routes |
 
 Sources: [CLI endpoints](https://erebine.ai/docs/erectl/endpoints),
@@ -60,12 +60,18 @@ The standard public `/openapi.json` locations on the dashboard and router return
 
 ## Proof boundaries
 
-Local tests use a loopback HTTP fixture, not a live Erebine deployment. They verify
+Local regression tests use a loopback HTTP fixture. They verify
 request methods, escaping, query repetition, body formats, headers, empty/binary
 responses, redirects, error envelopes, and SSE. Every generated operation is
 checked for successful URL construction. This is transport/catalog validation,
-not proof that each remote handler accepts a request or that every parameter is
-correct. No live credentials were used and no billable inference was performed.
+not proof that every remote handler accepts a request or that every parameter is
+correct. Separate opt-in live checks passed for both SDKs against the authorized
+account: model discovery, Chat Completions, Responses, SSE with usage, and MCP
+initialization/tool discovery/session termination. Those inference checks made
+bounded billable requests with store=false. The key stayed on the SSH host and
+was injected by a restrictive loopback proxy. See LIVE_VALIDATION.md. Management
+and execution discovery returned HTTP 403; administrative conformance remains
+unverified with this account credential.
 
 ## Closing full parity
 
