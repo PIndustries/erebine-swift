@@ -26,9 +26,11 @@ public struct ChatAccumulator: Sendable {
     public mutating func pushJSON(_ value: JSONValue) throws {
         raw.append(value)
         guard value["error"] == nil || value["error"] == .null else { throw ErebineError.stream("Server inference error event; inspect the raw event") }
+        if case .array = value["choices"] {
         if let id = value["id"]?.string { self.id = id }
         if let model = value["model"]?.string { self.model = model }
         if let usage = value["usage"], usage != .null { self.usage = usage }
+        }
         if case .array(let items) = value["choices"] {
             for item in items {
                 guard case .integer(let index) = item["index"], index >= 0 else { throw ErebineError.invalid("Stream choice requires an unsigned index") }
