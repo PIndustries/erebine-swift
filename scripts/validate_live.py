@@ -5,6 +5,9 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--ssh-host',required=True)
 p.add_argument('--opencode-config',required=True,help='Remote path containing the Erebine provider configuration')
 p.add_argument('--model',required=True,help='Model ID from that direct routing base')
+p.add_argument('--embedding-model')
+p.add_argument('--rerank-model')
+p.add_argument('--transcription-model')
 p.add_argument('--mcp-only',action='store_true',help='Only discover MCP tools; do not generate model output')
 p.add_argument('--sudo',action='store_true',help='Read remote configuration with non-interactive sudo')
 args=p.parse_args();root=pathlib.Path(__file__).resolve().parent.parent
@@ -14,6 +17,9 @@ with socket.socket() as s:
 remote_port=random.SystemRandom().randint(35000,60000)
 source=(root/'scripts/live_proxy.py').read_text()
 remote=(['sudo','-n'] if args.sudo else [])+['python3','-u','-c',source,'--config',args.opencode_config,'--model',args.model,'--port',str(remote_port)]
+for flag in ['embedding_model','rerank_model','transcription_model']:
+ value=getattr(args,flag)
+ if value:remote+=['--'+flag.replace('_','-'),value]
 command=['ssh','-o','BatchMode=yes','-o','ExitOnForwardFailure=yes','-L',f'127.0.0.1:{local_port}:127.0.0.1:{remote_port}',args.ssh_host,shlex.join(remote)]
 ssh=subprocess.Popen(command,stdin=subprocess.PIPE,stdout=subprocess.PIPE,text=True)
 try:

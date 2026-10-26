@@ -936,6 +936,21 @@
       "verification": "Live response shape verified by both SDKs with direct workspace routing on 2026-10-26; all other routing variants remain unverified"
     },
     {
+      "name": "get_project_id_endpoint_slug_v1_models_id",
+      "method": "GET",
+      "path": "/{project_id}/{endpoint_slug}/v1/models/{id}",
+      "parameters": [
+        "project_id",
+        "endpoint_slug",
+        "id"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://erebine.ai/docs/sdk-integrations"
+      ],
+      "verification": "Live model retrieval verified with encoded namespaced model ID by both SDKs on 2026-10-26 using direct routing"
+    },
+    {
       "method": "GET",
       "path": "/{project_id}/{endpoint_slug}/v1/responses",
       "sources": [

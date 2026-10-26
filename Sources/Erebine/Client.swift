@@ -123,6 +123,7 @@ public struct Client: Sendable {
         request.httpBody = options.body
         return request
     }
+    func makeWebSocketTask(_ request: URLRequest) -> URLSessionWebSocketTask { session.webSocketTask(with: request) }
     public func send(_ operation: Operation, options: RequestOptions = .init()) async throws -> APIResponse {
         try await execute(prepare(operation, options: options))
     }

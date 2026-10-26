@@ -1,9 +1,10 @@
 # Remote-only ephemeral authentication proxy for scripts/validate_live.py.
-import json,urllib.request,urllib.error,socketserver,argparse,sys,threading
+import json,urllib.request,urllib.error,socketserver,argparse,sys,threading,email.parser,email.policy
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from urllib.parse import urlsplit
 parser=argparse.ArgumentParser()
 parser.add_argument('--config',required=True);parser.add_argument('--model',required=True);parser.add_argument('--port',required=True,type=int)
+parser.add_argument('--embedding-model');parser.add_argument('--rerank-model');parser.add_argument('--transcription-model')
 args=parser.parse_args()
 cfg=json.load(open(args.config))['provider']['erebine']['options']
 base=urlsplit(cfg['baseURL']);parts=base.path.strip('/').split('/');project,workspace=parts[:2]
@@ -13,18 +14,29 @@ class Handler(BaseHTTPRequestHandler):
  def log_message(self,*args):pass
  def handle_api(self):
   if self.command=='GET' and self.path=='/__validation/config':
-   raw=json.dumps({'project':project,'workspace':workspace,'model':args.model}).encode();status=200;headers={'Content-Type':'application/json'}
+   raw=json.dumps({'project':project,'workspace':workspace,'model':args.model,'embedding_model':args.embedding_model,'rerank_model':args.rerank_model,'transcription_model':args.transcription_model}).encode();status=200;headers={'Content-Type':'application/json'}
   else:
    allowed_get=self.command=='GET' and (self.path.startswith(base.path+'/models') or self.path==base.path+'/provider-manifest')
    mcp_path='/'+project+'/v1/mcp'
    is_mcp=self.path==mcp_path
-   allowed_post=self.command in ['POST','DELETE'] and (self.path in [base.path+'/chat/completions',base.path+'/responses'] or is_mcp)
+   allowed_post=self.command in ['POST','DELETE'] and (self.path in [base.path+'/chat/completions',base.path+'/responses',base.path+'/embeddings',base.path+'/rerank',base.path+'/score',base.path+'/audio/transcriptions'] or is_mcp)
    if not (allowed_get or allowed_post):self.send_error(403);return
    body=self.rfile.read(int(self.headers.get('Content-Length','0'))) if self.command=='POST' else None
    if body and not is_mcp:
-    obj=json.loads(body)
-    if obj.get('model')!=args.model or obj.get('tools') or obj.get('store') is not False or max(obj.get('max_tokens',0),obj.get('max_output_tokens',0))>128:
-     self.send_error(400);return
+    if len(body)>2*1024*1024:self.send_error(413);return
+    if self.path.endswith('/audio/transcriptions'):
+     if not args.transcription_model:self.send_error(403);return
+     message=email.parser.BytesParser(policy=email.policy.default).parsebytes(('Content-Type: '+self.headers.get('Content-Type','')+'\r\nMIME-Version: 1.0\r\n\r\n').encode()+body)
+     fields={part.get_param('name',header='content-disposition'):part.get_payload(decode=True) for part in message.iter_parts()}
+     if fields.get('model',b'').decode()!=args.transcription_model:self.send_error(400);return
+    else:
+     obj=json.loads(body)
+     wanted=args.embedding_model if self.path.endswith('/embeddings') else (args.rerank_model if self.path.endswith(('/rerank','/score')) else args.model)
+     if not wanted or obj.get('model')!=wanted:self.send_error(400);return
+     if self.path.endswith(('/chat/completions','/responses')):
+      if obj.get('store') is not False or max(obj.get('max_tokens',0),obj.get('max_output_tokens',0))>128:self.send_error(400);return
+      for tool in obj.get('tools',[]):
+       if tool.get('type')!='function' or tool.get('function',{}).get('name')!='sdk_echo':self.send_error(403);return
    if body and is_mcp and json.loads(body).get('method') not in ['initialize','notifications/initialized','tools/list','resources/list','prompts/list','ping']:
     self.send_error(403);return
    headers={k:v for k,v in self.headers.items() if k.lower() in ['content-type','accept','x-erebine-vendor-events','mcp-session-id','mcp-protocol-version']}

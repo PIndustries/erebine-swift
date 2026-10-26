@@ -1,6 +1,6 @@
 # Operation catalog
 
-272 documented/protocol-defined method/path entries. See [coverage and limitations](../COVERAGE.md).
+273 documented/protocol-defined entries. See [inference integration](../INFERENCE.md) and [coverage](../COVERAGE.md).
 
 | Name | Method | Path | Surface | Source |
 | --- | --- | --- | --- | --- |
@@ -73,6 +73,7 @@
 | `get_project_id_endpoint_slug_v1_chat_completions_id` | GET | `/{project_id}/{endpoint_slug}/v1/chat/completions/{id}` | router | [docs](https://erebine.ai/docs/completions) |
 | `get_project_id_endpoint_slug_v1_chat_completions_id_messages` | GET | `/{project_id}/{endpoint_slug}/v1/chat/completions/{id}/messages` | router | [docs](https://erebine.ai/docs/completions) |
 | `get_project_id_endpoint_slug_v1_models` | GET | `/{project_id}/{endpoint_slug}/v1/models` | router | [docs](https://erebine.ai/docs/getting-started) |
+| `get_project_id_endpoint_slug_v1_models_id` | GET | `/{project_id}/{endpoint_slug}/v1/models/{id}` | router | [docs](https://erebine.ai/docs/sdk-integrations) |
 | `get_project_id_endpoint_slug_v1_responses` | GET | `/{project_id}/{endpoint_slug}/v1/responses` | router | [docs](https://erebine.ai/docs/responses) |
 | `get_project_id_endpoint_slug_v1_responses_id` | GET | `/{project_id}/{endpoint_slug}/v1/responses/{id}` | router | [docs](https://erebine.ai/docs/responses) |
 | `get_project_id_endpoint_slug_v1_responses_id_input_items` | GET | `/{project_id}/{endpoint_slug}/v1/responses/{id}/input_items` | router | [docs](https://erebine.ai/docs/responses) |

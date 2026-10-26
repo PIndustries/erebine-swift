@@ -6,7 +6,7 @@ API or schema parity**.
 
 ## What is implemented
 
-Both native SDKs use the same reviewed `api/operations.json` catalog (272
+Both native SDKs use the same reviewed `api/operations.json` catalog (273
 method/path entries, documentation retrieved 2026-10-26). Every catalog entry has
 a named operation definition, a source URL, and a router/dashboard surface.
 Requests preserve caller-supplied JSON, query parameters, headers, and binary
@@ -32,7 +32,13 @@ workspace/document/memory routes, branches, SLOs, usage/exports, API keys, agent
 approvals, webhooks, maintenance, members, and documented dashboard billing/GDPR
 routes. Some dashboard responses are HTML or redirects; use the raw response.
 
-## Exact-contract gaps
+## Deferred management and remaining contract gaps
+
+The current implementation milestone is inference first; see INFERENCE.md for
+its typed helpers, realtime transport, and live validation matrix. Management
+expansion is deferred. Offline official-CLI request captures have been collected
+as scratch evidence for future management work, but are not promoted to live
+management validation.
 
 The public docs describe additional CLI features without a complete method/path
 and request/response contract. These are **not implemented as guessed bindings**:
@@ -46,7 +52,7 @@ and request/response contract. These are **not implemented as guessed bindings**
 | Settings | exact project update/delete route and payload |
 | Authentication | complete login/SSO/2FA/session lifecycle API; browser-facing flows are not an SDK login implementation |
 | MCP | native request/response sessions are implemented; subscription listeners, reconnect/resume, sampling, roots, and elicitation remain unsupported |
-| Realtime | no undocumented WebSocket protocol is inferred from chat/audio HTTP routes |
+| Realtime | native WebSocket transcription is implemented and locally protocol-tested; no live realtime endpoint was identified |
 
 Sources: [CLI endpoints](https://erebine.ai/docs/erectl/endpoints),
 [CLI platform](https://erebine.ai/docs/erectl/platform),
