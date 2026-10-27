@@ -41,10 +41,12 @@ complete local transport matrix. Account credentials, project configuration,
 resource identifiers, deployment inventory, and per-account diagnostics remain
 internal.
 
-Provisioning/traffic changes, live model execution, agent execution/approvals,
-billing, dashboard authentication, export downloads, large uploads across process
-restarts, and pagination at scale still need suitable live test environments. Existing
-bindings and CLI request evidence do not establish successful end-to-end behavior.
+Selected provisioning/traffic workflows, live Chat Completions/SSE, and sandbox
+execution/approvals now have isolated-worker proof in both SDKs. The temporary
+model still fails Responses, and CORS updates return HTTP 500. Specialized speech,
+realtime, System 1 and complete batch jobs, extended execution configuration,
+billing/dashboard flows, export downloads, recovery and scale remain live gates.
+Existing bindings and CLI request evidence do not establish end-to-end behavior.
 Workspace-scoped template PATCH/DELETE bindings were added after live validation
 revealed that the project-template routes do not mutate workspace templates.
 MCP GET notifications and explicit Last-Event-ID resume are locally verified;
