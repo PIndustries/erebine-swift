@@ -4,7 +4,7 @@ Native Swift SDK for Erebine, maintained by P.Industries. Uses Foundation,
 URLSession, async/await, and AsyncSequence. No Rust FFI or third-party runtime.
 Community project; not an official Erebine SDK. MIT licensed.
 
-**Experimental 0.1:** 380 documentation/CLI-derived HTTP operation bindings, sharing the same
+**Experimental release 26.10.27.1** (`26.10.27-build.1`): 380 documentation/CLI-derived HTTP operation bindings, sharing the same
 catalog as [erebine-rs](https://github.com/PIndustries/erebine-rs). Full API/schema
 parity is the target; live verification and schema reconciliation remain. See
 [COVERAGE.md](COVERAGE.md).
@@ -21,11 +21,13 @@ MCP prompts, resources, subscriptions, and GET/resume are covered in [MCP.md](MC
 
 ## Swift Package Manager
 
-Add `https://github.com/PIndustries/erebine-swift` in Xcode, selecting the `main`
-branch until a release is tagged, and link the `Erebine` product. Or add:
+Add `https://github.com/PIndustries/erebine-swift` in Xcode, select Exact Version
+`26.10.27-build.1`, and link the `Erebine` product. The release is named
+`26.10.27.1`; its SwiftPM version is `26.10.27-build.1`.
+See [release versioning](RELEASING.md). Or add:
 
 ```swift
-.package(url: "https://github.com/PIndustries/erebine-swift", branch: "main")
+.package(url: "https://github.com/PIndustries/erebine-swift", exact: "26.10.27-build.1")
 ```
 
 Swift 6; minimum deployment targets: macOS 12, iOS 15, tvOS 15, watchOS 8, visionOS 1.
