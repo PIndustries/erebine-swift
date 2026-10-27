@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "description": "One bounded synthetic request on a disposable endpoint. Native upload, batch execution, polling, result verification, and file cleanup.",
+  "steps": [
+    {
+      "name": "upload single-request batch input",
+      "operation": "post_project_id_v1_files",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "multipart": {
+        "fields": [
+          [
+            "purpose",
+            "batch"
+          ]
+        ],
+        "file": {
+          "field": "file",
+          "filename": "${prefix}.jsonl",
+          "content_type": "application/jsonl",
+          "text": "{\"custom_id\": \"${prefix}\", \"method\": \"POST\", \"url\": \"/v1/chat/completions\", \"body\": {\"model\": \"${model_id}\", \"messages\": [{\"role\": \"user\", \"content\": \"Synthetic batch fixture.\"}], \"max_tokens\": 8, \"store\": false}}\n"
+        }
+      },
+      "save": {
+        "batch_input_id": [
+          "/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/${project_id}/v1/files/${batch_input_id}",
+        "headers": {
+          "X-Workspace-Id": "${chat_workspace_id}"
+        }
+      }
+    },
+    {
+      "name": "create real batch on temporary endpoint",
+      "operation": "post_project_id_endpoint_slug_v1_batches",
+      "parameters": {
+        "project_id": "${project_id}",
+        "endpoint_slug": "${endpoint_slug}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "body": {
+        "input_file_id": "${batch_input_id}",
+        "endpoint": "/v1/chat/completions",
+        "completion_window": "24h",
+        "metadata": {
+          "sdk_validation": "${prefix}"
+        }
+      },
+      "save": {
+        "batch_id": [
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "poll real batch to terminal status",
+      "operation": "get_project_id_v1_batches_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${batch_id}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "completed",
+          "failed",
+          "expired",
+          "cancelled"
+        ],
+        "attempts": 90,
+        "delay_ms": 1000
+      },
+      "assertions": {
+        "/status": "completed",
+        "/request_counts/completed": 1,
+        "/request_counts/failed": 0
+      },
+      "save": {
+        "batch_output_id": [
+          "/output_file_id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/${project_id}/v1/files/${batch_output_id}",
+        "headers": {
+          "X-Workspace-Id": "${chat_workspace_id}"
+        }
+      }
+    },
+    {
+      "name": "download and verify real batch output",
+      "operation": "get_project_id_v1_files_id_content",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${batch_output_id}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "assertions": {
+        "/custom_id": "${prefix}",
+        "/response/status_code": 200,
+        "/error": null
+      },
+      "min_array_lengths": {
+        "/response/body/choices": 1
+      },
+      "min_numbers": {
+        "/response/body/usage/completion_tokens": 1
+      }
+    },
+    {
+      "name": "delete fixture batch input in its workspace",
+      "operation": "delete_project_id_v1_files_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${batch_input_id}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "assertions": {
+        "/status": "deleted"
+      }
+    },
+    {
+      "name": "delete fixture batch output in its workspace",
+      "operation": "delete_project_id_v1_files_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${batch_output_id}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "assertions": {
+        "/status": "deleted"
+      }
+    },
+    {
+      "name": "verify input file tombstone",
+      "operation": "get_project_id_v1_files_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${batch_input_id}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "assertions": {
+        "/status": "deleted"
+      }
+    },
+    {
+      "name": "verify output file tombstone",
+      "operation": "get_project_id_v1_files_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${batch_output_id}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "assertions": {
+        "/status": "deleted"
+      }
+    },
+    {
+      "name": "verify deleted output bytes unavailable",
+      "operation": "get_project_id_v1_files_id_content",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${batch_output_id}"
+      },
+      "headers": {
+        "X-Workspace-Id": "${chat_workspace_id}"
+      },
+      "expected_error": {
+        "status": 404
+      }
+    }
+  ]
+}

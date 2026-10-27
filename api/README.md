@@ -383,3 +383,11 @@
 | `put_project_id_v1_management_evolution_id_lane_enable` | PUT | `/{project_id}/v1/management/evolution/{id}/{lane}/enable` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `put_project_id_v1_slos_id` | PUT | `/{project_id}/v1/slos/{id}` | router | [source](https://erebine.ai/docs/slo-tracking) |
 | `put_project_id_v1_webhooks_id` | PUT | `/{project_id}/v1/webhooks/{id}` | router | [source](https://erebine.ai/docs/webhooks), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
+
+Worker validation templates include CORS persistence and workspace-scoped batch
+flows. They require a restrictive private loopback fixture controller. Positive
+generated-token counts and terminal stream output are required; HTTP 200 or
+`status: completed` alone do not pass. See [live validation](../LIVE_VALIDATION.md)
+for currently failing service checks. The metadata preflight and local validator
+regressions are in `scripts/check_worker_fixture.py` and
+`scripts/test_worker_validation.py`.

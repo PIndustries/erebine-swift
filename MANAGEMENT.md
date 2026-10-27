@@ -127,3 +127,9 @@ retained as a service issue, not reported as a passing mutation.
 Validation cleanup specifications are resolved after response variables have
 been saved. Polling is limited to GET, has a maximum of 300 attempts, and a
 maximum two-second delay. An unmet polling condition fails the check.
+
+The CORS follow-up isolates persistence failure from request validation and
+authentication; see [live validation](LIVE_VALIDATION.md). Batch/file cleanup
+must retain `X-Workspace-Id`. A 404 from the wrong workspace does not establish
+that the original file was deleted. Scenario drivers support minimum numeric
+assertions (`min_numbers`) to require positive generated-token usage.

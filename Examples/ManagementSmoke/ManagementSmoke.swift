@@ -16,6 +16,14 @@ import Erebine
         default:return value
         }
     }
+    static func number(_ value:JSONValue?) -> Double? {
+        switch value {
+        case .integer(let n):return Double(n)
+        case .unsignedInteger(let n):return Double(n)
+        case .number(let n):return n
+        default:return nil
+        }
+    }
     static func pointer(_ body: JSONValue, _ pointer: String) -> JSONValue? {
         var current=body
         for part in pointer.split(separator:"/") {
@@ -116,6 +124,11 @@ import Erebine
                 if case .object(let assertions)=step["contains"] {for (p,expected) in assertions {passed = passed && body.flatMap {pointer($0,p)}?.string?.contains(expected.string!) == true}}
                 if let text=step["expected_text"]?.string {passed = passed && String(data:response.body,encoding:.utf8)==text}
                 if case .object(let lengths)=step["min_array_lengths"] {for (p,min) in lengths {guard case .integer(let count)=min,case .array(let values)=body.flatMap({pointer($0,p)}) else {passed=false;continue};passed = passed && values.count>=count}}
+                if case .object(let numbers)=step["min_numbers"] {
+                    for (path,minimum) in numbers {
+                        if let body,let actual=number(pointer(body,path)),let minimum=number(minimum) {passed = passed && actual.isFinite && actual>=minimum}else{passed=false}
+                    }
+                }
                 var record:[String:JSONValue]=["name":.string(name),"status":.integer(Int64(response.status)),"result":.string(passed ? "passed":"response_contract_failed")]
                 if case .object(let fields)=body {record["json_fields"] = .array(fields.keys.sorted().map(JSONValue.string))}
                 results.append(.object(record))

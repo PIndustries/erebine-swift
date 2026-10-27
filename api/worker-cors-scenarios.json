@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "description": "Opt-in disposable endpoint CORS conformance checks. Mutations must succeed and persist; service failures are not accepted as success.",
+  "steps": [
+    {
+      "name": "read fresh fixture CORS defaults",
+      "operation": "get_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      }
+    },
+    {
+      "name": "persist documented minimal CORS body",
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "body": {
+        "allow_origins": [
+          "https://sdk-validation.example.com"
+        ],
+        "allow_methods": [
+          "GET",
+          "POST",
+          "OPTIONS"
+        ]
+      }
+    },
+    {
+      "name": "persist complete canonical CORS body",
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "body": {
+        "allow_origins": [
+          "https://sdk-validation.example.com"
+        ],
+        "allow_methods": [
+          "GET",
+          "POST",
+          "OPTIONS"
+        ],
+        "allow_headers": [
+          "Content-Type",
+          "Authorization"
+        ],
+        "allow_credentials": false,
+        "max_age": 600,
+        "expose_headers": [
+          "X-Request-Id"
+        ]
+      }
+    },
+    {
+      "name": "persist alias CORS body",
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "body": {
+        "allowed_origins": [
+          "https://sdk-validation.example.com"
+        ],
+        "allowed_methods": [
+          "GET",
+          "POST",
+          "OPTIONS"
+        ],
+        "allowed_headers": [
+          "Content-Type",
+          "Authorization"
+        ],
+        "allow_credentials": false,
+        "max_age_seconds": 600,
+        "expose_headers": []
+      }
+    },
+    {
+      "name": "persist CORS with disposable scoped key",
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "headers": {
+        "X-SDK-Validation-Auth": "scoped"
+      },
+      "body": {
+        "allow_origins": [
+          "https://sdk-validation.example.com"
+        ],
+        "allow_methods": [
+          "GET",
+          "POST",
+          "OPTIONS"
+        ],
+        "allow_headers": [
+          "Content-Type",
+          "Authorization"
+        ],
+        "allow_credentials": false,
+        "max_age": 600,
+        "expose_headers": [
+          "X-Request-Id"
+        ]
+      }
+    },
+    {
+      "name": "reject wildcard origins with credentials",
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "expected_error": {
+        "status": 400,
+        "codes": [
+          "invalid_request"
+        ]
+      },
+      "body": {
+        "allow_origins": [
+          "*"
+        ],
+        "allow_methods": [
+          "GET"
+        ],
+        "allow_credentials": true
+      }
+    },
+    {
+      "name": "verify CORS settings persisted",
+      "operation": "get_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "assertions": {
+        "/allow_origins": [
+          "https://sdk-validation.example.com"
+        ],
+        "/allow_credentials": false,
+        "/max_age": 600
+      }
+    }
+  ]
+}

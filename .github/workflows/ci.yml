@@ -15,6 +15,7 @@ jobs:
       - run: python3 scripts/generate.py
       - run: git diff --exit-code -- Sources/Erebine/Operations.swift Sources/Erebine/API.swift
       - run: swift test
+      - run: python3 scripts/test_worker_validation.py --sdk swift
       - run: xcodebuild -scheme Erebine -destination 'generic/platform=iOS Simulator' -derivedDataPath work/ios CODE_SIGNING_ALLOWED=NO build
       - run: xcodebuild -scheme Erebine -destination 'generic/platform=watchOS Simulator' -derivedDataPath work/watchos CODE_SIGNING_ALLOWED=NO build
       - run: xcodebuild -scheme Erebine -destination 'generic/platform=tvOS Simulator' -derivedDataPath work/tvos CODE_SIGNING_ALLOWED=NO build

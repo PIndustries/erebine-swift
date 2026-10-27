@@ -41,9 +41,11 @@ complete local transport matrix. Account credentials, project configuration,
 resource identifiers, deployment inventory, and per-account diagnostics remain
 internal.
 
-Selected provisioning/traffic workflows, live Chat Completions/SSE, and sandbox
-execution/approvals now have isolated-worker proof in both SDKs. The temporary
-model still fails Responses, and CORS updates return HTTP 500. Specialized speech,
+Selected provisioning/traffic workflows and sandbox execution/approvals have
+isolated-worker proof in both SDKs. CPU Chat/batch generation labels from early
+shape-only checks are superseded by positive-output conformance checks. A compatible
+fixture now passes non-streaming Responses, while public Responses SSE/input
+history and CORS updates still fail conformance checks. Specialized speech,
 realtime, System 1 and complete batch jobs, extended execution configuration,
 billing/dashboard flows, export downloads, recovery and scale remain live gates.
 Existing bindings and CLI request evidence do not establish end-to-end behavior.
