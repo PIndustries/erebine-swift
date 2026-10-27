@@ -4,7 +4,7 @@ Native Swift SDK for Erebine, maintained by P.Industries. Uses Foundation,
 URLSession, async/await, and AsyncSequence. No Rust FFI or third-party runtime.
 Community project; not an official Erebine SDK. MIT licensed.
 
-**Experimental 0.1:** 377 documentation/CLI-derived HTTP operation bindings, sharing the same
+**Experimental 0.1:** 379 documentation/CLI-derived HTTP operation bindings, sharing the same
 catalog as [erebine-rs](https://github.com/PIndustries/erebine-rs). Full API/schema
 parity is the target; live verification and schema reconciliation remain. See
 [COVERAGE.md](COVERAGE.md).

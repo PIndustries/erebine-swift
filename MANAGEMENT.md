@@ -44,7 +44,8 @@ workspace create/read/update/visibility; template create/update/version history;
 conversation create/update and message item lifecycle; multipart file upload,
 metadata and exact content download; temporary API-key creation, quota, IP
 filter, rotation and revocation; join-key creation/revocation; SLO CRUD/history;
-and webhook configuration CRUD/history. No webhook test delivery was sent.
+and webhook configuration CRUD/history. This initial pass did not send a webhook
+test delivery; the later extension below did.
 
 All temporary workspaces, templates, conversations, files, API keys, join keys,
 SLOs, and webhooks were deleted or revoked. The proxy cleanup ledger reported
@@ -54,8 +55,8 @@ Only newly created credentials were rotated/revoked.
 Additional live validation requires suitably configured disposable resources and
 separate administrator access. Deployment inventories, project identifiers,
 account scopes, and per-account diagnostics remain internal. Provisioning, agent
-execution, chat context/branches/memory, template application to a chat, webhook
-delivery, invites, billing, and destructive execution are not live-verified.
+execution, chat context/branches/memory, template application to a chat,
+invites, billing, and destructive execution are not live-verified.
 
 ## Observed contract details
 
@@ -70,3 +71,37 @@ delivery, invites, billing, and destructive execution are not live-verified.
 These are observed server behaviors, not guarantees for every deployment.
 Per-account live reports are retained internally. Public scenarios use only
 synthetic identifiers, names, addresses, and content.
+
+## Additional native live checks
+
+A later live pass verified, independently in each SDK:
+
+- 38 extended checks for checksum-verified parts, directory files, archive parts,
+  upload status/resume/cancellation, model metadata, version creation/promotion/
+  rollback, HF override preview, scoped template updates/deletion, and disposable
+  agent metadata CRUD.
+- Nine MCP checks for initialization, tools/prompts/resources/templates, prompt
+  retrieval, resource reads, ping, and session close.
+- Synthetic HTTPS webhook delivery, delivery history, disabling/deleting the
+  test registration, and receiver-side HMAC-SHA256 verification.
+- Disposable-key authentication, scope enforcement, quota responses, IP filters,
+  revocation, and rejection of revoked credentials.
+
+Workspace template details can be read through the project template GET route,
+but mutations use `PATCH` and `DELETE` on
+`/{project_id}/v1/workspaces/{id_1}/chat-templates/{id_2}`. The nested GET returned
+405 during validation and is not advertised as a binding. A project-scoped
+template mutation does not substitute for a workspace-scoped mutation.
+
+Export creation, status reads, pagination requests, and pending-job cancellation
+were exercised. Successful export downloads remain unverified. Test results and
+server diagnostics stay internal; completion of a job is not sufficient proof of
+a working download. Completed export audit records may remain, as the documented
+DELETE operation cancels jobs rather than erasing history.
+
+The live driver supports an explicit `EREBINE_MANAGEMENT_SCENARIOS` path for a
+private scenario file. Binary bodies, query pairs, status/error assertions,
+bounded delays, and cleanup of matching fixture records are supported. Expected
+errors must actually occur; unexpected success fails validation. Duplicate
+cleanup actions are suppressed, and HTTP/contract/cleanup failures produce a
+nonzero process exit. Never use a fixture prefix shared with preexisting data.

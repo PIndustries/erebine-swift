@@ -729,6 +729,21 @@
       ]
     },
     {
+      "name": "delete_project_id_v1_workspaces_id_1_chat_templates_id_2",
+      "method": "DELETE",
+      "path": "/{project_id}/v1/workspaces/{id_1}/chat-templates/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://erebine.ai/docs/erectl/templates"
+      ],
+      "verification": "Workspace-scoped template lifecycle discovered and verified with disposable live SDK fixtures; account details retained internally"
+    },
+    {
       "name": "delete_project_id_v1_workspaces_id_1_decisions_id_2",
       "method": "DELETE",
       "path": "/{project_id}/v1/workspaces/{id_1}/decisions/{id_2}",
@@ -3787,6 +3802,21 @@
       "cli_commands": [
         "workspaces update"
       ]
+    },
+    {
+      "name": "patch_project_id_v1_workspaces_id_1_chat_templates_id_2",
+      "method": "PATCH",
+      "path": "/{project_id}/v1/workspaces/{id_1}/chat-templates/{id_2}",
+      "parameters": [
+        "project_id",
+        "id_1",
+        "id_2"
+      ],
+      "surface": "router",
+      "sources": [
+        "https://erebine.ai/docs/erectl/templates"
+      ],
+      "verification": "Workspace-scoped template lifecycle discovered and verified with disposable live SDK fixtures; account details retained internally"
     },
     {
       "name": "patch_project_id_v1_workspaces_id_1_decisions_id_2",

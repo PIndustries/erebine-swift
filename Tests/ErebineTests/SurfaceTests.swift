@@ -32,6 +32,10 @@ final class SurfaceTests: XCTestCase {
         XCTAssertEqual(echo["method"]?.string,"PATCH")
         let preflight = try await client.api.optionsProjectIdEndpointSlugV1ChatCompletions(options: .init(headers:["Origin":"https://example.invalid", "Access-Control-Request-Method":"POST"]))
         XCTAssertEqual(try preflight.json()["method"]?.string,"OPTIONS")
+        let scoped = try await client.api.patchProjectIdV1WorkspacesId1ChatTemplatesId2(id1:"ws fixture",id2:"ctpl fixture",options:.json(["system_prompt":"Synthetic scoped template"]))
+        XCTAssertEqual(try scoped.json()["path"]?.string,"/proj_test/v1/workspaces/ws%20fixture/chat-templates/ctpl%20fixture")
+        let deleted = try await client.api.deleteProjectIdV1WorkspacesId1ChatTemplatesId2(id1:"ws fixture",id2:"ctpl fixture")
+        XCTAssertEqual(try deleted.json()["method"]?.string,"DELETE")
         let dashboard = try Client(origin:f.origin, surface:.dashboard)
         do { _ = try await dashboard.api.getProjectIdV1Models(); XCTFail("surface mismatch accepted") }
         catch ErebineError.invalid { }

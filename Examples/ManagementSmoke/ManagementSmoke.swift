@@ -35,9 +35,10 @@ import Erebine
         guard case .object(var vars)=try configResponse.json(),let project=vars["project_id"]?.string else {throw ErebineError.invalid("Proxy configuration missing")}
         let client=try Client(origin:url,projectID:project)
         let source=URL(fileURLWithPath:#filePath).deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("api/management-scenarios.json")
-        let scenarios=try JSONDecoder().decode(JSONValue.self,from:Data(contentsOf:source))
+        let selected = ProcessInfo.processInfo.environment["EREBINE_MANAGEMENT_SCENARIOS"].map { URL(fileURLWithPath: $0) } ?? source
+        let scenarios=try JSONDecoder().decode(JSONValue.self,from:Data(contentsOf:selected))
         guard case .array(let steps)=scenarios["steps"] else {throw ErebineError.invalid("Scenarios missing")}
-        var results:[JSONValue]=[];var cleanup:[JSONValue]=[]
+        var results:[JSONValue]=[];var cleanup:[JSONValue]=[];var cleanedPaths=Set<String>()
         for original in steps {
             let name=original["name"]!.string!
             let step:JSONValue
@@ -45,6 +46,13 @@ import Erebine
             guard let operation=Operations.all.first(where:{$0.name==step["operation"]?.string}),case .object(let params)=step["parameters"] else {throw ErebineError.invalid("Scenario operation missing")}
             var options=RequestOptions(parameters:params.mapValues{$0.string!})
             if case .object(let h)=step["headers"] {options.headers=h.mapValues{$0.string!}}
+            if case .array(let pairs) = step["query"] {
+                options.query = pairs.map { pair in guard case .array(let p) = pair else { preconditionFailure("Invalid query pair") }; return URLQueryItem(name: p[0].string!, value: p[1].string!) }
+            }
+            if let encoded=step["body_base64"]?.string {
+                guard let data=Data(base64Encoded:encoded) else { throw ErebineError.invalid("Invalid base64 fixture") }
+                options.body=data; options.contentType=step["content_type"]?.string ?? "application/octet-stream"
+            }
             if let body=step["body"] {options.body=try JSONEncoder().encode(body);options.contentType="application/json"}
             if let form=step["multipart"] {
                 var multipart=Multipart()
@@ -52,8 +60,18 @@ import Erebine
                 let file=form["file"]!;try multipart.file(file["field"]!.string!,filename:file["filename"]!.string!,contentType:file["content_type"]!.string!,bytes:Data(file["text"]!.string!.utf8))
                 options=multipart.options(parameters:options.parameters,headers:options.headers)
             }
+            if case .integer(let ms)=step["delay_ms"], ms>0 { try await Task.sleep(nanoseconds:UInt64(min(ms,5000))*1_000_000) }
             do {
-                let response=try await client.send(operation,options:options);let body=try? response.json();var passed=true
+                let response=try await client.send(operation,options:options);let body=try? response.json();var passed=step["expected_error"] == nil
+                if operation.method == "DELETE",let path=try client.prepare(operation,options:options).url?.path {cleanedPaths.insert(path)}
+                if case .array(let statuses)=step["expected_status"] { passed=passed && statuses.contains(.integer(Int64(response.status))) }
+                if let spec=step["save_match"] {
+                    var selected:JSONValue?
+                    if let body, case .array(let items)=pointer(body,spec["pointer"]!.string!) {
+                        selected=items.first(where: { $0[spec["field"]!.string!] == spec["equals"] }).flatMap { pointer($0,spec["value_pointer"]!.string!) }
+                    }
+                    if let selected, selected.string != nil { vars[spec["variable"]!.string!] = selected } else { passed=false }
+                }
                 if case .object(let save)=original["save"] {
                     for (key,paths) in save {
                         guard case .array(let pointers)=paths else {passed=false;continue}
@@ -61,6 +79,13 @@ import Erebine
                         if let found {vars[key]=found} else {passed=false}
                     }
                     if let spec=original["cleanup"] {if let spec=try? resolve(spec,vars){cleanup.append(spec)}else{passed=false}}
+                }
+                if let spec=step["cleanup_matching"] {
+                    if let body, case .array(let items)=pointer(body,spec["pointer"]!.string!) {
+                        for item in items where item[spec["field"]!.string!]?.string?.hasPrefix(spec["prefix"]!.string!) == true {
+                            if let id=item["id"]?.string { cleanup.append(["method":"DELETE","path":.string(spec["path"]!.string!.replacingOccurrences(of:"{id}",with:id))]) }
+                        }
+                    } else { passed=false }
                 }
                 if case .object(let assertions)=step["assertions"] {for (p,expected) in assertions {passed = passed && body.flatMap{pointer($0,p)}==expected}}
                 if let text=step["expected_text"]?.string {passed = passed && String(data:response.body,encoding:.utf8)==text}
@@ -70,7 +95,10 @@ import Erebine
                 results.append(.object(record))
             } catch ErebineError.api(let status,_,let data) {
                 let body=try? JSONDecoder().decode(JSONValue.self,from:data)
-                var record:[String:JSONValue]=["name":.string(name),"status":.integer(Int64(status)),"result":.string(body?["error"]?["code"]?.string == "no_active_endpoint" ? "environment_unavailable":"http_failed")]
+                let code=body?["error"]?["code"]?.string
+                var expected=false
+                if step["expected_error"]?["status"] == .integer(Int64(status)) { if case .array(let codes)=step["expected_error"]?["codes"], let code { expected=codes.contains(.string(code)) } else {expected=true} }
+                var record:[String:JSONValue]=["name":.string(name),"status":.integer(Int64(status)),"result":.string(expected ? "expected_rejection" : code == "no_active_endpoint" ? "environment_unavailable":"http_failed")]
                 if let code=body?["error"]?["code"]?.string {record["code"] = .string(code)}
                 results.append(.object(record))
             } catch {results.append(["name":.string(name),"result":"transport_failed"])}
@@ -79,6 +107,7 @@ import Erebine
         for spec in cleanup.reversed() {
             var path=spec["path"]!.string!
             for (name,value) in vars {if let text=value.string {path=path.replacingOccurrences(of:"{"+name+"}",with:text)}}
+            guard cleanedPaths.insert(path).inserted else {continue}
             var options=RequestOptions()
             if case .object(let h)=spec["headers"] {options.headers=h.mapValues{$0.string!}}
             do {let response=try await client.send(method:spec["method"]!.string!,path:path,options:options);cleanupResults.append(["status":.integer(Int64(response.status)),"result":"passed"])}
@@ -87,6 +116,8 @@ import Erebine
         }
         let result:JSONValue=["sdk":"swift","steps":.array(results),"cleanup":.array(cleanupResults)]
         print(String(data:try JSONEncoder().encode(result),encoding:.utf8)!)
+        let failed=results.contains { ["http_failed","transport_failed","response_contract_failed"].contains($0["result"]?.string ?? "") } || cleanupResults.contains { ["failed","transport_failed"].contains($0["result"]?.string ?? "") }
+        if failed { throw ErebineError.invalid("Live validation has failed checks or cleanup") }
     }
-    static func main() async {do {try await run()}catch {FileHandle.standardError.write(Data("Management validation could not complete; no credential values logged.\n".utf8))}}
+    static func main() async {do {try await run()}catch {FileHandle.standardError.write(Data("Management validation could not complete; no credential values logged.\n".utf8)); exit(1)}}
 }

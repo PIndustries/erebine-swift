@@ -270,6 +270,13 @@ public struct API: Sendable {
         options.parameters["id_2"] = id2
         return try await client.send(Operations.deleteProjectIdV1WorkspacesId1AutoApprovalsId2, options: options)
     }
+    /// DELETE /{project_id}/v1/workspaces/{id_1}/chat-templates/{id_2}
+    public func deleteProjectIdV1WorkspacesId1ChatTemplatesId2(id1: String, id2: String, options: RequestOptions = .init()) async throws -> APIResponse {
+        var options = options
+        options.parameters["id_1"] = id1
+        options.parameters["id_2"] = id2
+        return try await client.send(Operations.deleteProjectIdV1WorkspacesId1ChatTemplatesId2, options: options)
+    }
     /// DELETE /{project_id}/v1/workspaces/{id_1}/decisions/{id_2}
     public func deleteProjectIdV1WorkspacesId1DecisionsId2(id1: String, id2: String, options: RequestOptions = .init()) async throws -> APIResponse {
         var options = options
@@ -1270,6 +1277,13 @@ public struct API: Sendable {
         var options = options
         options.parameters["id"] = id
         return try await client.send(Operations.patchProjectIdV1WorkspacesId, options: options)
+    }
+    /// PATCH /{project_id}/v1/workspaces/{id_1}/chat-templates/{id_2}
+    public func patchProjectIdV1WorkspacesId1ChatTemplatesId2(id1: String, id2: String, options: RequestOptions = .init()) async throws -> APIResponse {
+        var options = options
+        options.parameters["id_1"] = id1
+        options.parameters["id_2"] = id2
+        return try await client.send(Operations.patchProjectIdV1WorkspacesId1ChatTemplatesId2, options: options)
     }
     /// PATCH /{project_id}/v1/workspaces/{id_1}/decisions/{id_2}
     public func patchProjectIdV1WorkspacesId1DecisionsId2(id1: String, id2: String, options: RequestOptions = .init()) async throws -> APIResponse {

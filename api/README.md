@@ -1,6 +1,6 @@
 # Operation catalog
 
-377 documentation/CLI-derived bindings and native methods. See [coverage](../COVERAGE.md), [native API](../API.md), [inference](../INFERENCE.md), and [management](../MANAGEMENT.md).
+379 documentation/CLI/live-verified bindings and native methods. See [coverage](../COVERAGE.md), [native API](../API.md), [inference](../INFERENCE.md), and [management](../MANAGEMENT.md).
 
 | Name | Method | Path | Surface | Source |
 | --- | --- | --- | --- | --- |
@@ -47,6 +47,7 @@
 | `delete_project_id_v1_workspaces_id` | DELETE | `/{project_id}/v1/workspaces/{id}` | router | [source](https://erebine.ai/docs/document-workspace), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `delete_project_id_v1_workspaces_id_1_agents_id_2` | DELETE | `/{project_id}/v1/workspaces/{id_1}/agents/{id_2}` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `delete_project_id_v1_workspaces_id_1_auto_approvals_id_2` | DELETE | `/{project_id}/v1/workspaces/{id_1}/auto-approvals/{id_2}` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
+| `delete_project_id_v1_workspaces_id_1_chat_templates_id_2` | DELETE | `/{project_id}/v1/workspaces/{id_1}/chat-templates/{id_2}` | router | [source](https://erebine.ai/docs/erectl/templates) |
 | `delete_project_id_v1_workspaces_id_1_decisions_id_2` | DELETE | `/{project_id}/v1/workspaces/{id_1}/decisions/{id_2}` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `delete_project_id_v1_workspaces_id_1_files_id_2` | DELETE | `/{project_id}/v1/workspaces/{id_1}/files/{id_2}` | router | [source](https://erebine.ai/docs/document-workspace) |
 | `delete_project_id_v1_workspaces_id_1_members_id_2` | DELETE | `/{project_id}/v1/workspaces/{id_1}/members/{id_2}` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
@@ -234,6 +235,7 @@
 | `patch_project_id_v1_settings_project` | PATCH | `/{project_id}/v1/settings/project` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `patch_project_id_v1_user_preferences` | PATCH | `/{project_id}/v1/user/preferences` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `patch_project_id_v1_workspaces_id` | PATCH | `/{project_id}/v1/workspaces/{id}` | router | [source](https://erebine.ai/docs/document-workspace), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
+| `patch_project_id_v1_workspaces_id_1_chat_templates_id_2` | PATCH | `/{project_id}/v1/workspaces/{id_1}/chat-templates/{id_2}` | router | [source](https://erebine.ai/docs/erectl/templates) |
 | `patch_project_id_v1_workspaces_id_1_decisions_id_2` | PATCH | `/{project_id}/v1/workspaces/{id_1}/decisions/{id_2}` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `patch_project_id_v1_workspaces_id_1_memories_id_2` | PATCH | `/{project_id}/v1/workspaces/{id_1}/memories/{id_2}` | router | [source](https://erebine.ai/docs/chat-memory), [source](https://erebine.ai/docs/document-workspace), [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |
 | `patch_project_id_v1_workspaces_id_1_milestones_id_2` | PATCH | `/{project_id}/v1/workspaces/{id_1}/milestones/{id_2}` | router | [source](https://github.com/erebine/binaries/releases/tag/v2.7.3) |

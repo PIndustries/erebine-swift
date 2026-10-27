@@ -60,3 +60,8 @@ requires that server to advertise and implement the capability.
 Protocol references: [Streamable HTTP](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports),
 [resources](https://modelcontextprotocol.io/specification/2025-06-18/server/resources),
 [prompts](https://modelcontextprotocol.io/specification/2025-06-18/server/prompts).
+
+Opt-in native read-only live drivers are `examples/mcp_live_smoke.rs` and
+`Examples/MCPLiveSmoke/MCPLiveSmoke.swift` (`ErebineMCPLiveSmoke`). They use the
+same credential-injecting loopback boundary as the management driver, create an
+isolated workspace, report only check outcomes, and remove the workspace.
