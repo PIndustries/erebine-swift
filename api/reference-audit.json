@@ -3011,6 +3011,15 @@
       ],
       "operation": "get_project_id_v1_workspaces_id_graph",
       "status": "bound"
+    },
+    {
+      "method": "POST",
+      "reference_path": "/{project_id}/v1/chats/{id}/messages",
+      "sources": [
+        "https://erebine.ai/docs/erectl/chat"
+      ],
+      "operation": "post_project_id_v1_chats_id_messages",
+      "status": "bound"
     }
   ]
 }

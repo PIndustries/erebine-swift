@@ -54,9 +54,9 @@ Only newly created credentials were rotated/revoked.
 
 Additional live validation requires suitably configured disposable resources and
 separate administrator access. Deployment inventories, project identifiers,
-account scopes, and per-account diagnostics remain internal. Provisioning, agent
-execution, chat context/branches/memory, template application to a chat,
-invites, billing, and destructive execution are not live-verified.
+account scopes, and per-account diagnostics remain internal. The later isolated-worker pass below covers execution and selected chat/endpoint
+workflows. Invites, billing, and destructive infrastructure operations remain
+unverified.
 
 ## Observed contract details
 
@@ -105,3 +105,25 @@ bounded delays, and cleanup of matching fixture records are supported. Expected
 errors must actually occur; unexpected success fails validation. Duplicate
 cleanup actions are suppressed, and HTTP/contract/cleanup failures produce a
 nonzero process exit. Never use a fixture prefix shared with preexisting data.
+
+## Isolated worker follow-up
+
+See [live validation](LIVE_VALIDATION.md) for execution and CPU inference proof.
+The worker validation adds message creation, chat context, branch fork/list/delete,
+chat memory/member reads, visibility updates, execution-workspace linking, and
+chat-template application. Memory/member reads do not establish memory mutation
+or multi-user access-control behavior.
+
+Chat message creation uses `POST /{project_id}/v1/chats/{id}/messages`, documented
+by `erectl chat new --message`. Both catalogs now include this binding. OpenAI
+inference headers alone did not populate the management chat message history.
+Endpoint membership mutations take the bound **worker ID**, while attaching a
+worker takes its **agent ID**.
+
+CORS reads and endpoint health reads/checks succeeded, but CORS PUT returned
+HTTP 500 for both the CLI-shaped and expanded request shapes. The failure is
+retained as a service issue, not reported as a passing mutation.
+
+Validation cleanup specifications are resolved after response variables have
+been saved. Polling is limited to GET, has a maximum of 300 attempts, and a
+maximum two-second delay. An unmet polling condition fails the check.

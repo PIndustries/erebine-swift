@@ -4,5 +4,5 @@ let package = Package(
     name: "Erebine",
     platforms: [.macOS(.v12), .iOS(.v15), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)],
     products: [.library(name: "Erebine", targets: ["Erebine"])],
-    targets: [.target(name: "Erebine"), .executableTarget(name: "ErebineMCPLiveSmoke", dependencies: ["Erebine"], path: "Examples/MCPLiveSmoke"), .executableTarget(name: "ErebineManagementSmoke", dependencies: ["Erebine"], path: "Examples/ManagementSmoke"), .executableTarget(name: "ErebineLiveSmoke", dependencies: ["Erebine"], path: "Examples/LiveSmoke"), .testTarget(name: "ErebineTests", dependencies: ["Erebine"], resources: [.copy("http_fixture.py")])]
+    targets: [.target(name: "Erebine"), .executableTarget(name: "ErebineWorkerInferenceSmoke", dependencies: ["Erebine"], path: "Examples/WorkerInferenceSmoke"), .executableTarget(name: "ErebineMCPLiveSmoke", dependencies: ["Erebine"], path: "Examples/MCPLiveSmoke"), .executableTarget(name: "ErebineManagementSmoke", dependencies: ["Erebine"], path: "Examples/ManagementSmoke"), .executableTarget(name: "ErebineLiveSmoke", dependencies: ["Erebine"], path: "Examples/LiveSmoke"), .testTarget(name: "ErebineTests", dependencies: ["Erebine"], resources: [.copy("http_fixture.py")])]
 )

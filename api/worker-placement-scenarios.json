@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "steps": [
+    {
+      "name": "suspend only the fixture endpoint",
+      "operation": "patch_project_id_v1_management_endpoints_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "body": {
+        "status": "suspended"
+      }
+    },
+    {
+      "name": "unprovision only the fixture worker",
+      "operation": "post_project_id_v1_management_endpoints_id_unprovision",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      }
+    },
+    {
+      "name": "verify worker model detached",
+      "operation": "get_project_id_v1_management_endpoints_id_agents",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "poll": {
+        "pointer": "/data",
+        "values": [
+          []
+        ],
+        "attempts": 30,
+        "delay_ms": 1000
+      },
+      "assertions": {
+        "/data": []
+      }
+    },
+    {
+      "name": "activate fixture endpoint",
+      "operation": "patch_project_id_v1_management_endpoints_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "body": {
+        "status": "active"
+      }
+    },
+    {
+      "name": "reattach temporary inference worker",
+      "operation": "post_project_id_v1_management_endpoints_id_agents",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "body": {
+        "agent_id": "${inference_agent_id}",
+        "weight": 1
+      }
+    },
+    {
+      "name": "provision real tiny model again",
+      "operation": "post_project_id_v1_management_endpoints_id_provision",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      }
+    },
+    {
+      "name": "verify real model active",
+      "operation": "get_project_id_v1_management_endpoints_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "poll": {
+        "pointer": "/provisioning_state",
+        "values": [
+          "active"
+        ],
+        "attempts": 180,
+        "delay_ms": 2000
+      },
+      "assertions": {
+        "/provisioning_state": "active"
+      }
+    }
+  ],
+  "description": "Opt-in isolated worker validation. Bootstrap IDs and authentication must be supplied by a restrictive private loopback proxy. Never target preexisting resources."
+}

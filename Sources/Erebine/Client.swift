@@ -161,7 +161,7 @@ public struct Client: Sendable {
     }
     private static func escape(_ value: String) throws -> String {
         guard !value.isEmpty, value != ".", value != "..", !value.unicodeScalars.contains(where: CharacterSet.controlCharacters.contains) else { throw ErebineError.invalid("Empty, dot, or control-character path segment") }
-        let allowed = CharacterSet(charactersIn: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~")
+        let allowed = CharacterSet(charactersIn: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~:")
         guard let escaped = value.addingPercentEncoding(withAllowedCharacters: allowed) else { throw ErebineError.invalid("Unencodable path parameter") }
         return escaped
     }

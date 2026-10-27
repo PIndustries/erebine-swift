@@ -6144,6 +6144,20 @@
       "cli_commands": [
         "webhooks legacy update"
       ]
+    },
+    {
+      "method": "POST",
+      "path": "/{project_id}/v1/chats/{id}/messages",
+      "sources": [
+        "https://erebine.ai/docs/erectl/chat"
+      ],
+      "name": "post_project_id_v1_chats_id_messages",
+      "parameters": [
+        "project_id",
+        "id"
+      ],
+      "surface": "router",
+      "verification": "documented; live message creation verified"
     }
   ]
 }

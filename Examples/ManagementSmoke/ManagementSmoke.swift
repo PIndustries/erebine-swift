@@ -28,6 +28,16 @@ import Erebine
         }
         return current
     }
+    static func pollReady(_ body: JSONValue?, _ step: JSONValue, _ poll: JSONValue) -> Bool {
+        if let path=poll["pointer"]?.string,case .array(let values)=poll["values"],let body,let value=pointer(body,path) {return values.contains(value)}
+        if let spec=step["save_match"],let body,case .array(let items)=pointer(body,spec["pointer"]!.string!) {
+            return items.contains { item in
+                let a=item[spec["field"]!.string!];let b=spec["equals"]
+                return a == b || (spec["uuid_compare"] == true && a?.string.flatMap(UUID.init(uuidString:)) == b?.string.flatMap(UUID.init(uuidString:)) && b?.string.flatMap(UUID.init(uuidString:)) != nil)
+            }
+        }
+        return false
+    }
     static func run() async throws {
         guard let origin=ProcessInfo.processInfo.environment["EREBINE_MANAGEMENT_PROXY"],origin.hasPrefix("http://127.0.0.1:"),let url=URL(string:origin) else {throw ErebineError.invalid("Management validation requires a loopback proxy")}
         let bootstrap=try Client(origin:url)
@@ -42,7 +52,9 @@ import Erebine
         for original in steps {
             let name=original["name"]!.string!
             let step:JSONValue
-            do {step=try resolve(original,vars)} catch {results.append(["name":.string(name),"result":"skipped_dependency"]);continue}
+            var requestSpec=original
+            if case .object(var object)=requestSpec {object.removeValue(forKey:"cleanup");requestSpec = .object(object)}
+            do {step=try resolve(requestSpec,vars)} catch {results.append(["name":.string(name),"result":"skipped_dependency"]);continue}
             guard let operation=Operations.all.first(where:{$0.name==step["operation"]?.string}),case .object(let params)=step["parameters"] else {throw ErebineError.invalid("Scenario operation missing")}
             var options=RequestOptions(parameters:params.mapValues{$0.string!})
             if case .object(let h)=step["headers"] {options.headers=h.mapValues{$0.string!}}
@@ -62,13 +74,26 @@ import Erebine
             }
             if case .integer(let ms)=step["delay_ms"], ms>0 { try await Task.sleep(nanoseconds:UInt64(min(ms,5000))*1_000_000) }
             do {
-                let response=try await client.send(operation,options:options);let body=try? response.json();var passed=step["expected_error"] == nil
+                var response=try await client.send(operation,options:options)
+                var pollFailed=false
+                if let poll=step["poll"] {
+                    guard operation.method=="GET" else {throw ErebineError.invalid("Polling is limited to GET requests")}
+                    let attempts:Int;if case .integer(let n)=poll["attempts"] {attempts=Int(max(1,min(n,300)))}else{attempts=20}
+                    let ms:Int64;if case .integer(let n)=poll["delay_ms"] {ms=max(100,min(n,2000))}else{ms=1000}
+                    for _ in 1..<attempts {
+                        if pollReady(try? response.json(),step,poll){break}
+                        try await Task.sleep(nanoseconds:UInt64(ms)*1_000_000)
+                        do {response=try await client.send(operation,options:options)}catch{pollFailed=true;break}
+                    }
+                }
+                if let poll=step["poll"] {pollFailed = pollFailed || !pollReady(try? response.json(),step,poll)}
+                let body=try? response.json();var passed=step["expected_error"] == nil && !pollFailed
                 if operation.method == "DELETE",let path=try client.prepare(operation,options:options).url?.path {cleanedPaths.insert(path)}
                 if case .array(let statuses)=step["expected_status"] { passed=passed && statuses.contains(.integer(Int64(response.status))) }
                 if let spec=step["save_match"] {
                     var selected:JSONValue?
                     if let body, case .array(let items)=pointer(body,spec["pointer"]!.string!) {
-                        selected=items.first(where: { $0[spec["field"]!.string!] == spec["equals"] }).flatMap { pointer($0,spec["value_pointer"]!.string!) }
+                        selected=items.first(where: { $0[spec["field"]!.string!] == spec["equals"] || (spec["uuid_compare"] == true && $0[spec["field"]!.string!]?.string.flatMap(UUID.init(uuidString:)) == spec["equals"]?.string.flatMap(UUID.init(uuidString:)) && spec["equals"]?.string.flatMap(UUID.init(uuidString:)) != nil) }).flatMap { pointer($0,spec["value_pointer"]!.string!) }
                     }
                     if let selected, selected.string != nil { vars[spec["variable"]!.string!] = selected } else { passed=false }
                 }
@@ -88,6 +113,7 @@ import Erebine
                     } else { passed=false }
                 }
                 if case .object(let assertions)=step["assertions"] {for (p,expected) in assertions {passed = passed && body.flatMap{pointer($0,p)}==expected}}
+                if case .object(let assertions)=step["contains"] {for (p,expected) in assertions {passed = passed && body.flatMap {pointer($0,p)}?.string?.contains(expected.string!) == true}}
                 if let text=step["expected_text"]?.string {passed = passed && String(data:response.body,encoding:.utf8)==text}
                 if case .object(let lengths)=step["min_array_lengths"] {for (p,min) in lengths {guard case .integer(let count)=min,case .array(let values)=body.flatMap({pointer($0,p)}) else {passed=false;continue};passed = passed && values.count>=count}}
                 var record:[String:JSONValue]=["name":.string(name),"status":.integer(Int64(response.status)),"result":.string(passed ? "passed":"response_contract_failed")]

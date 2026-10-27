@@ -53,3 +53,50 @@ reasoning/refusal separation, and native WebSocket transcription. Speech, System
 verification.
 Management was subsequently validated with a separate management-scoped key and
 project; see [MANAGEMENT.md](MANAGEMENT.md). See INFERENCE.md for inference proof.
+
+## Temporary isolated worker validation
+
+A later pass enrolled disposable CPU inference and code-execution workers on an
+isolated bridge network. Resource limits were enforced, no host ports were
+published, and the execution worker could access only a synthetic sandbox.
+Bootstrap credentials were single-use and revoked after enrollment. Account
+identities and operator configuration remain internal.
+
+Each native SDK passed 23 execution checks covering discovery, real directory
+and file reads, an approval-gated write with content verification, rejection,
+waiting cancellation, and sandbox enforcement. A separate six-step run per SDK
+approved a controlled sleep job, verified it was executing, then cancelled it
+and verified the terminal state. These counts describe scenarios, not unique
+API operations. Async state reads use bounded GET-only polling; writes are
+never retried by the validation driver.
+
+Each SDK also generated real Chat Completions on the temporary CPU model,
+assembled Chat SSE including usage, and retrieved/updated/deleted stored
+completions. The worker-specific Responses check failed: the backend reported
+a tokenizer/tool-parser incompatibility, also reproduced directly against the
+worker engine. This fixture does not establish Responses support for that
+model; earlier direct-routing Responses validation remains separate evidence.
+
+The opt-in worker inference examples report a nonzero exit on failure and log
+only check names, counts, and generic diagnostics. The generic worker scenario
+files under `api/` require a private fixture controller; they do not enroll
+workers, contain credentials, or run during normal tests or CI.
+
+Each SDK additionally verified endpoint suspend/unprovision/detachment, attach/
+provision, and eventual active-model state. Both SDKs drained the temporary
+traffic member to weight zero and restored weight one. Swift initially escaped
+a colon in the worker identifier; preserving the RFC 3986 path-segment colon
+fixed the live route, with an HTTP regression test added.
+
+Both SDKs passed 23 selected chat/endpoint checks, including template application,
+branch lifecycle, traffic changes, and health/config reads. CORS PUT is excluded
+from that passing count. The worker lifecycle and execution checks above are
+reported separately to keep the proof boundaries explicit.
+
+Cleanup removed both worker containers, their isolated network, bootstrap files,
+private worker state, and the temporary cleanup timer. Temporary agent identities
+were revoked and active account fixtures deleted. Terminal execution/audit
+history may remain on the service. Previously stable host workloads retained their original start times and
+restart counts and remained running, with no unhealthy containers observed.
+Preexisting unstable workloads were not modified. Public SDK files were scanned against the private credential
+and fixture values before publication.

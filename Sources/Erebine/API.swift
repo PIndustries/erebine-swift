@@ -2073,5 +2073,11 @@ public struct API: Sendable {
         options.parameters["id"] = id
         return try await client.send(Operations.putProjectIdV1WebhooksId, options: options)
     }
+    /// POST /{project_id}/v1/chats/{id}/messages
+    public func postProjectIdV1ChatsIdMessages(id: String, options: RequestOptions = .init()) async throws -> APIResponse {
+        var options = options
+        options.parameters["id"] = id
+        return try await client.send(Operations.postProjectIdV1ChatsIdMessages, options: options)
+    }
 }
 extension Client { public var api: API { API(client: self) } }

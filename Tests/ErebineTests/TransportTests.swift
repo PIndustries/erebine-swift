@@ -33,6 +33,14 @@ final class TransportTests: XCTestCase {
         let body = try JSONDecoder().decode(JSONValue.self, from: Data(v["body"]!.string!.utf8))
         XCTAssertEqual(body["x_vendor"]?["enabled"], .bool(true))
     }
+    func testWorkerIdentifierColonSurvivesNativeTransport() async throws {
+        let fixture = try Fixture()
+        let client = try fixture.client()
+        let response = try await client.send(method: "PATCH", path: "/echo/{worker}", options: .init(parameters: ["worker": "worker:fixture/name?query#fragment%literal"]))
+        XCTAssertEqual(try response.json()["path"]?.string, "/echo/worker:fixture%2Fname%3Fquery%23fragment%25literal")
+        let request = try client.prepare(.init(name: "fixture", method: "PATCH", path: "/echo/{worker}", surface: .router), options: .init(parameters: ["worker": "worker:fixture"]))
+        XCTAssertEqual(request.url?.absoluteString, fixture.origin.absoluteString + "/echo/worker:fixture")
+    }
     func testErrorsEmptyBinaryAndRedirects() async throws {
         let f = try Fixture(); let c = try f.client()
         do { _ = try await c.send(method: "GET", path: "/error"); XCTFail("expected error") }

@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "steps": [
+    {
+      "name": "read fixture chat",
+      "operation": "get_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      }
+    },
+    {
+      "name": "rename fixture chat",
+      "operation": "patch_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "body": {
+        "title": "${prefix}-updated"
+      }
+    },
+    {
+      "name": "seed real chat message",
+      "operation": "post_project_id_v1_chats_id_messages",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "body": {
+        "role": "user",
+        "content": "Synthetic native SDK branch fixture."
+      },
+      "save": {
+        "seed_message_id": [
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "read seeded chat messages",
+      "operation": "get_project_id_v1_chats_id_messages",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "min_array_lengths": {
+        "/data": 1
+      }
+    },
+    {
+      "name": "read chat context",
+      "operation": "get_project_id_v1_chats_id_context",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      }
+    },
+    {
+      "name": "fork fixture branch",
+      "operation": "post_project_id_v1_chats_id_branches",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "body": {
+        "title": "${prefix}-branch",
+        "from_message_id": "${seed_message_id}"
+      },
+      "save": {
+        "branch_id": [
+          "/id",
+          "/branch_id"
+        ]
+      }
+    },
+    {
+      "name": "list fixture branches",
+      "operation": "get_project_id_v1_chats_id_branches",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      }
+    },
+    {
+      "name": "delete fixture branch",
+      "operation": "delete_project_id_v1_chats_id_1_branches_id_2",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id_1": "${chat_id}",
+        "id_2": "${branch_id}"
+      }
+    },
+    {
+      "name": "read chat memory",
+      "operation": "get_project_id_v1_chats_id_memories",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      }
+    },
+    {
+      "name": "read chat members",
+      "operation": "get_project_id_v1_chats_id_members",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      }
+    },
+    {
+      "name": "read chat visibility",
+      "operation": "get_project_id_v1_chats_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      }
+    },
+    {
+      "name": "set fixture visibility",
+      "operation": "patch_project_id_v1_chats_id_visibility",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "body": {
+        "visibility": "private"
+      }
+    },
+    {
+      "name": "link fixture execution workspace",
+      "operation": "put_project_id_v1_chats_id_exec_workspace",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "allows_members": false
+      }
+    },
+    {
+      "name": "read execution workspace link",
+      "operation": "get_project_id_v1_chats_id_exec_workspace",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      }
+    },
+    {
+      "name": "unlink fixture execution workspace",
+      "operation": "delete_project_id_v1_chats_id_exec_workspace",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${chat_id}"
+      }
+    },
+    {
+      "name": "create inference chat template",
+      "operation": "post_project_id_v1_chat_templates",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "name": "${prefix}-template",
+        "description": "Synthetic native worker fixture",
+        "system_prompt": "Synthetic SDK test.",
+        "allowed_tools": [],
+        "approval_policy": "standard",
+        "model_id": "${model_id}"
+      },
+      "save": {
+        "template_id": [
+          "/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/${project_id}/v1/chat-templates/${template_id}"
+      }
+    },
+    {
+      "name": "apply template to fixture workspace",
+      "operation": "post_project_id_v1_workspaces_id_1_chat_templates_id_2_apply",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id_1": "${chat_workspace_id}",
+        "id_2": "${template_id}"
+      },
+      "body": {},
+      "save": {
+        "applied_chat_id": [
+          "/id",
+          "/chat_id",
+          "/chat/id"
+        ]
+      },
+      "cleanup": {
+        "method": "DELETE",
+        "path": "/${project_id}/v1/chats/${applied_chat_id}"
+      }
+    },
+    {
+      "name": "read endpoint traffic members",
+      "operation": "get_project_id_v1_management_endpoints_id_agents",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      }
+    },
+    {
+      "name": "drain only temporary worker",
+      "operation": "patch_project_id_v1_management_endpoints_id_1_agents_id_2",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id_1": "${endpoint_id}",
+        "id_2": "${inference_worker_id}"
+      },
+      "body": {
+        "weight": 0
+      }
+    },
+    {
+      "name": "restore temporary worker weight",
+      "operation": "patch_project_id_v1_management_endpoints_id_1_agents_id_2",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id_1": "${endpoint_id}",
+        "id_2": "${inference_worker_id}"
+      },
+      "body": {
+        "weight": 1
+      }
+    },
+    {
+      "name": "read endpoint cors",
+      "operation": "get_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      }
+    },
+    {
+      "name": "set fixture cors",
+      "operation": "put_project_id_v1_management_endpoints_id_cors",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      },
+      "body": {
+        "allow_origins": [
+          "https://example.invalid"
+        ],
+        "allow_methods": [
+          "GET",
+          "POST"
+        ]
+      }
+    },
+    {
+      "name": "read fixture health config",
+      "operation": "get_project_id_v1_management_endpoints_id_health_config",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      }
+    },
+    {
+      "name": "trigger fixture health check",
+      "operation": "get_project_id_v1_management_endpoints_id_health_check",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${endpoint_id}"
+      }
+    }
+  ],
+  "description": "Opt-in isolated worker validation. Bootstrap IDs and authentication must be supplied by a restrictive private loopback proxy. Never target preexisting resources."
+}

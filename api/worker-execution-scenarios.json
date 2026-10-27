@@ -1,0 +1,582 @@
+{
+  "schema_version": 1,
+  "steps": [
+    {
+      "name": "worker tool discovery",
+      "operation": "get_project_id_v1_exec_tools",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "min_array_lengths": {
+        "/data": 1
+      }
+    },
+    {
+      "name": "read tool descriptor",
+      "operation": "get_project_id_v1_exec_tools_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "code_read"
+      }
+    },
+    {
+      "name": "invoke isolated directory listing",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "tool_name": "code_tree",
+        "arguments": {
+          "path": "/sandbox",
+          "max_depth": 1
+        }
+      },
+      "save": {
+        "tree_invocation_id": [
+          "/invocation_id",
+          "/invocationId",
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "read directory invocation result",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${tree_invocation_id}"
+      },
+      "delay_ms": 2000,
+      "assertions": {
+        "/status": "completed"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "failed",
+          "rejected",
+          "completed",
+          "cancelled"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "invoke isolated file read",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "tool_name": "code_read",
+        "arguments": {
+          "path": "/sandbox/README.txt"
+        }
+      },
+      "save": {
+        "read_invocation_id": [
+          "/invocation_id",
+          "/invocationId",
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "read file invocation result",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${read_invocation_id}"
+      },
+      "delay_ms": 2000,
+      "assertions": {
+        "/status": "completed"
+      },
+      "contains": {
+        "/result": "Synthetic isolated SDK execution fixture"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "failed",
+          "rejected",
+          "completed",
+          "cancelled"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "submit reversible sandbox write for approval",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "tool_name": "code_write",
+        "arguments": {
+          "path": "/sandbox/${prefix}.txt",
+          "content": "Synthetic SDK approval test\n"
+        }
+      },
+      "save": {
+        "write_invocation_id": [
+          "/invocation_id",
+          "/invocationId",
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "read pending write state",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${write_invocation_id}"
+      },
+      "delay_ms": 1000,
+      "assertions": {
+        "/status": "awaiting_approval"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "rejected",
+          "cancelled",
+          "awaiting_approval",
+          "failed",
+          "completed"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "pending approvals discovery",
+      "operation": "get_project_id_v1_exec_approvals",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "save_match": {
+        "variable": "approval_id",
+        "pointer": "/data",
+        "field": "invocation_id",
+        "equals": "${write_invocation_id}",
+        "uuid_compare": true,
+        "value_pointer": "/id"
+      },
+      "query": [
+        [
+          "limit",
+          "100"
+        ],
+        [
+          "status",
+          "awaiting_approval"
+        ]
+      ],
+      "poll": {
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "read own write approval",
+      "operation": "get_project_id_v1_exec_approvals_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${approval_id}"
+      }
+    },
+    {
+      "name": "approve reversible sandbox write",
+      "operation": "post_project_id_v1_exec_approvals_id_approve",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${approval_id}"
+      },
+      "body": {
+        "confirmation": "code_write"
+      }
+    },
+    {
+      "name": "verify approved write completed",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${write_invocation_id}"
+      },
+      "delay_ms": 2000,
+      "assertions": {
+        "/status": "completed"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "failed",
+          "rejected",
+          "completed",
+          "cancelled"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "read approved fixture file",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "tool_name": "code_read",
+        "arguments": {
+          "path": "/sandbox/${prefix}.txt"
+        }
+      },
+      "save": {
+        "approved_read_id": [
+          "/invocation_id",
+          "/invocationId",
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "verify approved file contents",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${approved_read_id}"
+      },
+      "delay_ms": 1500,
+      "assertions": {
+        "/status": "completed"
+      },
+      "contains": {
+        "/result": "Synthetic SDK approval test"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "failed",
+          "rejected",
+          "completed",
+          "cancelled"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "submit sandbox write to reject",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "tool_name": "code_write",
+        "arguments": {
+          "path": "/sandbox/${prefix}-rejected.txt",
+          "content": "Must not be written\n"
+        }
+      },
+      "save": {
+        "reject_invocation_id": [
+          "/invocation_id",
+          "/invocationId",
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "find rejection approval",
+      "operation": "get_project_id_v1_exec_approvals",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "save_match": {
+        "variable": "reject_approval_id",
+        "pointer": "/data",
+        "field": "invocation_id",
+        "equals": "${reject_invocation_id}",
+        "uuid_compare": true,
+        "value_pointer": "/id"
+      },
+      "query": [
+        [
+          "limit",
+          "100"
+        ],
+        [
+          "status",
+          "awaiting_approval"
+        ]
+      ],
+      "poll": {
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "reject sandbox write",
+      "operation": "post_project_id_v1_exec_approvals_id_reject",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${reject_approval_id}"
+      },
+      "body": {
+        "reason": "Synthetic native SDK rejection test"
+      }
+    },
+    {
+      "name": "verify write rejection",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${reject_invocation_id}"
+      },
+      "assertions": {
+        "/status": "rejected"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "failed",
+          "completed",
+          "cancelled",
+          "rejected"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "submit cancellable fixture test",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "tool_name": "code_test",
+        "arguments": {
+          "repo": "/sandbox",
+          "command": "sdk-wait"
+        }
+      },
+      "save": {
+        "cancel_invocation_id": [
+          "/invocation_id",
+          "/invocationId",
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "cancel waiting fixture invocation",
+      "operation": "post_project_id_v1_exec_invocations_id_cancel",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${cancel_invocation_id}"
+      }
+    },
+    {
+      "name": "verify invocation cancellation",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${cancel_invocation_id}"
+      },
+      "assertions": {
+        "/status": "cancelled"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "failed",
+          "rejected",
+          "cancelled",
+          "completed"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "dispatch out-of-scope read fixture",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "tool_name": "code_read",
+        "arguments": {
+          "path": "/outside-sdk-sandbox/fixture.txt"
+        }
+      },
+      "save": {
+        "scope_invocation_id": [
+          "/invocation_id",
+          "/invocationId",
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "verify worker enforces sandbox scope",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${scope_invocation_id}"
+      },
+      "delay_ms": 1500,
+      "assertions": {
+        "/status": "failed",
+        "/error_code": "execution_error"
+      },
+      "contains": {
+        "/error_message": "outside every declared repo_root"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "failed",
+          "rejected",
+          "completed",
+          "cancelled"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "submit running-cancel fixture test",
+      "operation": "post_project_id_v1_exec_invocations",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "body": {
+        "workspace_id": "${operational_workspace_id}",
+        "tool_name": "code_test",
+        "arguments": {
+          "repo": "/sandbox",
+          "command": "sdk-wait"
+        }
+      },
+      "save": {
+        "running_invocation_id": [
+          "/invocation_id",
+          "/invocationId",
+          "/id"
+        ]
+      }
+    },
+    {
+      "name": "find running test approval",
+      "operation": "get_project_id_v1_exec_approvals",
+      "parameters": {
+        "project_id": "${project_id}"
+      },
+      "delay_ms": 2000,
+      "query": [
+        [
+          "limit",
+          "100"
+        ],
+        [
+          "status",
+          "awaiting_approval"
+        ]
+      ],
+      "save_match": {
+        "variable": "running_approval_id",
+        "pointer": "/data",
+        "field": "invocation_id",
+        "equals": "${running_invocation_id}",
+        "uuid_compare": true,
+        "value_pointer": "/id"
+      },
+      "poll": {
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "approve controlled sleep fixture",
+      "operation": "post_project_id_v1_exec_approvals_id_approve",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${running_approval_id}"
+      },
+      "body": {
+        "confirmation": "code_test"
+      }
+    },
+    {
+      "name": "verify fixture test executing",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${running_invocation_id}"
+      },
+      "delay_ms": 1000,
+      "assertions": {
+        "/status": "executing"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "rejected",
+          "executing",
+          "cancelled",
+          "failed",
+          "completed"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    },
+    {
+      "name": "cancel actually running fixture test",
+      "operation": "post_project_id_v1_exec_invocations_id_cancel",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${running_invocation_id}"
+      }
+    },
+    {
+      "name": "verify running invocation cancelled",
+      "operation": "get_project_id_v1_exec_invocations_id",
+      "parameters": {
+        "project_id": "${project_id}",
+        "id": "${running_invocation_id}"
+      },
+      "delay_ms": 1000,
+      "assertions": {
+        "/status": "cancelled"
+      },
+      "poll": {
+        "pointer": "/status",
+        "values": [
+          "failed",
+          "rejected",
+          "cancelled",
+          "completed"
+        ],
+        "attempts": 25,
+        "delay_ms": 1000
+      }
+    }
+  ],
+  "description": "Opt-in isolated worker validation. Bootstrap IDs and authentication must be supplied by a restrictive private loopback proxy. Never target preexisting resources."
+}

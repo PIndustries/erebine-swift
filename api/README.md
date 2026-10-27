@@ -1,6 +1,6 @@
 # Operation catalog
 
-379 documentation/CLI/live-verified bindings and native methods. See [coverage](../COVERAGE.md), [native API](../API.md), [inference](../INFERENCE.md), and [management](../MANAGEMENT.md).
+380 documentation/CLI/live-verified bindings and native methods. See [coverage](../COVERAGE.md), [native API](../API.md), [inference](../INFERENCE.md), and [management](../MANAGEMENT.md).
 
 | Name | Method | Path | Surface | Source |
 | --- | --- | --- | --- | --- |

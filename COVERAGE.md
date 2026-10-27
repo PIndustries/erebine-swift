@@ -1,7 +1,7 @@
 # API coverage and verification
 
 The native Rust and Swift SDKs cover the reviewed public HTTP surface with
-**379 operation bindings and 379 native API methods each**. Project/routing
+**380 operation bindings and 380 native API methods each**. Project/routing
 configuration is inherited from Client, resource IDs are explicit arguments,
 and all request/response JSON fields remain available. This is HTTP binding
 coverage; complete typed schemas and live server conformance are separate gates.
@@ -9,7 +9,7 @@ coverage; complete typed schemas and live server conformance are separate gates.
 ## Public contract audit — 2026-10-26
 
 - 112 public documentation pages reviewed, including curl examples.
-- 323 concrete method/path references reconciled in `api/reference-audit.json`.
+- 324 concrete method/path references reconciled in `api/reference-audit.json`.
   Example identifiers normalize to resource parameters; workspace-scoped endpoint
   paths use a dedicated routing variant. One integration source download is
   classified as a static asset rather than an API.
@@ -21,7 +21,7 @@ coverage; complete typed schemas and live server conformance are separate gates.
   chunk/file transfer, checksum headers, resume, and completion. CLI captures
   used fake credentials and a loopback server. Synthetic server replies drove
   later requests; they are not authoritative response schemas.
-- Every one of the 379 catalog bindings is sent through each SDK's native HTTP
+- Every one of the 380 catalog bindings is sent through each SDK's native HTTP
   transport in local tests. CORS OPTIONS, workspace endpoint/direct/semantic
   routing, JSON/multipart/binary bodies, errors, SSE, MCP, and realtime are covered.
 - `scripts/check_catalog.py` runs in CI to reject missing audit bindings,
